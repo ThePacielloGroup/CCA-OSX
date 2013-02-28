@@ -132,7 +132,7 @@
 {
 	NSString *crs, *dbs;
 	
-	crs = [NSString stringWithFormat: @"%@: %.1f:1"
+	crs = [NSString stringWithFormat: @"%@: %.2f:1"
 	, [NSApp Localisation:@"Contrast ratio"]
 	, mainContrastRatio];
 	[contrastRatio setStringValue:crs];

@@ -13,7 +13,7 @@ static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-ana
 		
 	[self switchSliders:NO];
 	
-	[self showAlgorithmColourBrightnessDifference:nil];
+	[self showAlgorithmLuminosity:nil];
 	[self moveView:resultsColourBrightnessDifference y:-243];
 	[self moveView:algorithmBox y:-243];
 	[self moveView:backgroundBox y:-243];

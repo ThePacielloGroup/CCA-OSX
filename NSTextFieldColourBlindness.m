@@ -172,7 +172,7 @@
 -(void)displayContrastRatio
 {
 	float cr = [luminosity getResult];
-	NSString *crs = [NSString stringWithFormat: @"%@: %.1f:1", [NSApp Localisation:@"The contrast ratio is"] ,cr];
+	NSString *crs = [NSString stringWithFormat: @"%@: %.2f:1", [NSApp Localisation:@"The contrast ratio is"] ,cr];
 	[super setStringValue:crs];
 }
 

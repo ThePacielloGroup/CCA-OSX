@@ -1,1175 +1,0 @@
-TColour Contrast Analyser
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist" Info.plist
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib
-cStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib
-cCpResource images/No.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico"
-cCpResource images/Yes.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico"
-cCpResource images/details.png "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.png"
-cCpResource images/cca.icns "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns"
-cCpResource English.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtf"
-cCpResource French.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf"
-cCpResource Italian.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf"
-cCpResource Swedish.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf"
-cCpResource German.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf"
-cCpResource Dutch.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf"
-cCpResource Chinese.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf"
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Localized.strings" English.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Localized.strings" French.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Localized.strings" Swedish.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Localized.strings" Italian.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Localized.strings" German.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Localized.strings" Dutch.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/Localized.strings" Russian.lproj/Localized.strings
-cCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Localized.strings" Chinese.lproj/Localized.strings
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser" normal x86_64
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser" normal i386
-cCreateUniversalBinary "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser" normal "x86_64 i386"
-cTouch "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app"
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-c000000005107B97100000000000000AA
-t1359460721
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000050AA4AB600000000000001E5
-t1353337526
-s485
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c0000000050A97E030000000000006730
-t1353285123
-s26416
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/Credits.rtf
-c00000000480DA7FA00000000000005F5
-t1208854522
-s1525
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/Localized.strings
-c000000004A6EBEF10000000000000812
-t1248771825
-s2066
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib
-c00000000512F5E2C0000000000000088
-t1362058796
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m
-c000000004680E0420000000000000485
-t1182851138
-s1157
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser.LinkFileList
-c00000000512F6018000000000000083A
-t1362059288
-s2106
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser.LinkFileList
-c00000000512F60180000000000000852
-t1362059288
-s2130
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/PkgInfo
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Localized.strings
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.png
-t2
-s0
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/Credits.rtf
-c000000004A4B8336000000000000061D
-t1246462774
-s1565
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/Localized.strings
-c00000000512F2C9A0000000000000F58
-t1362046106
-s3928
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib
-c00000000512F5DFD0000000000000088
-t1362058749
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/Credits.rtf
-c00000000468D35C400000000000005EE
-t1183659460
-s1518
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/Localized.strings
-c000000004A6EBE10000000000000073D
-t1248771600
-s1853
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib
-c00000000512F5D880000000000000088
-t1362058632
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/Credits.rtf
-c00000000468D36000000000000000637
-t1183659520
-s1591
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/Localized.strings
-c000000004A6EBE300000000000000FC2
-t1248771632
-s4034
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib
-c00000000512F5DF30000000000000088
-t1362058739
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/Credits.rtf
-c00000000468EA172000000000000068D
-t1183752562
-s1677
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/Localized.strings
-c000000004A6EBEA40000000000000F76
-t1248771748
-s3958
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib
-c00000000512F5D910000000000000088
-t1362058641
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/Credits.rtf
-c00000000468D353E0000000000000830
-t1183659326
-s2096
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/Localized.strings
-c000000004A6EBE6800000000000007CD
-t1248771688
-s1997
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib
-c00000000512F5E320000000000000088
-t1362058802
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m
-c00000000467D3CB40000000000000149
-t1182612660
-s329
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m
-c00000000468023AE000000000000056E
-t1182802862
-s1390
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m
-c00000000512F5F010000000000001416
-t1362059009
-s5142
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m
-c00000000467C10260000000000000075
-t1182535718
-s117
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m
-c00000000467C0CC60000000000000076
-t1182534854
-s118
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m
-c00000000512F2CD70000000000001492
-t1362046167
-s5266
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m
-c00000000512F5F2000000000000020CE
-t1362059040
-s8398
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m
-c00000000512F5F2B000000000000284B
-t1362059051
-s10315
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m
-c00000000467AC8A80000000000000214
-t1182451880
-s532
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m
-c000000004946594F00000000000007AA
-t1229347151
-s1962
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/Localized.strings
-c000000004A6EBED60000000000000F4C
-t1248771798
-s3916
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib
-c00000000512F5DE50000000000000088
-t1362058725
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/Credits.rtf
-c00000000468DFFFC0000000000000A01
-t1183711228
-s2561
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/Localized.strings
-c00000000512F2BF40000000000000DA6
-t1362045940
-s3494
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib
-c00000000512F5DCE0000000000000088
-t1362058702
-s136
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/No.ico
-c000000004459218800000000000009F6
-t1146691976
-s2550
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/Yes.ico
-c000000004459218800000000000009F6
-t1146691976
-s2550
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/cca.icns
-c00000000467D38660000000000008ADA
-t1182611558
-s35546
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/details.png
-c000000004661CB320000000000000506
-t1180814130
-s1286
-
-N/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m
-c000000004659EEAC00000000000000FD
-t1180298924
-s253
-i<Cocoa/Cocoa.h>
-
-NInfo.plist
-c00000000512F33C7000000000000046F
-t1362047943
-s1135
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m
-r0
-
-CBuild AST from /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc4968a9897dfb641^1e509e9897dfb641^---0#1#0#--18"Check dependencies36"F25507A3-BCDA-4E6B-BEC4-B718821E34D6-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.417047
-e383752091.008001
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m9b1b6b9a97dfb641^070c029b97dfb641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m0000000000000000^2995"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o" ColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/ColourBrightnessDifference.o"36"2B7055DB-A816-459B-A807-12DE0ED4E4F7-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.497455
-e383752091.045952
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m4a7b7f9a97dfb641^98c20b9b97dfb641^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m0000000000000000^2911"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o" Localization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Localization.o"36"805011A1-8A70-4A7A-881E-3B69FB801EFA-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.407373
-e383752091.004053
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.mfd6c689a97dfb641^2b14019b97dfb641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m0000000000000000^2899"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o" Luminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Luminosity.o"36"380A3448-026B-4085-91AB-352426286BD7-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.818789
-e383752090.469785
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m23bcd19997dfb641^af5a799a97dfb641^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m0000000000000000^2905"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o" MyColourHex.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHex.o"36"951ECF8B-A9D4-4218-8B5C-B35C17757382-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.483324
-e383752091.046122
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m21e97b9a97dfb641^8acd0b9b97dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m0000000000000000^2965"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o" MyColourHexBackground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexBackground.o"36"E68D1334-D364-4269-8D1A-BF27C3572219-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.483316
-e383752091.054583
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.mccf07b9a97dfb641^90f80d9b97dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m0000000000000000^2965"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o" MyColourHexForeground.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyColourHexForeground.o"36"5AF11AB2-3EB2-4E99-ADB6-B862097925CB-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.395388
-e383752091.009261
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:11:49: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'
-o        [resultsColourBrightnessDifference setDelegate:self];
-o                                                       ^~~~
-o/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here
-o- (void)setDelegate:(id <NSTabViewDelegate>)anObject;
-o                                            ^
-o/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:12:33: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'
-o        [resultsLuminosity setDelegate:self];
-o                                       ^~~~
-o/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here
-o- (void)setDelegate:(id <NSTabViewDelegate>)anObject;
-o                                            ^
-o2 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.md15a659a97dfb641^705c029b97dfb641^-1206"/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:11:49: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'        [resultsColourBrightnessDifference setDelegate:self];                                                       ^~~~/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here- (void)setDelegate:(id <NSTabViewDelegate>)anObject;                                            ^/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:12:33: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'        [resultsLuminosity setDelegate:self];                                       ^~~~/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here- (void)setDelegate:(id <NSTabViewDelegate>)anObject;                                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@82"Sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'-383752091#18446744073709551615#0#1(2@45"Passing argument to parameter 'anObject' here-383752091#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@177"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h0000000000000000^116#44#116#44#4192#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^10#48#10#48#297#0#14"Semantic Issue1(3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^10#48#10#52#297#0#-2@82"Sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'-383752091#18446744073709551615#0#1(2@45"Passing argument to parameter 'anObject' here-383752091#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@177"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h0000000000000000^116#44#116#44#4192#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^11#32#11#32#336#0#14"Semantic Issue1(3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^11#32#11#36#336#0#-0#0#0#-19%DVTDocumentLocation4@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^2911"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o" MyController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyController.o"36"7E16D81C-80E2-4EB5-840B-775A998ACE92-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.412433
-e383752091.023195
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m0fd0699a97dfb641^6bf1059b97dfb641^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m0000000000000000^2893"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o" MyResults.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/MyResults.o"36"EEEDF547-B26E-4879-8A69-A29140128D75-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.830130
-e383752090.483211
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.mf4a8d49997dfb641^44be7b9a97dfb641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m0000000000000000^2995"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o" NSTextFieldColourBlindness.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBlindness.o"36"4A6FED2C-4DF2-4BD1-8EEE-A55F5F099C31-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752090.453238
-e383752091.045154
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m172d749a97dfb641^21900b9b97dfb641^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m0000000000000000^3061"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o" NSTextFieldColourBrightnessDifference.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldColourBrightnessDifference.o"36"AC18A079-C73A-429A-A3B8-420F933A0BF2-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.826992
-e383752090.451915
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m7fdbd39997dfb641^02ba739a97dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m0000000000000000^2965"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o" NSTextFieldLuminosity.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/NSTextFieldLuminosity.o"36"A4B80DC9-5EA7-4B75-9EEB-E0E9B4499002-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.804377
-e383752090.424316
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.mbf10ce9997dfb641^86aa6c9a97dfb641^---0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m0000000000000000^2863"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o" main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/i386" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/main.o"36"106A501F-4A0F-47E8-A09E-4334AF88F11B-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.172779
-e383752089.803011
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m378a2c9997dfb641^0491cd9997dfb641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m0000000000000000^3009"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o" ColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/ColourBrightnessDifference.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/ColourBrightnessDifference.o"36"90DA973A-6E20-41B5-85DE-4CC74456B896-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.791034
-e383752090.410934
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m62a1ca9997dfb641^083b699a97dfb641^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m0000000000000000^2925"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o" Localization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Localization.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Localization.o"36"F07FFF0D-C973-41A9-A55C-3870AB726ACE-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.171847
-e383752089.789177
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m12832c9997dfb641^a113ca9997dfb641^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m0000000000000000^2913"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o" Luminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Luminosity.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Luminosity.o"36"DA318399-9660-4A20-ABA3-8ABC37C540B0-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.168322
-e383752089.784389
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m2f342b9997dfb641^68ccc89997dfb641^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m0000000000000000^2919"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o" MyColourHex.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHex.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHex.o"36"16655214-C7B7-455D-B64D-6DA7D5666ECC-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.790285
-e383752090.394083
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.ma872ca9997dfb641^a2ed649a97dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m0000000000000000^2979"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o" MyColourHexBackground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexBackground.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexBackground.o"36"95B96166-11F2-4051-88CB-7D1E3007744F-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.785977
-e383752090.414857
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m2158c99997dfb641^465e6a9a97dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m0000000000000000^2979"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o" MyColourHexForeground.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyColourHexForeground.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyColourHexForeground.o"36"34BB7465-B9B2-4A8B-8536-D03B88214BF8-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.171128
-e383752089.817354
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:11:49: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'
-o        [resultsColourBrightnessDifference setDelegate:self];
-o                                                       ^~~~
-o/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here
-o- (void)setDelegate:(id <NSTabViewDelegate>)anObject;
-o                                            ^
-o/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:12:33: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'
-o        [resultsLuminosity setDelegate:self];
-o                                       ^~~~
-o/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here
-o- (void)setDelegate:(id <NSTabViewDelegate>)anObject;
-o                                            ^
-o2 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.maaf02b9997dfb641^e751d19997dfb641^-1206"/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:11:49: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'        [resultsColourBrightnessDifference setDelegate:self];                                                       ^~~~/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here- (void)setDelegate:(id <NSTabViewDelegate>)anObject;                                            ^/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m:12:33: warning: sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'        [resultsLuminosity setDelegate:self];                                       ^~~~/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h:117:45: note: passing argument to parameter 'anObject' here- (void)setDelegate:(id <NSTabViewDelegate>)anObject;                                            ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@82"Sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'-383752089#18446744073709551615#0#1(2@45"Passing argument to parameter 'anObject' here-383752089#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@177"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h0000000000000000^116#44#116#44#4192#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^10#48#10#48#297#0#14"Semantic Issue1(3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^10#48#10#52#297#0#-2@82"Sending 'MyController *' to parameter of incompatible type 'id<NSTabViewDelegate>'-383752089#18446744073709551615#0#1(2@45"Passing argument to parameter 'anObject' here-383752089#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@177"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTabView.h0000000000000000^116#44#116#44#4192#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^11#32#11#32#336#0#14"Semantic Issue1(3@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^11#32#11#36#336#0#-0#0#0#-19%DVTDocumentLocation4@80"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m0000000000000000^2925"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o" MyController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyController.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyController.o"36"64EE53B3-E9A4-4C31-9279-B5AAC2F8B39F-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.171876
-e383752089.828811
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m821c2c9997dfb641^4d2cd49997dfb641^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m0000000000000000^2907"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o" MyResults.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/MyResults.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/MyResults.o"36"E993EF22-D884-427B-A23F-080566B76A15-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.171853
-e383752089.825279
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m90852c9997dfb641^8044d39997dfb641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m0000000000000000^3009"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o" NSTextFieldColourBlindness.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBlindness.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBlindness.o"36"228EB2B1-645D-450E-A1F1-FC87E6A067DD-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.777890
-e383752090.406016
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.ma647c79997dfb641^a8fc679a97dfb641^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m0000000000000000^3075"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o" NSTextFieldColourBrightnessDifference.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldColourBrightnessDifference.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldColourBrightnessDifference.o"36"89921C87-7F1E-41B6-9EB8-E5E12B89FAC8-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.168372
-e383752089.788995
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.md2352b9997dfb641^b806ca9997dfb641^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m0000000000000000^2979"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o" NSTextFieldLuminosity.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/NSTextFieldLuminosity.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/NSTextFieldLuminosity.o"36"AF3F4700-1D2B-4110-AD03-004563335C2E-
-
-CCompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o" /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s383752089.166477
-e383752089.776432
-r1
-xCompileC
-xDerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.mf9bc2a9997dfb641^54c3c69997dfb641^---0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m0000000000000000^2877"CompileC "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o" main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -fvisibility=hidden -Wno-sign-conversion "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Colour Contrast Analyser.hmap" -I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources/x86_64" "-I/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/DerivedSources" -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -MMD -MT dependencies -MF "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.d" --serialize-diagnostics "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.dia" -c /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/main.m -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/main.o"36"61665BC7-2943-499A-B93B-C7CD435518E2-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Localized.strings" Chinese.lproj/Localized.strings
-s383752088.780250
-e383752088.785220
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Localized.strings
-xChinese.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy Chinese.lproj/Localized.strings25cdc79897dfb641^c504c99897dfb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/Localized.strings0000000000000000^505"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Localized.strings" Chinese.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj" -- Chinese.lproj/Localized.strings36"BD878629-DE43-43BA-849E-24A1506D134D-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Localized.strings" Dutch.lproj/Localized.strings
-s383752088.779860
-e383752088.782607
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Localized.strings
-xDutch.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Copy Dutch.lproj/Localized.stringsd0b5c79897dfb641^f662c89897dfb641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/Localized.strings0000000000000000^497"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Localized.strings" Dutch.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj" -- Dutch.lproj/Localized.strings36"7A63A616-4D06-4085-ABBB-48D8610461D8-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Localized.strings" English.lproj/Localized.strings
-s383752088.756025
-e383752088.778490
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Localized.strings
-xEnglish.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy English.lproj/Localized.strings6b9cc19897dfb641^db52c79897dfb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/Localized.strings0000000000000000^504"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Localized.strings" English.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj" -- English.lproj/Localized.strings36"435D56D7-D217-4930-B1E9-1216CAD53776-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Localized.strings" French.lproj/Localized.strings
-s383752088.761676
-e383752088.778746
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Localized.strings
-xFrench.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Copy French.lproj/Localized.stringsd40ec39897dfb641^ed61c79897dfb641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/Localized.strings0000000000000000^501"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Localized.strings" French.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj" -- French.lproj/Localized.strings36"32101CA1-4078-40FA-8CD9-12E18741AC4C-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Localized.strings" German.lproj/Localized.strings
-s383752088.768098
-e383752088.779035
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Localized.strings
-xGerman.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Copy German.lproj/Localized.strings14b1c49897dfb641^b56ec79897dfb641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/Localized.strings0000000000000000^501"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Localized.strings" German.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj" -- German.lproj/Localized.strings36"DF05B70F-D304-4467-BB9B-8956123497F0-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Localized.strings" Italian.lproj/Localized.strings
-s383752088.768082
-e383752088.776684
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Localized.strings
-xItalian.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy Italian.lproj/Localized.stringsd1b0c49897dfb641^17d9c69897dfb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/Localized.strings0000000000000000^504"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Localized.strings" Italian.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj" -- Italian.lproj/Localized.strings36"EC5D86C1-BB2A-4857-9248-653B7FDA5EE7-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/Localized.strings" Russian.lproj/Localized.strings
-s383752088.780171
-e383752088.784393
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/Localized.strings
-xRussian.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy Russian.lproj/Localized.strings6dc8c79897dfb641^81cec89897dfb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/Localized.strings0000000000000000^505"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/Localized.strings" Russian.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj" -- Russian.lproj/Localized.strings36"9B1A83FD-F17C-44AB-97EC-A15B6ABD037D-
-
-CCopyStringsFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Localized.strings" Swedish.lproj/Localized.strings
-s383752088.768041
-e383752088.779677
-r1
-xCopyStringsFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Localized.strings
-xSwedish.lproj/Localized.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy Swedish.lproj/Localized.strings7ac8c49897dfb641^27a2c79897dfb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/Localized.strings0000000000000000^505"CopyStringsFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Localized.strings" Swedish.lproj/Localized.strings    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj" -- Swedish.lproj/Localized.strings36"02C878FD-3195-4FF1-855F-DA250AE85F36-
-
-CCpResource Chinese.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf"
-s383752088.751720
-e383752088.767057
-r1
-xCpResource
-xChinese.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf3d81c09897dfb641^1904c69897dfb641^---0#0#0#-19%DVTDocumentLocation2@182"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf000000000080d041^676"CpResource Chinese.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj"36"FC364556-AB44-468B-90BD-28447C7CCDD8-
-
-CCpResource Dutch.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf"
-s383752088.740486
-e383752088.765756
-r1
-xCpResource
-xDutch.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtfada4bd9897dfb641^0002c69897dfb641^---0#0#0#-19%DVTDocumentLocation2@180"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf000000000080d041^668"CpResource Dutch.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj"36"E6292B7F-4786-48F4-B76C-A1DDFCB18169-
-
-CCpResource English.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtf"
-s383752088.696040
-e383752088.737062
-r1
-xCpResource
-xEnglish.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtfcd3fb29897dfb641^20b2bc9897dfb641^---0#0#0#-19%DVTDocumentLocation2@182"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/English.lproj/Credits.rtf000000000080d041^676"CpResource English.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj"36"C3F9BE15-260D-445C-99BA-6F192A841014-
-
-CCpResource French.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf"
-s383752088.736658
-e383752088.749066
-r1
-xCpResource
-xFrench.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf83a7bc9897dfb641^f44fc09897dfb641^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/French.lproj/Credits.rtf000000000080d041^672"CpResource French.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj"36"32D06950-8DBE-4DD2-AE4A-912639CF3CE3-
-
-CCpResource German.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf"
-s383752088.738618
-e383752088.765577
-r1
-xCpResource
-xGerman.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf1329bd9897dfb641^f8ffc59897dfb641^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/German.lproj/Credits.rtf000000000080d041^672"CpResource German.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj"36"25E4B313-D18D-4570-9543-8D7D04A04523-
-
-CCpResource Italian.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf"
-s383752088.736700
-e383752088.753938
-r1
-xCpResource
-xItalian.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf72a7bc9897dfb641^0af4c59897dfb641^---0#0#0#-19%DVTDocumentLocation2@182"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf000000000080d041^676"CpResource Italian.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj"36"6F57F46C-993A-40C9-AB0C-5627D1148384-
-
-CCpResource Swedish.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf"
-s383752088.736964
-e383752088.756437
-r1
-xCpResource
-xSwedish.lproj/Credits.rtf
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtfbfb8bc9897dfb641^87fac59897dfb641^---0#0#0#-19%DVTDocumentLocation2@182"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf000000000080d041^676"CpResource Swedish.lproj/Credits.rtf "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/Credits.rtf"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/Credits.rtf "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj"36"7C1B1FB1-596D-4096-A853-5CCD73389894-
-
-CCpResource images/No.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico"
-s383752088.678730
-e383752088.682591
-r1
-xCpResource
-ximages/No.ico
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico35d3ad9897dfb641^7ac6ae9897dfb641^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/No.ico000000000080d041^619"CpResource images/No.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/No.ico"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/No.ico "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources"36"24AD01C3-E6A9-40A8-8EC3-4CE21A205FB5-
-
-CCpResource images/Yes.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico"
-s383752088.681475
-e383752088.695377
-r1
-xCpResource
-ximages/Yes.ico
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico6286ae9897dfb641^6c04b29897dfb641^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/Yes.ico000000000080d041^622"CpResource images/Yes.ico "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Yes.ico"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/Yes.ico "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources"36"E74A35A2-F2FB-41E9-AF2F-001320EA2309-
-
-CCpResource images/cca.icns "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns"
-s383752088.695584
-e383752088.736607
-r1
-xCpResource
-ximages/cca.icns
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns8924b29897dfb641^b490bc9897dfb641^---0#0#0#-19%DVTDocumentLocation2@165"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/cca.icns000000000080d041^625"CpResource images/cca.icns "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/cca.icns"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/cca.icns "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources"36"B597B234-7853-468A-8D65-480F20C4FE2E-
-
-CCpResource images/details.png "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.png"
-s383752088.691261
-e383752088.731469
-r1
-xCpResource
-ximages/details.png
-xDerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.pngff06b19897dfb641^ce8abc9897dfb641^---0#0#0#-19%DVTDocumentLocation2@168"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/Resources/details.png000000000080d041^634"CpResource images/details.png "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/details.png"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/images/details.png "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources"36"893A8D03-A53B-40D6-846A-1F2A1C389A5F-
-
-CCreateUniversalBinary "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser" normal "x86_64 i386"
-s383752091.098934
-e383752091.105620
-r1
-xCreateUniversalBinary
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser
-xnormal
-xx86_64 i386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection181"Create universal binary /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyserc269199b97dfb641^ea091b9b97dfb641^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour%20Contrast%20Analyser.app/Contents/MacOS/Colour%20Contrast%20Analyser000000000080d041^761"CreateUniversalBinary "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser" normal "x86_64 i386"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    lipo -create "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser" "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser" -output "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser"36"509BFBDC-3706-4F07-BE23-45B25EFCF66B-
-
-CLd "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser" normal i386
-s383752091.061284
-e383752091.092052
-r1
-xLd
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection184"Link /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser1ac40f9b97dfb641^5490179b97dfb641^---0#0#0#--1097"Ld "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser" normal i386    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -filelist "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser.LinkFileList" -mmacosx-version-min=10.8 -fobjc-link-runtime -framework Cocoa -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/i386/Colour Contrast Analyser"36"C7E74A6D-D93F-41C1-BD30-2EC60C959EF5-
-
-CLd "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser" normal x86_64
-s383752090.425662
-e383752090.475647
-r1
-xLd
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection186"Link /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser410f6d9a97dfb641^ffea799a97dfb641^---0#0#0#--1107"Ld "DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser" normal x86_64    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -F/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release -filelist "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser.LinkFileList" -mmacosx-version-min=10.8 -fobjc-link-runtime -framework Cocoa -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Intermediates/CCA.build/Release/Colour Contrast Analyser.build/Objects-normal/x86_64/Colour Contrast Analyser"36"55E3257D-3BB7-4B31-99E3-73056B8220E7-
-
-CProcessInfoPlistFile "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist" Info.plist
-s383752088.626591
-e383752088.656104
-r1
-xProcessInfoPlistFile
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist247ba09897dfb641^a5f5a79897dfb641^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Info.plist0000000000000000^549"ProcessInfoPlistFile "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist" Info.plist    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    builtin-infoPlistUtility Info.plist -genpkginfo "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Info.plist"36"5CC7F827-51A0-466C-8EEA-8AC0FCF444A2-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib
-s383752088.664825
-e383752089.117114
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib8943aa9897dfb641^6d001e9997dfb641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib/0000000000000000^532"StripNIB Chinese.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Chinese.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Chinese.lproj/MainMenu.nib36"A94A4057-9908-4DD9-A674-95D27D779173-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib
-s383752088.664490
-e383752089.157945
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib9830aa9897dfb641^6478289997dfb641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib/0000000000000000^526"StripNIB Dutch.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Dutch.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Dutch.lproj/MainMenu.nib36"14BDE89A-BC77-4137-95A6-5A3A9297EE7F-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib
-s383752088.664437
-e383752088.691981
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib3430aa9897dfb641^f8aab19897dfb641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib/0000000000000000^532"StripNIB English.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/English.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/English.lproj/MainMenu.nib36"8A8A5687-6B1B-4D87-A272-46A491E1848E-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib
-s383752088.664441
-e383752089.143430
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib9d2faa9897dfb641^a1bb249997dfb641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib/0000000000000000^529"StripNIB French.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/French.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/French.lproj/MainMenu.nib36"6552EF88-16F0-4F59-9501-AA5EAABA406A-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib
-s383752088.664468
-e383752088.725216
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib3b36aa9897dfb641^f086bc9897dfb641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib/0000000000000000^529"StripNIB German.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/German.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/German.lproj/MainMenu.nib36"64E190B7-ACDC-46DF-879B-F6908A319ABD-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib
-s383752088.664453
-e383752088.678594
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib272faa9897dfb641^03eead9897dfb641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib/0000000000000000^532"StripNIB Italian.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Italian.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Italian.lproj/MainMenu.nib36"F870EB38-A36E-4556-B47C-FBA30132F2C9-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib
-s383752088.664502
-e383752088.724781
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib1d3daa9897dfb641^1f84bc9897dfb641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib/0000000000000000^532"StripNIB Russian.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Russian.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Russian.lproj/MainMenu.nib36"50A6EE08-D386-44F1-B432-7382D39683F9-
-
-CStripNIB /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib
-s383752088.664457
-e383752088.676248
-r1
-xStripNIB
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Processing /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib5a2faa9897dfb641^541ead9897dfb641^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib/0000000000000000^532"StripNIB Swedish.lproj/MainMenu.nib    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --strip "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app/Contents/Resources/Swedish.lproj/MainMenu.nib" --output-format human-readable-text /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/Swedish.lproj/MainMenu.nib36"3CAEAC0E-04AB-4CAE-81AF-C734EE9F8451-
-
-CTouch "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app"
-s383752091.113553
-e383752091.118394
-r1
-xTouch
-x/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Touch /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app4f1f1d9b97dfb641^83501e9b97dfb641^---0#0#0#--275"Touch "DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app"    cd /Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository    /usr/bin/touch -c "/Users/cedric/_WORK/_Tools/CCA/CCA_OSX/repository/DerivedData/CCA/Build/Products/Release/Colour Contrast Analyser.app"36"BB0B79F4-8AC4-4D3C-88C2-822E1B5D615B-
-
