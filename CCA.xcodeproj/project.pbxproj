@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		824502120C15CF360039E38F /* NSTextFieldColourBlindness.m in Sources */ = {isa = PBXBuildFile; fileRef = 824502110C15CF360039E38F /* NSTextFieldColourBlindness.m */; };
 		8263B29B0C26EDCB00BFB67A /* MyResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8268AD120C0B65E800D80B81 /* MyResults.m */; };
 		8268ABE40C0B124800D80B81 /* MyColourHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8268ABE30C0B124800D80B81 /* MyColourHex.m */; };
-		8280F3C20C311AD7002A319B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* Info.plist */; };
 		8291D1AB0C20341900C174AE /* Luminosity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8291D1AA0C20341900C174AE /* Luminosity.m */; };
 		82934C050C3AC62600748B44 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 82934C040C3AC62600748B44 /* Credits.rtf */; };
 		82A62F9F0C1A0092001000A1 /* cca.icns in Resources */ = {isa = PBXBuildFile; fileRef = 82A62F9E0C1A0092001000A1 /* cca.icns */; };
@@ -34,7 +33,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; explicitFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CCA_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCA_Prefix.pch; sourceTree = "<group>"; };
@@ -61,13 +60,13 @@
 		82DBF21A0C1B07D600289EC8 /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
 		82DBF21B0C1B07D600289EC8 /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
 		82E530210C3D6E5000D8900E /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localized.strings; sourceTree = "<group>"; };
-		82E530220C3D6E6200D8900E /* Swedish */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Swedish; path = Swedish.lproj/Localized.strings; sourceTree = "<group>"; };
+		82E530220C3D6E6200D8900E /* Swedish */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Swedish; path = Swedish.lproj/Localized.strings; sourceTree = "<group>"; };
 		82E530230C3D6E7700D8900E /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Italian; path = Italian.lproj/Credits.rtf; sourceTree = "<group>"; };
 		82E530240C3D6E8300D8900E /* Swedish */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Swedish; path = Swedish.lproj/Credits.rtf; sourceTree = "<group>"; };
 		82E530250C3D6E9900D8900E /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		82E530260C3D6EA200D8900E /* Swedish */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Swedish; path = Swedish.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		82F363E10C42B55B00562B1F /* German */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = German; path = German.lproj/Credits.rtf; sourceTree = "<group>"; };
-		82F363E20C42B59A00562B1F /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localized.strings; sourceTree = "<group>"; };
+		82F363E20C42B59A00562B1F /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localized.strings; sourceTree = "<group>"; };
 		82F363E30C42B5AB00562B1F /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		82F93F3E0C2C42BE00FE39D2 /* MyColourHexForeground.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyColourHexForeground.m; sourceTree = "<group>"; };
 		82F93F3F0C2C42BE00FE39D2 /* MyColourHexForeground.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyColourHexForeground.h; sourceTree = "<group>"; };
@@ -79,14 +78,14 @@
 		82FABBE70C29714B00FF1A40 /* NSTextFieldColourBrightnessDifference.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSTextFieldColourBrightnessDifference.h; sourceTree = "<group>"; };
 		82FABBE80C29714B00FF1A40 /* NSTextFieldColourBrightnessDifference.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSTextFieldColourBrightnessDifference.m; sourceTree = "<group>"; };
 		82FF545B0C25865100E2CB00 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
-		857E97C50FFBBB330003CF19 /* Chinese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Chinese; path = Chinese.lproj/Localized.strings; sourceTree = "<group>"; };
+		857E97C50FFBBB330003CF19 /* Chinese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Chinese; path = Chinese.lproj/Localized.strings; sourceTree = "<group>"; };
 		857E97C60FFBBB5C0003CF19 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = Dutch.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		857E97C70FFBBB660003CF19 /* Russian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Russian; path = Russian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		857E97C80FFBBB6E0003CF19 /* Chinese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Chinese; path = Chinese.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		857E97C90FFBBB850003CF19 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Dutch; path = Dutch.lproj/Credits.rtf; sourceTree = "<group>"; };
 		857E97CA0FFBBBA10003CF19 /* Chinese */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Chinese; path = Chinese.lproj/Credits.rtf; sourceTree = "<group>"; };
-		85A986BF0FFA530D00C0D313 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Dutch; path = Dutch.lproj/Localized.strings; sourceTree = "<group>"; };
-		85A986C10FFA547D00C0D313 /* Russian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Russian; path = Russian.lproj/Localized.strings; sourceTree = "<group>"; };
+		85A986BF0FFA530D00C0D313 /* Dutch */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Dutch; path = Dutch.lproj/Localized.strings; sourceTree = "<group>"; };
+		85A986C10FFA547D00C0D313 /* Russian */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Russian; path = Russian.lproj/Localized.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,8 +227,12 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CCA" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -263,7 +266,6 @@
 				82A62F9F0C1A0092001000A1 /* cca.icns in Resources */,
 				82934C050C3AC62600748B44 /* Credits.rtf in Resources */,
 				82FA21300C2D764600BFAB91 /* Localized.strings in Resources */,
-				8280F3C20C311AD7002A319B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,15 +344,16 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Colour Contrast Analyser";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -359,15 +362,14 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Colour Contrast Analyser";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -377,8 +379,7 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -389,8 +390,7 @@
 				ARCHS = "$(ARCHS)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

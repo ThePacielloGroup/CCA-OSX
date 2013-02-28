@@ -6,10 +6,10 @@
 {
 	NSColor *color;
 	if ([self isForeground]) {
-		color = [[NSColor blackColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+		color = [[NSColor blackColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 		previousHex = [[NSString alloc] initWithString:@"#000000" ];
 	} else { // Background
-		color = [[NSColor whiteColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+		color = [[NSColor whiteColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 		previousHex = [[NSString alloc] initWithString:@"#FFFFFF" ];
 	}
 	
@@ -39,10 +39,10 @@
 		// Save for undo futur wrong entry
 		previousHex = hex;
 		
-		color = [NSColor colorWithDeviceRed:([MyColourHex hexStringToInt:red]/255.0)
-										green:([MyColourHex hexStringToInt:green]/255.0)
-										blue:([MyColourHex hexStringToInt:blue]/255.0)
-										alpha:1.0];
+		color = [NSColor colorWithCalibratedRed:([MyColourHex hexStringToInt:red]/255.0f)
+										green:([MyColourHex hexStringToInt:green]/255.0f)
+										blue:([MyColourHex hexStringToInt:blue]/255.0f)
+										alpha:1.0f];
 		[self setWellFromColor:color];
 		[self setSlidersFromColor:color];
 		[self setRGBFromColor:color];
@@ -55,7 +55,7 @@
 
 - (IBAction)updateFromWell:(id)sender
 {
-	NSColor*	color = [[colorWell color] colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+	NSColor*	color = [[colorWell color] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	if ( color != nil ) {
 		[self setSlidersFromColor:color];
 		[self setHTMLFromColor:color];
@@ -74,10 +74,10 @@
 	green = [stringToInt numberFromString:[greenField stringValue]];
 	blue = [stringToInt numberFromString:[blueField stringValue]];
 		
-	color = [NSColor colorWithDeviceRed:([red intValue]/255.0)
-									green:([green intValue]/255.0)
-									blue:([blue intValue]/255.0)
-									alpha:1.0];
+	color = [NSColor colorWithCalibratedRed:([red intValue]/255.0f)
+									green:([green intValue]/255.0f)
+									blue:([blue intValue]/255.0f)
+									alpha:1.0f];
 
 	[self setWellFromColor:color];
 	[self setSlidersFromColor:color];
@@ -87,10 +87,11 @@
 
 - (IBAction)updateFromSliders:(id)sender
 {
-	NSColor*	color = [NSColor colorWithDeviceRed:[redSlider floatValue]
+	NSColor*	color = [NSColor colorWithCalibratedRed:[redSlider floatValue]
                                        green:[greenSlider floatValue]
                                         blue:[blueSlider floatValue]
-                                       alpha:1.0];
+                                       alpha:1.0f];
+
 	[self setWellFromColor:color];
 	[self setHTMLFromColor:color];
 	[self setRGBFromColor:color];
@@ -99,13 +100,13 @@
 
 - (void)setWellFromColor:(NSColor*)color
 {
-	NSColor*	c = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
-	[colorWell setColor:c];
+//	NSColor*	c = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	[colorWell setColor:color];
 }
 
 -(void)setHTMLFromColor:(NSColor*)color
 {
-	float		red,green,blue,alpha;
+	CGFloat		red,green,blue,alpha;
 	int			intRed, intGreen, intBlue;
 	NSString *hex;
 		
@@ -114,9 +115,9 @@
 			blue:&blue
 			alpha:&alpha];
 
-	intRed = (red * 255);
-	intGreen = (green * 255);
-	intBlue = (blue * 255);
+	intRed = (int)(red * 255);
+	intGreen = (int)(green * 255);
+	intBlue = (int)(blue * 255);
 	
 	hex = [NSString stringWithFormat: @"#%02X%02X%02X",intRed,intGreen,intBlue];
 	
@@ -140,30 +141,25 @@
 
 - (void)setRGBFromColor:(NSColor*)color
 {
-	float		red,green,blue,alpha;
-	int			intRed, intGreen, intBlue;
+	CGFloat		red,green,blue;
 	NSString	*stmp;
 	
 	[color getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
-
-	intRed = (red * 255);
-	intGreen = (green * 255);
-	intBlue = (blue * 255);
+			alpha:NULL];
 	
-	stmp = [NSString stringWithFormat: @"%d",intRed];
+	stmp = [NSString stringWithFormat: @"%d",(int)roundf(red * 255)];
 	[redField setStringValue:stmp];
-	stmp = [NSString stringWithFormat: @"%d",intGreen];
+	stmp = [NSString stringWithFormat: @"%d",(int)roundf(green * 255)];
 	[greenField setStringValue:stmp];
-	stmp = [NSString stringWithFormat: @"%d",intBlue];
+	stmp = [NSString stringWithFormat: @"%d",(int)roundf(blue * 255)];
 	[blueField setStringValue:stmp];
 }
 
 - (void)setResultsFromColor:(NSColor*)color
 {
-	NSColor		*c = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+	NSColor		*c = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	
 	if ([self isForeground]) {
 		[myResults setForegroundColor:c];

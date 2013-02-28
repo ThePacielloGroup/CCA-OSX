@@ -32,8 +32,6 @@
 	
 }
 
-static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-analyser.html";
-
 - (IBAction)showSliders:(id)sender;
 - (IBAction)showHex:(id)sender;
 - (IBAction)showRGB:(id)sender;

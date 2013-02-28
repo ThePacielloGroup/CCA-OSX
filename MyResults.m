@@ -29,24 +29,24 @@
 	[colourBrightnessDifferenceTritanopia initWithDeficiency:COLORBLIND_DEFICIENCY_TRITANOPIA];
 	[colourBrightnessDifferenceColorBlindness initWithDeficiency:COLORBLIND_DEFICIENCY_COLORBLINDNESS];
 
-	[self setForegroundColor:[[NSColor blackColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace]];
-	[self setBackgroundColor:[[NSColor whiteColor] colorUsingColorSpaceName:NSDeviceRGBColorSpace]];
+	[self setForegroundColor:[[NSColor blackColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace]];
+	[self setBackgroundColor:[[NSColor whiteColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace]];
 	[self setResults];
 }
 
 
 - (void)setForegroundColor:(NSColor*)color
 {
-	float		red,green,blue,alpha;
+	CGFloat		red,green,blue,alpha;
 	
 	[color getRed:&red
 			green:&green
 			blue:&blue
 			alpha:&alpha];
 
-	foregroundR = (red * 255);
-	foregroundG = (green * 255);
-	foregroundB = (blue * 255);
+	foregroundR = (int)(red * 255);
+	foregroundG = (int)(green * 255);
+	foregroundB = (int)(blue * 255);
 
 	[mainLuminosity setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
 	[mainColourBrightnessDifference setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
@@ -57,16 +57,16 @@
 
 - (void)setBackgroundColor:(NSColor*)color
 {
-	float		red,green,blue,alpha;
+	CGFloat		red,green,blue,alpha;
 	
 	[color getRed:&red
 			green:&green
 			blue:&blue
 			alpha:&alpha];
 
-	backgroundR = (red * 255);
-	backgroundG = (green * 255);
-	backgroundB = (blue * 255);
+	backgroundR = (int)(red * 255);
+	backgroundG = (int)(green * 255);
+	backgroundB = (int)(blue * 255);
 	
 	[mainLuminosity setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];	
 	[mainColourBrightnessDifference setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];

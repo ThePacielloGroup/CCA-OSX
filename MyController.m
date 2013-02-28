@@ -1,5 +1,7 @@
 #import "MyController.h"
 
+static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-analyser.html";
+
 @implementation MyController
 
 - (void)awakeFromNib

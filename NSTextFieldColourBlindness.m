@@ -118,24 +118,30 @@
       c2 = anchor_e[0] * anchor[4]  - anchor_e[1] * anchor[3];
       inflection = (anchor_e[1] / anchor_e[0]);
       break;
+            
+    case COLORBLIND_DEFICIENCY_NONE:
+      break;
+
+    case COLORBLIND_DEFICIENCY_COLORBLINDNESS:
+      break;
     }
 }
 
 - (void)setBackgroundColor:(NSColor *)aColor
 {
-	float		red,green,blue,alpha;
+	CGFloat		red,green,blue,alpha;
 	int			intRed, intGreen, intBlue;
 	
-	NSColor *color = [aColor colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+	NSColor *color = [aColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	NSColor *convertedColor = [self convertColor:color];
 	[convertedColor getRed:&red
 			green:&green
 			blue:&blue
 			alpha:&alpha];
 
-	intRed = (red * 255);
-	intGreen = (green * 255);
-	intBlue = (blue * 255);	
+	intRed = (int)(red * 255);
+	intGreen = (int)(green * 255);
+	intBlue = (int)(blue * 255);	
 	[luminosity setBackgroundRed:intRed Green:intGreen Blue:intBlue];
 	[colourBrightnessDifference setBackgroundRed:intRed Green:intGreen Blue:intBlue];
 		
@@ -144,19 +150,19 @@
 
 - (void)setTextColor:(NSColor *)aColor
 {
-	float		red,green,blue,alpha;
+	CGFloat		red,green,blue,alpha;
 	int			intRed, intGreen, intBlue;
 	
-	NSColor *color = [aColor colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+	NSColor *color = [aColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	NSColor *convertedColor = [self convertColor:color];
 	[convertedColor getRed:&red
 			green:&green
 			blue:&blue
 			alpha:&alpha];
 
-	intRed = (red * 255);
-	intGreen = (green * 255);
-	intBlue = (blue * 255);	
+	intRed = (int)(red * 255);
+	intGreen = (int)(green * 255);
+	intBlue = (int)(blue * 255);
 	[luminosity setForegroundRed:intRed Green:intGreen Blue:intBlue];
 	[colourBrightnessDifference setForegroundRed:intRed Green:intGreen Blue:intBlue];
 		
@@ -266,7 +272,7 @@
 		green = [NSTextFieldColourBlindness clamp:green low:0.0 high:255.0]/255.0;
 		blue  = [NSTextFieldColourBlindness clamp:blue low:0.0 high:255.0]/255.0;
 //		NSLog(@"\nApres RED:%f - GREEN:%f - BLUE:%f",red,green,blue);
-		res = [NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0];
+		res = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0];
 	}
 	
 	return res;
