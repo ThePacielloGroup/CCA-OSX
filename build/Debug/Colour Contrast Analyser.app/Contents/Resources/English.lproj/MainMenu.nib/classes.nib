@@ -1,0 +1,108 @@
+{
+    IBClasses = (
+        {CLASS = ContrastRatio; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                updateFromHTML = id; 
+                updateFromRGB = id; 
+                updateFromSliders = id; 
+                updateFromWell = id; 
+            }; 
+            CLASS = MyColourHex; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                blueField = NSTextField; 
+                blueSlider = NSSlider; 
+                colorWell = NSColorWell; 
+                greenField = NSTextField; 
+                greenSlider = NSSlider; 
+                htmlTextField = NSTextField; 
+                myResults = MyResults; 
+                nsBox = NSBox; 
+                redField = NSTextField; 
+                redSlider = NSSlider; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = MyColourHexBackground; LANGUAGE = ObjC; SUPERCLASS = MyColourHex; }, 
+        {CLASS = MyColourHexForeground; LANGUAGE = ObjC; SUPERCLASS = MyColourHex; }, 
+        {
+            ACTIONS = {
+                copyDetails = id; 
+                showAlgorithmColourBrightnessDifference = id; 
+                showAlgorithmLuminosity = id; 
+                showHelp = id; 
+                showHex = id; 
+                showRGB = id; 
+                showSliders = id; 
+            }; 
+            CLASS = MyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "HEXRGB_Background" = NSTabView; 
+                "HEXRGB_Foreground" = NSTabView; 
+                algorithmBox = NSBox; 
+                backgroundBox = NSBox; 
+                backgroundSliderBox = NSBox; 
+                buttonAlgorithmColourBrightnessDifference = NSButtonCell; 
+                buttonAlgorithmLuminosity = NSButtonCell; 
+                detailedView = NSTextView; 
+                foregroundBox = NSBox; 
+                foregroundSliderBox = NSBox; 
+                menuAlgorithmColourBrightnessDifference = NSMenuItem; 
+                menuAlgorithmLuminosity = NSMenuItem; 
+                menuHEX = NSMenuItem; 
+                menuRGB = NSMenuItem; 
+                menuShowSliders = NSMenuItem; 
+                myResults = MyResults; 
+                myWindow = NSWindow; 
+                resultsColourBrightnessDifference = NSTabView; 
+                resultsLuminosity = NSTabView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = MyResults; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                colourBrightnessDifference = NSTextField; 
+                colourBrightnessDifferenceColorBlindness = NSTextFieldColourBlindness; 
+                colourBrightnessDifferenceDeuteranopia = NSTextFieldColourBlindness; 
+                colourBrightnessDifferenceNormal = NSTextFieldColourBlindness; 
+                colourBrightnessDifferenceProtanopia = NSTextFieldColourBlindness; 
+                colourBrightnessDifferenceTritanopia = NSTextFieldColourBlindness; 
+                contrastRatio = NSTextField; 
+                detailedView = NSTextView; 
+                largeTextAA = NSTextFieldLuminosity; 
+                largeTextAAA = NSTextFieldLuminosity; 
+                textAA = NSTextFieldLuminosity; 
+                textAAA = NSTextFieldLuminosity; 
+                textColorBlindness = NSTextFieldColourBlindness; 
+                textColourBrightnessDifference = NSTextFieldColourBrightnessDifference; 
+                textDeuteranopia = NSTextFieldColourBlindness; 
+                textNormal = NSTextFieldColourBlindness; 
+                textProtanopia = NSTextFieldColourBlindness; 
+                textTritanopia = NSTextFieldColourBlindness; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSTextFieldColourBlindness; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextField; 
+        }, 
+        {
+            CLASS = NSTextFieldColourBrightnessDifference; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {statusImage = NSImageView; }; 
+            SUPERCLASS = NSTextField; 
+        }, 
+        {
+            CLASS = NSTextFieldLuminosity; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {statusImage = NSImageView; }; 
+            SUPERCLASS = NSTextField; 
+        }
+    ); 
+    IBVersion = 1; 
+}

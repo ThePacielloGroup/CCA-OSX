@@ -1,0 +1,274 @@
+﻿
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "5"; */
+"5.title" = "將此程式所有視窗移至最前";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "19"; */
+"19.title" = "視窗";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "23"; */
+"23.title" = "縮到最小";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "24"; */
+"24.title" = "視窗";
+
+/* Class = "NSMenuItem"; title = "Colour Contrast Analyser"; ObjectID = "56"; */
+"56.title" = "色彩對比分析程式";
+
+/* Class = "NSMenu"; title = "Colour Contrast Analyser"; ObjectID = "57"; */
+"57.title" = "色彩對比分析程式";
+
+/* Class = "NSMenuItem"; title = "About Colour Contrast Analyser"; ObjectID = "58"; */
+"58.title" = "關於色彩對比分析程式";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "說明";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "說明";
+
+/* Class = "NSMenuItem"; title = "Colour Contrast Analyser Help"; ObjectID = "111"; */
+"111.title" = "色彩對比分析程式說明";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "129"; */
+"129.title" = "偏好…";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "服務";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "服務";
+
+/* Class = "NSMenuItem"; title = "Hide Colour Contrast Analyser"; ObjectID = "134"; */
+"134.title" = "隱藏色彩對比分析程式";
+
+/* Class = "NSMenuItem"; title = "Quit Colour Contrast Analyser"; ObjectID = "136"; */
+"136.title" = "離開色彩對比分析程式";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "隱藏其他的";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "顯示全部";
+
+/* Class = "NSWindow"; title = "Colour Contrast Analyser"; ObjectID = "407"; */
+"407.title" = "色彩對比分析程式";
+
+/* Class = "NSBox"; title = "Foreground"; ObjectID = "412"; */
+"412.title" = "前景";
+
+/* Class = "NSColorWell"; gToolTip = "Foreground colour dropdown"; ObjectID = "423"; */
+"423.gToolTip" = "前景色彩下拉式選單";
+
+/* Class = "NSBox"; title = "Background"; ObjectID = "424"; */
+"424.title" = "背景";
+
+/* Class = "NSColorWell"; gToolTip = "Background colour dropdown"; ObjectID = "430"; */
+"430.gToolTip" = "背景色彩下拉式選單";
+
+/* Class = "NSTabViewItem"; label = "Results for color blindness"; ObjectID = "501"; */
+"501.label" = "模擬色盲的對比分析結果";
+
+/* Class = "NSTabViewItem"; label = "Results"; ObjectID = "503"; */
+"503.label" = "結果";
+
+/* Class = "NSButton"; gToolTip = "⌘O : Open details panel"; ObjectID = "542"; */
+"542.gToolTip" = "⌘O : 開啟細節面板";
+
+/* Class = "NSMenuItem"; title = "Options"; ObjectID = "562"; */
+"562.title" = "選項";
+
+/* Class = "NSMenu"; title = "Options"; ObjectID = "563"; */
+"563.title" = "選項";
+
+/* Class = "NSMenuItem"; title = "Show color sliders"; ObjectID = "564"; */
+"564.title" = "顯示色彩滑棒";
+
+/* Class = "NSMenuItem"; title = "Displayed color values"; ObjectID = "570"; */
+"570.title" = "色彩值的顯示方式";
+
+/* Class = "NSMenu"; title = "Displayed color values"; ObjectID = "571"; */
+"571.title" = "色彩值的顯示方式";
+
+/* Class = "NSMenuItem"; title = "Hex"; ObjectID = "572"; */
+"572.title" = "Hex";
+
+/* Class = "NSMenuItem"; title = "RGB"; ObjectID = "573"; */
+"573.title" = "RGB";
+
+/* Class = "NSTabViewItem"; label = "View"; ObjectID = "588"; */
+"588.label" = "View";
+
+/* Class = "NSTabViewItem"; label = "Hex"; ObjectID = "590"; */
+"590.label" = "Hex";
+
+/* Class = "NSTextField"; gToolTip = "Display and edit the chosen foreground colour"; ObjectID = "594"; */
+"594.gToolTip" = "顯示並編輯所選的前景色彩";
+
+/* Class = "NSTextField"; gToolTip = "⌘R : Switch into RGB input"; ObjectID = "595"; */
+"595.gToolTip" = "⌘R : 切換至 RGB 輸入模式";
+
+/* Class = "NSTabViewItem"; label = "Hex"; ObjectID = "599"; */
+"599.label" = "Hex";
+
+/* Class = "NSTextField"; gToolTip = "Display and edit the chosen background colour"; ObjectID = "603"; */
+"603.gToolTip" = "顯示並編輯所選的背景色彩";
+
+/* Class = "NSTextField"; gToolTip = "⌘R : Switch into RGB input"; ObjectID = "604"; */
+"604.gToolTip" = "⌘R : 切換至 RGB 輸入模式";
+
+/* Class = "NSTextField"; gToolTip = "⌘E : Switch into HEX input"; ObjectID = "605"; */
+"605.gToolTip" = "⌘E : 切換至 HEX 輸入模式";
+
+/* Class = "NSTextField"; gToolTip = "Red"; ObjectID = "606"; */
+"606.gToolTip" = "紅";
+
+/* Class = "NSTextField"; gToolTip = "Green"; ObjectID = "607"; */
+"607.gToolTip" = "綠";
+
+/* Class = "NSTextField"; gToolTip = "Blue"; ObjectID = "608"; */
+"608.gToolTip" = "藍";
+
+/* Class = "NSTextField"; gToolTip = "⌘E : Switch into HEX input"; ObjectID = "609"; */
+"609.gToolTip" = "⌘E : 切換至 HEX 輸入模式";
+
+/* Class = "NSTextField"; gToolTip = "Red"; ObjectID = "624"; */
+"624.gToolTip" = "紅";
+
+/* Class = "NSTextField"; gToolTip = "Green"; ObjectID = "626"; */
+"626.gToolTip" = "綠";
+
+/* Class = "NSTextField"; gToolTip = "Blue"; ObjectID = "627"; */
+"627.gToolTip" = "藍";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "719"; */
+"719.title" = "編輯";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "720"; */
+"720.title" = "編輯";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "741"; */
+"741.title" = "複製";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "746"; */
+"746.title" = "貼上";
+
+/* Class = "NSBox"; title = "Algorithm"; ObjectID = "767"; */
+"767.title" = "演算法";
+
+/* Class = "NSButtonCell"; gToolTip = "⌘D : Select Colour/Brightness difference algorithm"; ObjectID = "785"; */
+"785.gToolTip" = "⌘D : 選擇色彩/亮度差異演算法";
+
+/* Class = "NSButtonCell"; title = "Colour/Brightness difference"; ObjectID = "785"; */
+"785.title" = "色彩/亮度差異";
+
+/* Class = "NSButtonCell"; gToolTip = "⌘L : Select Luminosity algorithm"; ObjectID = "786"; */
+"786.gToolTip" = "⌘L : 選擇明度演算法";
+
+/* Class = "NSButtonCell"; title = "Luminosity"; ObjectID = "786"; */
+"786.title" = "明度";
+
+/* Class = "NSTabViewItem"; label = "Results for color blindness"; ObjectID = "788"; */
+"788.label" = "模擬色盲的對比分析結果";
+
+/* Class = "NSTabViewItem"; label = "Results"; ObjectID = "800"; */
+"800.label" = "結果";
+
+/* Class = "NSButton"; gToolTip = "⌘O : Open details panel"; ObjectID = "803"; */
+"803.gToolTip" = "⌘O : 開啟細節面板";
+
+/* Class = "NSBox"; title = "Text"; ObjectID = "804"; */
+"804.title" = "文字";
+
+/* Class = "NSBox"; title = "Large text"; ObjectID = "813"; */
+"813.title" = "大字";
+
+/* Class = "NSMenuItem"; title = "Algorithm"; ObjectID = "862"; */
+"862.title" = "演算法";
+
+/* Class = "NSMenu"; title = "Algorithm"; ObjectID = "863"; */
+"863.title" = "演算法";
+
+/* Class = "NSMenuItem"; title = "Colour/Brightness difference"; ObjectID = "864"; */
+"864.title" = "色彩/亮度差異";
+
+/* Class = "NSMenuItem"; title = "Luminosity"; ObjectID = "865"; */
+"865.title" = "明度";
+
+/* Class = "NSTextFieldCell"; title = "Colour select:"; ObjectID = "929"; */
+"929.title" = "色彩選擇:";
+
+/* Class = "NSTextFieldCell"; title = "RGB:"; ObjectID = "930"; */
+"930.title" = "RGB:";
+
+/* Class = "NSTextFieldCell"; title = "Hex:"; ObjectID = "935"; */
+"935.title" = "Hex:";
+
+/* Class = "NSTextFieldCell"; title = "Red"; ObjectID = "937"; */
+"937.title" = "紅";
+
+/* Class = "NSTextFieldCell"; title = "Green"; ObjectID = "939"; */
+"939.title" = "綠";
+
+/* Class = "NSTextFieldCell"; title = "Blue"; ObjectID = "941"; */
+"941.title" = "藍";
+
+/* Class = "NSTextFieldCell"; title = "Colour select:"; ObjectID = "942"; */
+"942.title" = "色彩選擇:";
+
+/* Class = "NSTextFieldCell"; title = "RGB:"; ObjectID = "943"; */
+"943.title" = "RGB:";
+
+/* Class = "NSTextFieldCell"; title = "Hex:"; ObjectID = "948"; */
+"948.title" = "Hex:";
+
+/* Class = "NSTextFieldCell"; title = "Red"; ObjectID = "952"; */
+"952.title" = "紅";
+
+/* Class = "NSTextFieldCell"; title = "Blue"; ObjectID = "953"; */
+"953.title" = "藍";
+
+/* Class = "NSTextFieldCell"; title = "Green"; ObjectID = "954"; */
+"954.title" = "綠";
+
+/* Class = "NSTextFieldCell"; title = "Normal"; ObjectID = "955"; */
+"955.title" = "正常";
+
+/* Class = "NSTextFieldCell"; title = "Protanopia"; ObjectID = "957"; */
+"957.title" = "紅色盲";
+
+/* Class = "NSTextFieldCell"; title = "Deuteranopia"; ObjectID = "959"; */
+"959.title" = "綠色盲";
+
+/* Class = "NSTextFieldCell"; title = "Tritanopia"; ObjectID = "961"; */
+"961.title" = "第三原色盲";
+
+/* Class = "NSTextFieldCell"; title = "Color blindness"; ObjectID = "963"; */
+"963.title" = "色盲";
+
+/* Class = "NSButtonCell"; title = "Show details"; ObjectID = "966"; */
+"966.title" = "顯示細節";
+
+/* Class = "NSTextFieldCell"; title = "example text showing contrast"; ObjectID = "967"; */
+"967.title" = "顯示對比用的範例文字";
+
+/* Class = "NSTextFieldCell"; title = "Tritanopia"; ObjectID = "969"; */
+"969.title" = "第三原色盲";
+
+/* Class = "NSTextFieldCell"; title = "Deuteranopia"; ObjectID = "970"; */
+"970.title" = "綠色盲";
+
+/* Class = "NSTextFieldCell"; title = "Protanopia"; ObjectID = "973"; */
+"973.title" = "紅色盲";
+
+/* Class = "NSTextFieldCell"; title = "Normal"; ObjectID = "977"; */
+"977.title" = "正常";
+
+/* Class = "NSTextFieldCell"; title = "Color blindness"; ObjectID = "978"; */
+"978.title" = "色盲";
+
+/* Class = "NSButtonCell"; title = "Show details"; ObjectID = "980"; */
+"980.title" = "顯示細節";
+
+/* Class = "NSButtonCell"; title = "Copy results"; ObjectID = "989"; */
+"989.title" = "複製細節";
+
