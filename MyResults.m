@@ -37,16 +37,16 @@
 
 - (void)setForegroundColor:(NSColor*)color
 {
-	CGFloat		red,green,blue,alpha;
+	CGFloat		red,green,blue;
 	
 	[color getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
+			alpha:NULL];
 
-	foregroundR = (int)(red * 255);
-	foregroundG = (int)(green * 255);
-	foregroundB = (int)(blue * 255);
+	foregroundR = (int)roundf(red * 255);
+	foregroundG = (int)roundf(green * 255);
+	foregroundB = (int)roundf(blue * 255);
 
 	[mainLuminosity setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
 	[mainColourBrightnessDifference setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
@@ -57,16 +57,16 @@
 
 - (void)setBackgroundColor:(NSColor*)color
 {
-	CGFloat		red,green,blue,alpha;
+	CGFloat		red,green,blue;
 	
 	[color getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
+			alpha:NULL];
 
-	backgroundR = (int)(red * 255);
-	backgroundG = (int)(green * 255);
-	backgroundB = (int)(blue * 255);
+	backgroundR = (int)roundf(red * 255);
+	backgroundG = (int)roundf(green * 255);
+	backgroundB = (int)roundf(blue * 255);
 	
 	[mainLuminosity setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];	
 	[mainColourBrightnessDifference setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];
@@ -217,7 +217,7 @@
 		NSString *ltAAA = [largeTextAAA getStatus];
 	
 		detailedText = [detailedText stringByAppendingString:[NSString stringWithFormat: 
-			@"\n\n%@: %.1f:1"
+			@"\n\n%@: %.2f:1"
 			, [NSApp Localisation:@"The contrast ratio is"]
 			, mainContrastRatio]];
 		detailedText = [detailedText stringByAppendingString:[NSString stringWithFormat: 			

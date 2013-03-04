@@ -129,7 +129,7 @@
 
 - (void)setBackgroundColor:(NSColor *)aColor
 {
-	CGFloat		red,green,blue,alpha;
+	CGFloat		red, green, blue;
 	int			intRed, intGreen, intBlue;
 	
 	NSColor *color = [aColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
@@ -137,11 +137,11 @@
 	[convertedColor getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
+			alpha:NULL];
 
-	intRed = (int)(red * 255);
-	intGreen = (int)(green * 255);
-	intBlue = (int)(blue * 255);	
+	intRed = (int)roundf(red * 255);
+	intGreen = (int)roundf(green * 255);
+	intBlue = (int)roundf(blue * 255);
 	[luminosity setBackgroundRed:intRed Green:intGreen Blue:intBlue];
 	[colourBrightnessDifference setBackgroundRed:intRed Green:intGreen Blue:intBlue];
 		
@@ -150,7 +150,7 @@
 
 - (void)setTextColor:(NSColor *)aColor
 {
-	CGFloat		red,green,blue,alpha;
+	CGFloat		red, green, blue;
 	int			intRed, intGreen, intBlue;
 	
 	NSColor *color = [aColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
@@ -158,11 +158,11 @@
 	[convertedColor getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
+			alpha:NULL];
 
-	intRed = (int)(red * 255);
-	intGreen = (int)(green * 255);
-	intBlue = (int)(blue * 255);
+	intRed = (int)roundf(red * 255);
+	intGreen = (int)roundf(green * 255);
+	intBlue = (int)roundf(blue * 255);
 	[luminosity setForegroundRed:intRed Green:intGreen Blue:intBlue];
 	[colourBrightnessDifference setForegroundRed:intRed Green:intGreen Blue:intBlue];
 		

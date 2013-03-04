@@ -106,18 +106,18 @@
 
 -(void)setHTMLFromColor:(NSColor*)color
 {
-	CGFloat		red,green,blue,alpha;
+	CGFloat		red, green, blue;
 	int			intRed, intGreen, intBlue;
 	NSString *hex;
 		
 	[color getRed:&red
 			green:&green
 			blue:&blue
-			alpha:&alpha];
+			alpha:NULL];
 
-	intRed = (int)(red * 255);
-	intGreen = (int)(green * 255);
-	intBlue = (int)(blue * 255);
+	intRed = (int)roundf(red * 255);
+	intGreen = (int)roundf(green * 255);
+	intBlue = (int)roundf(blue * 255);
 	
 	hex = [NSString stringWithFormat: @"#%02X%02X%02X",intRed,intGreen,intBlue];
 	
