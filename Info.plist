@@ -23,7 +23,7 @@
 	<key>CFBundleSignature</key>
 	<string>WATC</string>
 	<key>CFBundleVersion</key>
-	<string>1.5.12</string>
+	<string>1.5.13</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>NSHumanReadableCopyright</key>

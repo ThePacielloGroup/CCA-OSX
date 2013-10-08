@@ -55,7 +55,8 @@
 
 - (IBAction)updateFromWell:(id)sender
 {
-	NSColor*	color = [[colorWell color] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	NSColor*	color = [colorWell color];
+//	NSColor*	color = [[colorWell color] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	if ( color != nil ) {
 		[self setSlidersFromColor:color];
 		[self setHTMLFromColor:color];
@@ -108,6 +109,7 @@
 {
 	CGFloat		red, green, blue;
 	int			intRed, intGreen, intBlue;
+    int			intRed1, intRed2, intGreen1, intGreen2, intBlue1, intBlue2;
 	NSString *hex;
 		
 	[color getRed:&red
@@ -115,12 +117,23 @@
 			blue:&blue
 			alpha:NULL];
 
+//    NSLog(@"%f,%f,%f",red,green,blue);
+
 	intRed = (int)roundf(red * 255);
 	intGreen = (int)roundf(green * 255);
 	intBlue = (int)roundf(blue * 255);
-	
-	hex = [NSString stringWithFormat: @"#%02X%02X%02X",intRed,intGreen,intBlue];
-	
+    
+    intRed1 = (int)floor(intRed / 16);
+    intRed2 = (int)((int)intRed % 16);
+    intGreen1 = (int)floor(intGreen / 16);
+    intGreen2 = (int)((int)intGreen % 16);
+    intBlue1 = (int)floor(intBlue / 16);
+    intBlue2 = (int)((int)intBlue % 16);
+//    NSLog(@"%d,%d,%d",intRed,intGreen,intBlue);
+//    NSLog(@"%d,%d,%d,%d,%d,%d",intRed1, intRed2,intGreen1,intGreen2,intBlue1,intBlue2);
+    
+	hex = [NSString stringWithFormat: @"#%01X%01X%01X%01X%01X%01X",intRed1, intRed2,intGreen1,intGreen2,intBlue1,intBlue2];
+    
 	[htmlTextField setStringValue:hex];
 }
 

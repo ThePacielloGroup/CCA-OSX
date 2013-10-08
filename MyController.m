@@ -19,7 +19,9 @@ static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-ana
 	[self moveView:backgroundBox y:-243];
 	[self moveView:foregroundBox y:-243];
 	[self resizeWindowDiff:-243];
-
+    
+//    imageFilter = [[ImageFilter alloc] init];
+//    [imageFilter createSession];
 }
 
 // Program end with last window closed
