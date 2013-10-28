@@ -2,7 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MyResults.h"
-//#import "ImageFilter.h"
+#import "ImageFilter.h"
 
 @interface MyController : NSObject
 {
@@ -30,7 +30,7 @@
 	IBOutlet NSTabView *resultsColourBrightnessDifference;
 	IBOutlet NSTabView *resultsLuminosity;
 	
-//    ImageFilter *imageFilter;
+    ImageFilter *imageFilter;
 	
 }
 

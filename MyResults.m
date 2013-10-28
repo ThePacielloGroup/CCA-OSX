@@ -35,21 +35,72 @@
 }
 
 
-- (void)setForegroundColor:(NSColor*)color
+- (NSString*)HexFromRGB:(int)intRed intGreen:(int)intGreen intBlue:(int)intBlue
 {
-	CGFloat		red,green,blue;
-	
-	[color getRed:&red
-			green:&green
-			blue:&blue
+    int         _intR1, _intR2, _intG1, _intG2, _intB1, _intB2;
+	NSString    *_hex;
+
+    _intR1 = (int)floor(intRed / 16);
+    _intR2 = (int)((int)intRed % 16);
+    _intG1 = (int)floor(intGreen / 16);
+    _intG2 = (int)((int)intGreen % 16);
+    _intB1 = (int)floor(intBlue / 16);
+    _intB2 = (int)((int)intBlue % 16);
+
+    _hex = [NSString stringWithFormat: @"#%01X%01X%01X%01X%01X%01X", _intR1, _intR2, _intG1, _intG2, _intB1, _intB2];
+//    NSLog(@"H: %d,%d,%d = %@", intRed, intGreen, intBlue, _hex);
+
+    return _hex;
+}
+
+- (NSString*)getHexFromColor:(NSColor*)color
+{
+    CGFloat		_red, _green, _blue;
+    int         _intR, _intG, _intB;
+
+    [color getRed:&_red
+			green:&_green
+             blue:&_blue
 			alpha:NULL];
 
-	foregroundR = (int)roundf(red * 255);
-	foregroundG = (int)roundf(green * 255);
-	foregroundB = (int)roundf(blue * 255);
+//    NSLog(@"H: %f %f %f", _red, _green, _blue);
+    
+	_intR = (int)roundf(_red * 255);
+	_intG = (int)roundf(_green * 255);
+	_intB = (int)roundf(_blue * 255);
+    
+    return [self HexFromRGB:_intR intGreen:_intG intBlue:_intB];
+}
 
-	[mainLuminosity setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
-	[mainColourBrightnessDifference setForegroundRed:foregroundR Green:foregroundG Blue:foregroundB];
+- (NSString*)getForegroundHex
+{
+    return [self getHexFromColor:foregroundColor];
+}
+
+- (NSString*)getBackgroundHex
+{
+    return [self getHexFromColor:backgroundColor];
+}
+
+- (void)setForegroundColor:(NSColor*)color
+{
+    CGFloat		_red, _green, _blue;
+    int         _intR, _intG, _intB;
+    
+    [color getRed:&_red
+			green:&_green
+             blue:&_blue
+			alpha:NULL];
+    
+	_intR = (int)roundf(_red * 255);
+	_intG = (int)roundf(_green * 255);
+	_intB = (int)roundf(_blue * 255);
+
+
+    NSLog(@"FC: %d %d %d", _intR, _intG, _intB);
+    
+	[mainLuminosity setForegroundRed:_intR Green:_intG Blue:_intB];
+	[mainColourBrightnessDifference setForegroundRed:_intR Green:_intG Blue:_intB];
 	
 	foregroundColor = color;
 	[self setTextForeground:color];
@@ -57,20 +108,21 @@
 
 - (void)setBackgroundColor:(NSColor*)color
 {
-	CGFloat		red,green,blue;
-	
-	[color getRed:&red
-			green:&green
-			blue:&blue
+    CGFloat		_red, _green, _blue;
+    int         _intR, _intG, _intB;
+    
+    [color getRed:&_red
+			green:&_green
+             blue:&_blue
 			alpha:NULL];
-
-	backgroundR = (int)roundf(red * 255);
-	backgroundG = (int)roundf(green * 255);
-	backgroundB = (int)roundf(blue * 255);
-	
-	[mainLuminosity setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];	
-	[mainColourBrightnessDifference setBackgroundRed:backgroundR Green:backgroundG Blue:backgroundB];
-		
+    
+	_intR = (int)roundf(_red * 255);
+	_intG = (int)roundf(_green * 255);
+	_intB = (int)roundf(_blue * 255);
+    
+	[mainLuminosity setBackgroundRed:_intR Green:_intG Blue:_intB];
+	[mainColourBrightnessDifference setBackgroundRed:_intR Green:_intG Blue:_intB];
+    
 	backgroundColor = color;
 	[self setTextBackground:color];
 }
@@ -165,12 +217,11 @@
 - (void)displayDetailedResults
 {
 	NSString *resBrightness, *resColour;
-	NSString *detailedText = [[NSString alloc] initWithFormat: @"%@: #%02X%02X%02X - %@: #%02X%02X%02X"
-			,[NSApp Localisation:@"Foreground"]
-			, foregroundR, foregroundG, foregroundB
-			,[NSApp Localisation:@"Background"]
-			, backgroundR, backgroundG, backgroundB];
-
+	NSString *detailedText = [[NSString alloc] initWithFormat: @"%@: ", [NSApp Localisation:@"Foreground"]];
+    detailedText = [detailedText stringByAppendingString:[self getForegroundHex]];
+    detailedText = [detailedText stringByAppendingFormat: @" - %@: ", [NSApp Localisation:@"Background"]];
+    detailedText = [detailedText stringByAppendingString:[self getBackgroundHex]];
+    
 	if (algorithm == ALGORITHM_COLOUR_BRIGHTNESS_DIFFERENCE) {
 		detailedText = [detailedText stringByAppendingFormat: 
 			@"\n\n%@:%d / %@:%d"

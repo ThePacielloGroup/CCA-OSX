@@ -41,9 +41,7 @@
 	
 	NSColor *foregroundColor;
 	NSColor *backgroundColor;
-	int foregroundR, foregroundG, foregroundB;
-	int backgroundR, backgroundG, backgroundB;
-	
+    
 	Luminosity *mainLuminosity;
 	float mainContrastRatio;
 
@@ -59,6 +57,9 @@
 - (void)setTextBackground:(NSColor*)color;
 - (void)setTextForeground:(NSColor*)color;
 - (void)setResults;
+
+- (NSString*)getForegroundHex;
+- (NSString*)getBackgroundHex;
 
 - (void)displayResults;
 - (void)displayDetailedResults;

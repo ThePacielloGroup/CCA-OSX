@@ -10,7 +10,7 @@ static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-ana
 	
 	[resultsColourBrightnessDifference setDelegate:self];
 	[resultsLuminosity setDelegate:self];
-		
+    
 	[self switchSliders:NO];
 	
 	[self showAlgorithmLuminosity:nil];
@@ -21,7 +21,7 @@ static NSString *cca_url = @"http://www.paciellogroup.com/resources/contrast-ana
 	[self resizeWindowDiff:-243];
     
 //    imageFilter = [[ImageFilter alloc] init];
-//    [imageFilter createSession];
+//    [imageFilter launchSession];
 }
 
 // Program end with last window closed

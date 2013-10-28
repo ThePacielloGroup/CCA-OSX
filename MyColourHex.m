@@ -101,40 +101,36 @@
 
 - (void)setWellFromColor:(NSColor*)color
 {
-//	NSColor*	c = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
 	[colorWell setColor:color];
 }
 
 -(void)setHTMLFromColor:(NSColor*)color
 {
-	CGFloat		red, green, blue;
-	int			intRed, intGreen, intBlue;
-    int			intRed1, intRed2, intGreen1, intGreen2, intBlue1, intBlue2;
-	NSString *hex;
+	CGFloat		_red, _green, _blue;
+	int			_intR, _intG, _intB;
+    int			_intR1, _intR2, _intG1, _intG2, _intB1, _intB2;
+	NSString    *_hex;
 		
-	[color getRed:&red
-			green:&green
-			blue:&blue
+	[color getRed:&_red
+			green:&_green
+			blue:&_blue
 			alpha:NULL];
 
-//    NSLog(@"%f,%f,%f",red,green,blue);
-
-	intRed = (int)roundf(red * 255);
-	intGreen = (int)roundf(green * 255);
-	intBlue = (int)roundf(blue * 255);
+	_intR = (int)roundf(_red * 255);
+	_intG = (int)roundf(_green * 255);
+	_intB = (int)roundf(_blue * 255);
     
-    intRed1 = (int)floor(intRed / 16);
-    intRed2 = (int)((int)intRed % 16);
-    intGreen1 = (int)floor(intGreen / 16);
-    intGreen2 = (int)((int)intGreen % 16);
-    intBlue1 = (int)floor(intBlue / 16);
-    intBlue2 = (int)((int)intBlue % 16);
-//    NSLog(@"%d,%d,%d",intRed,intGreen,intBlue);
-//    NSLog(@"%d,%d,%d,%d,%d,%d",intRed1, intRed2,intGreen1,intGreen2,intBlue1,intBlue2);
+    _intR1 = (int)floor(_intR / 16);
+    _intR2 = (int)((int)_intR % 16);
+    _intG1 = (int)floor(_intG / 16);
+    _intG2 = (int)((int)_intG % 16);
+    _intB1 = (int)floor(_intB / 16);
+    _intB2 = (int)((int)_intB % 16);
     
-	hex = [NSString stringWithFormat: @"#%01X%01X%01X%01X%01X%01X",intRed1, intRed2,intGreen1,intGreen2,intBlue1,intBlue2];
+	_hex = [NSString stringWithFormat: @"#%01X%01X%01X%01X%01X%01X", _intR1, _intR2, _intG1, _intG2, _intB1, _intB2];
+//    NSLog(@"M: %d,%d,%d = %@", _intR, _intG, _intB, _hex);
     
-	[htmlTextField setStringValue:hex];
+	[htmlTextField setStringValue: _hex];
 }
 
 - (void)setSlidersFromColor:(NSColor*)color
@@ -172,12 +168,10 @@
 
 - (void)setResultsFromColor:(NSColor*)color
 {
-	NSColor		*c = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	
 	if ([self isForeground]) {
-		[myResults setForegroundColor:c];
+		[myResults setForegroundColor:color];
 	} else { // Background
-		[myResults setBackgroundColor:c];
+		[myResults setBackgroundColor:color];
 	}
 	[myResults setResults];
 }

@@ -6,16 +6,15 @@
 //
 //
 
-#import <Cocoa/Cocoa.h>
-#import <AVFoundation/AVCaptureOutput.h>
+#import <Quartz/Quartz.h>
+#include <CoreGraphics/CoreGraphics.h>
 
-@class AVCaptureSession, AVCaptureScreenInput, AVCaptureMovieFileOutput;
+@interface ImageFilter: NSObject
+{
+    CGDisplayStreamRef displayStream;
+    dispatch_queue_t _capture_queue;
+}
 
-@interface ImageFilter : NSObject <AVCaptureFileOutputDelegate,AVCaptureFileOutputRecordingDelegate>
-
-@property (strong) AVCaptureSession *captureSession;
-@property (strong) AVCaptureScreenInput *captureScreenInput;
-
--(void)createSession;
+- (void)launchSession;
 
 @end

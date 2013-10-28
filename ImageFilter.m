@@ -6,135 +6,43 @@
 //
 //
 
+#include <CoreGraphics/CoreGraphics.h>
 #import "ImageFilter.h"
-#import <AVFoundation/AVFoundation.h>
-
-@interface ImageFilter ()
-
-@property IBOutlet NSView *captureView;
-
-@property (strong, nonatomic) NSObject *uIImage;
-
--(void)addCaptureVideoPreview;
-
-@end
 
 @implementation ImageFilter
-{
-    CGDirectDisplayID           display;
-    AVCaptureMovieFileOutput    *captureMovieFileOutput;
-}
 
-#pragma mark Capture
-
--(void)createSession
+- (void)launchSession
 {
-    /* Create a capture session. */
-    self.captureSession = [[AVCaptureSession alloc] init];
-	if ([self.captureSession canSetSessionPreset:AVCaptureSessionPresetHigh])
+    _capture_queue = dispatch_queue_create("CCA", DISPATCH_QUEUE_SERIAL);
+    
+    if (!_capture_queue)
     {
-      /* Specifies capture settings suitable for high quality video and audio output. */
-		[self.captureSession setSessionPreset:AVCaptureSessionPresetHigh];
+        NSLog(@"Could not create desktop capture dispatch queue");
     }
 
-    /* Add the main display as a capture input. */
-    display = CGMainDisplayID();
-    self.captureScreenInput = [[AVCaptureScreenInput alloc] initWithDisplayID:display];
+    // create a new CGDisplayStream
+    CGDirectDisplayID display_id;
+    display_id = CGMainDisplayID();
     
-//    CGRect cropRect = [self.captureView frame];
+    CGDisplayModeRef mode = CGDisplayCopyDisplayMode(display_id);
+    size_t pixelWidth = CGDisplayModeGetPixelWidth(mode);
+    size_t pixelHeight = CGDisplayModeGetPixelHeight(mode);
     
-    /* Set the bounding rectangle of the screen area to be captured, in pixels. */
-//    [self.captureScreenInput setCropRect:cropRect];
+    CGDisplayModeRelease(mode);
     
-    if ([self.captureSession canAddInput:self.captureScreenInput])
-    {
-        [self.captureSession addInput:self.captureScreenInput];
-    }
-    
-    /* Add a movie file output + delegate. */
-    captureMovieFileOutput = [[AVCaptureMovieFileOutput alloc] init];
-    [captureMovieFileOutput setDelegate:self];
-    if ([self.captureSession canAddOutput:captureMovieFileOutput])
-    {
-        [self.captureSession addOutput:captureMovieFileOutput];
-    }
-    
-    /* Register for notifications of errors during the capture session so we can display an alert. */
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(captureSessionRuntimeErrorDidOccur:) name:AVCaptureSessionRuntimeErrorNotification object:self.captureSession];
-    
-    [self addCaptureVideoPreview];
-    
-    /* Start the capture session running. */
-    [self.captureSession startRunning];
-}
-
-/*
- AVCaptureVideoPreviewLayer is a subclass of CALayer that you use to display
- video as it is being captured by an input device.
- 
- You use this preview layer in conjunction with an AV capture session.
- */
--(void)addCaptureVideoPreview
-{
-    NSLog(@"A");
-    /* Create a video preview layer. */
-	AVCaptureVideoPreviewLayer *videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
-    NSLog(@"B");
-    
-    /* Configure it.*/
-	[videoPreviewLayer setFrame:[[self.captureView layer] bounds]];
-//	[videoPreviewLayer setAutoresizingMask:kCALayerWidthSizable|kCALayerHeightSizable];
-    NSLog(@"C");
-    
-    /* Add the preview layer as a sublayer to the view. */
-    [[self.captureView layer] addSublayer:videoPreviewLayer];
-    /* Specify the background color of the layer. */
-//	[[self.captureView layer] setBackgroundColor:CGColorGetConstantColor(kCGColorBlack)];
-    NSLog(@"D");
-}
-
-// AVCaptureFileOutputRecordingDelegate methods
-
-- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error
-{
-    NSLog(@"Did finish recording to %@ due to error %@", [outputFileURL description], [error description]);
-    
-    // Stop running the session
-//    [mSession stopRunning];
-    
-    // Release the session
-//    [mSession release];
-//    mSession = nil;
-}
-
-- (BOOL)captureOutputShouldProvideSampleAccurateRecordingStart:(AVCaptureOutput *)captureOutput
-{
-	// We don't require frame accurate start when we start a recording. If we answer YES, the capture output
-    // applies outputSettings immediately when the session starts previewing, resulting in higher CPU usage
-    // and shorter battery life.
-	return NO;
-}
-
-- (void)captureSessionRuntimeErrorDidOccur:(NSNotification *)notification
-{
-	NSError *error = [[notification userInfo] objectForKey:AVCaptureSessionErrorKey];
-	if ([error localizedDescription]) {
-		if ([error localizedFailureReason]) {
-			NSRunAlertPanel(@"AVScreenShack Alert",
-							[NSString stringWithFormat:@"%@\n\n%@", [error localizedDescription], [error localizedFailureReason]],
-							nil, nil, nil);
-		}
-		else {
-			NSRunAlertPanel(@"AVScreenShack Alert",
-							[NSString stringWithFormat:@"%@", [error localizedDescription]],
-							nil, nil, nil);
-		}
-	}
-	else {
-		NSRunAlertPanel(@"AVScreenShack Alert",
-						@"An unknown error occured",
-				 		nil, nil, nil);
-	}
+    displayStream = CGDisplayStreamCreateWithDispatchQueue(display_id, pixelWidth, pixelHeight, 'BGRA', NULL, _capture_queue, ^(CGDisplayStreamFrameStatus status, uint64_t displayTime, IOSurfaceRef frameSurface, CGDisplayStreamUpdateRef updateRef)
+                                                           {
+                                                               NSLog(@"test");
+                                                               if(status == kCGDisplayStreamFrameStatusFrameComplete && frameSurface)
+                                                               {
+                                                                   NSLog(@"test2");
+                                                                   // As per CGDisplayStreams header
+//                                                                   IOSurfaceIncrementUseCount(frameSurface);
+                                                                   // -emitNewFrame: retains the frame
+//                                                                   [self emitNewFrame:frameSurface];
+                                                               }
+                                                           });
+    CGDisplayStreamStart(displayStream);
 }
 
 @end
