@@ -1,0 +1,40 @@
+﻿/* Contrast Ratio: %.2f:1 */
+"contrast_ratio" = "Ratio de contraste: %.2f:1";
+
+/* Colour/Brightness difference */
+"colour_diff" = "Différence de couleurs: %d (minimum 500)";
+"brightness_diff" = "Différence d'intensité: %d (minimum 125)";
+
+"pass" = "Conforme";
+"fail" = "Echec";
+
+/* Initial Results format text */
+"results_format" = "Premier plan: %F - Arrière plan: %B
+
+Le ratio de contraste est de: %L
+
+%AAN
+%AAAN
+%AAL
+%AAAL
+
+1.4.3 Contraste (Minimum):  Le texte (et images de texte) a une différence de contraste d'au moins 4.5:1, excepté si le texte est purement décoratif. Les textes de grande taille (au moins 18 points ou 14 points en gras) ou images de texte peuvent avoir une différence de contraste de 3:1. (Niveau AA)
+
+1.4.6 Contraste (Augmenté): Le texte (et images de texte) a une différence de contraste d'au moins 7:1, excepté si le texte est purement décoratif. Les textes de grande taille (au moins 18 points ou 14 points en gras) ou images de texte peuvent avoir une différence de contraste de 4.5:1. (Niveau AAA)
+
+Note: Les polices spécialement petites ou décoratives sont difficiles à lire avec un contraste de bas niveau.";
+
+"normal" = "Normal";
+"protanopia" = "Protanopie";
+"tritanopia" = "Tritanopie";
+"deuteranopia" = "Deutéranopie";
+"color_blindness" = "Achromatopsie";
+
+"passed_normal_AA" = "Texte normal conforme au niveaul AA";
+"failed_normal_AA" = "Texte normal non conforme au niveau AA";
+"passed_normal_AAA" = "Texte normal conforme au niveau AAA";
+"failed_normal_AAA" = "Texte normal non conforme au niveau AAA";
+"passed_large_AA" = "Grand texte conforme au niveau AA");
+"failed_large_AA" = "Grand texte non conforme au niveau AA";
+"passed_large_AAA" = "Grand texte conforme au niveau AAA";
+"failed_large_AAA" = "Grand texte non conforme au niveau AAA";

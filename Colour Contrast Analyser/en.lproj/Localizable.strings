@@ -1,0 +1,40 @@
+﻿/* Contrast Ratio: %.2f:1 */
+"contrast_ratio" = "Contrast Ratio: %.2f:1";
+
+/* Colour/Brightness difference */
+"colour_diff" = "Colour difference: %d (minimum 500)";
+"brightness_diff" = "Brightness difference: %d (minimum 125)";
+
+"pass" = "Pass";
+"fail" = "Fail";
+
+/* Initial Results format text */
+"results_format" = "Foreground: %F - Background: %B
+
+The contrast ratio is: %L
+
+%AAN
+%AAAN
+%AAL
+%AAAL
+
+1.4.3 Contrast (Minimum):  Text (and images of text) have a contrast ratio of at least 4.5:1, except if the text is pure decoration.  Larger scale text (at least 18 point or 14 point bold) or images of text can have a contrast ratio of 3:1. (Level AA)
+
+1.4.6 Contrast (Enhanced): Text (and images of text) have a contrast ratio of at least 7:1, except if the text is pure decoration.  Larger scale text (at least 18 point or 14 point bold) or images of text can have a contrast ratio of 4.5:1. (Level AAA)
+
+Note: Fonts that are extraordinarily thin or decorative are harder to read at lower contrast levels.";
+
+"normal" = "Normal";
+"protanopia" = "Protanopia";
+"tritanopia" = "Tritanopia";
+"deuteranopia" = "Deuteranopia";
+"color_blindness" = "Color Blindness";
+
+"passed_normal_AA" = "Normal text passed at level AA";
+"failed_normal_AA" = "Normal text failed at level AA";
+"passed_normal_AAA" = "Normal text passed at level AAA";
+"failed_normal_AAA" = "Normal text failed at level AAA";
+"passed_large_AA" = "Large text passed at level AA";
+"failed_large_AA" = "Large text failed at level AA";
+"passed_large_AAA" = "Large text passed at level AAA";
+"failed_large_AAA" = "Large text failed at level AAA";

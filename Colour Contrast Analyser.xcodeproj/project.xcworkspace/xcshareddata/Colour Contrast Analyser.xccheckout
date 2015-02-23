@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0D232ECB-3B9F-4D39-BA58-7205860B269B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Colour Contrast Analyser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F31FCC16D19B04E436126772DA180A84194C8A45</key>
+		<string>https://github.com/ferllings/Color-Contrast-Analyser-OSX.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Colour Contrast Analyser.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F31FCC16D19B04E436126772DA180A84194C8A45</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ferllings/Color-Contrast-Analyser-OSX.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F31FCC16D19B04E436126772DA180A84194C8A45</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F31FCC16D19B04E436126772DA180A84194C8A45</string>
+			<key>IDESourceControlWCCName</key>
+			<string>repository.git</string>
+		</dict>
+	</array>
+</dict>
+</plist>

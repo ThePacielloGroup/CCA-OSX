@@ -1,0 +1,174 @@
+/* Class = "NSBox"; title = "Large text"; ObjectID = "0cX-Oh-bED"; */
+"0cX-Oh-bED.title" = "Grand texte";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "01D-4p-Fnq"; */
+"01D-4p-Fnq.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Red value"; ObjectID = "01D-4p-Fnq"; */
+"01D-4p-Fnq.ibShadowedToolTip" = "Valeur rouge";
+
+/* Class = "NSMenuItem"; title = "Colour Contrast Analyser"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Outil d'Analyse de Contraste des Couleurs";
+
+/* Class = "NSMenuItem"; title = "Quit Colour Contrast Analyser"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quitter l'Outil d'Analyse de Contraste des Couleur";
+
+/* Class = "NSMenuItem"; title = "About Colour Contrast Analyser"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "A propos de l'Outil d'Analyse de Contraste des Couleurs";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "9VW-f9-ttc"; */
+"9VW-f9-ttc.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Green value"; ObjectID = "9VW-f9-ttc"; */
+"9VW-f9-ttc.ibShadowedToolTip" = "Valeur verte";
+
+/* Class = "NSMenu"; title = "Results"; ObjectID = "12G-TK-f79"; */
+"12G-TK-f79.title" = "Résultats";
+
+/* Class = "NSMenuItem"; title = "Copy Results"; ObjectID = "29A-sF-pet"; */
+"29A-sF-pet.title" = "Copier les résultats";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Menu principal";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Préfèrences…";
+
+/* Class = "NSTabViewItem"; label = "Luminosity"; ObjectID = "DSB-dr-xAs"; */
+"DSB-dr-xAs.label" = "Luminosité";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Aide";
+
+/* Class = "NSMenuItem"; title = "Colour Contrast Analyser Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Aide sur l'Outil d'Analyse de Contraste des Couleur";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "Foreground Color Picker"; ObjectID = "Jvq-lL-d16"; */
+"Jvq-lL-d16.ibExternalAccessibilityDescription" = "sélecteur de couleur de premier plan";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Montrer tout";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Mettre tout au premier plan";
+
+/* Class = "NSTabViewItem"; label = "Colour/Brightness"; ObjectID = "MoT-M5-z8P"; */
+"MoT-M5-z8P.label" = "Couleur/Intensité";
+
+/* Class = "NSTableColumn"; headerCell.title = "Contrast Ratio"; ObjectID = "NDG-1o-cd9"; */
+"NDG-1o-cd9.headerCell.title" = "Différence de contraste";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSTextFieldCell"; title = "Green"; ObjectID = "OUP-vt-sRS"; */
+"OUP-vt-sRS.title" = "Vert";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Réduire";
+
+/* Class = "NSMenuItem"; title = "Hide Colour Contrast Analyser"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Masquer l'Outil d'Analyse de Contraste des Couleur";
+
+/* Class = "NSWindow"; title = "Colour Contrast Analyser"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Outil d'Analyse de Contraste des Couleurs";
+
+/* Class = "NSBox"; title = "Background"; ObjectID = "T8D-ip-yNQ"; */
+"T8D-ip-yNQ.title" = "Arrière plan";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Fenêtre";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Masquer les Autres";
+
+/* Class = "NSBox"; title = "Normal Text"; ObjectID = "W9x-lm-RDA"; */
+"W9x-lm-RDA.title" = "Texte normal";
+
+/* Class = "NSMenuItem"; title = "Results"; ObjectID = "XA6-JW-Noy"; */
+"XA6-JW-Noy.title" = "Résultats";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "Hexadecimal"; ObjectID = "XI9-La-glV"; */
+"XI9-La-glV.ibExternalAccessibilityDescription" = "Hexadecimal";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Hexadecimal value"; ObjectID = "XI9-La-glV"; */
+"XI9-La-glV.ibShadowedToolTip" = "Valeur hexadecimal";
+
+/* Class = "NSTextFieldCell"; title = "Red"; ObjectID = "Yth-61-QPN"; */
+"Yth-61-QPN.title" = "Rouge";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "ZKg-sZ-frV"; */
+"ZKg-sZ-frV.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Green value"; ObjectID = "ZKg-sZ-frV"; */
+"ZKg-sZ-frV.ibShadowedToolTip" = "Valeur verte";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "a4j-nN-LRS"; */
+"a4j-nN-LRS.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Blue value"; ObjectID = "a4j-nN-LRS"; */
+"a4j-nN-LRS.ibShadowedToolTip" = "Valeur bleue";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Fenêtre";
+
+/* Class = "NSTableColumn"; headerCell.title = "Colour/Brightness"; ObjectID = "bCd-aq-yII"; */
+"bCd-aq-yII.headerCell.title" = "Couleur/Intensité";
+
+/* Class = "NSTextFieldCell"; title = "Green"; ObjectID = "dnD-0P-Pnj"; */
+"dnD-0P-Pnj.title" = "Vert";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSTextFieldCell"; title = "Blue"; ObjectID = "iyo-Va-gis"; */
+"iyo-Va-gis.title" = "Bleu";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "jNz-WF-muD"; */
+"jNz-WF-muD.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Red value"; ObjectID = "jNz-WF-muD"; */
+"jNz-WF-muD.ibShadowedToolTip" = "Valeur rouge";
+
+/* Class = "NSTextFieldCell"; title = "Red"; ObjectID = "jeI-WW-O71"; */
+"jeI-WW-O71.title" = "Rouge";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "Hexadecimal"; ObjectID = "jxl-9c-tfV"; */
+"jxl-9c-tfV.ibExternalAccessibilityDescription" = "Hexadecimal";
+
+/* Class = "NSTextField"; ibExternalAccessibilityDescription = "RGB value"; ObjectID = "kj8-Kq-R0v"; */
+"kj8-Kq-R0v.ibExternalAccessibilityDescription" = "Valeur RGB";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Blue value"; ObjectID = "kj8-Kq-R0v"; */
+"kj8-Kq-R0v.ibShadowedToolTip" = "Valeur bleue";
+
+/* Class = "NSTextFieldCell"; title = "Hex:"; ObjectID = "lNB-Gk-6pJ"; */
+"lNB-Gk-6pJ.title" = "Hex:";
+
+/* Class = "NSButton"; ibExternalAccessibilityDescription = "Background Color Picker"; ObjectID = "nAF-lt-8Ky"; */
+"nAF-lt-8Ky.ibExternalAccessibilityDescription" = "sélecteur de couleur d'arrière plan";
+
+/* Class = "NSTabViewItem"; label = "Colour Deficiency"; ObjectID = "nRk-Mx-Jog"; */
+"nRk-Mx-Jog.label" = "Déficience de couleurs";
+
+/* Class = "NSTableColumn"; headerCell.title = "Deficiency"; ObjectID = "qJW-l0-AFT"; */
+"qJW-l0-AFT.headerCell.title" = "Déficience";
+
+/* Class = "NSTextFieldCell"; title = "example text showing contrast"; ObjectID = "t5O-hq-k15"; */
+"t5O-hq-k15.title" = "exemple de texte avec contraste";
+
+/* Class = "NSMenu"; title = "Colour Contrast Analyser"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Outil d'Analyse de Contraste des Couleurs";
+
+/* Class = "NSTextFieldCell"; title = "Hex:"; ObjectID = "v67-hG-rKg"; */
+"v67-hG-rKg.title" = "Hex:";
+
+/* Class = "NSTextFieldCell"; title = "Blue"; ObjectID = "wow-49-rmY"; */
+"wow-49-rmY.title" = "Bleu";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Aide";
+
+/* Class = "NSBox"; title = "Foreground"; ObjectID = "xLq-Dp-ux3"; */
+"xLq-Dp-ux3.title" = "Premier plan";
+
