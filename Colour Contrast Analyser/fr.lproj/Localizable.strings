@@ -1,5 +1,5 @@
 ﻿/* Contrast Ratio: %.2f:1 */
-"contrast_ratio" = "Ratio de contraste: %.2f:1";
+"contrast_ratio" = "Ratio de contraste: %.1f:1";
 
 /* Colour/Brightness difference */
 "colour_diff" = "Différence de couleurs: %d (minimum 500)";
@@ -34,7 +34,7 @@ Note: Les polices spécialement petites ou décoratives sont difficiles à lire 
 "failed_normal_AA" = "Texte normal non conforme au niveau AA";
 "passed_normal_AAA" = "Texte normal conforme au niveau AAA";
 "failed_normal_AAA" = "Texte normal non conforme au niveau AAA";
-"passed_large_AA" = "Grand texte conforme au niveau AA");
+"passed_large_AA" = "Grand texte conforme au niveau AA";
 "failed_large_AA" = "Grand texte non conforme au niveau AA";
 "passed_large_AAA" = "Grand texte conforme au niveau AAA";
 "failed_large_AAA" = "Grand texte non conforme au niveau AAA";

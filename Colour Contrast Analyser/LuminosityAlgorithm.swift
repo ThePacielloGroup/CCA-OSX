@@ -13,7 +13,10 @@ class Luminosity {
     class func getResult(fColor:NSColor, bColor:NSColor) -> Double {
         let lf:CGFloat = relativeLuminance(fColor)
         let lb:CGFloat = relativeLuminance(bColor)
-        return Double(contrastRatio(lf, lb:lb))
+        let cr = contrastRatio(lf, lb:lb)
+        // Half round up to 0.x
+        let rounded =  round(cr*10)/10
+        return Double(rounded)
     }
     
     class func contrastRatio (lf:CGFloat, lb:CGFloat) -> CGFloat {
