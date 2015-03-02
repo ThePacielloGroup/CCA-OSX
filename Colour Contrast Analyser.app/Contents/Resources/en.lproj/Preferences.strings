@@ -1,0 +1,12 @@
+
+/* Class = "NSBox"; title = "Data formatters"; ObjectID = "Mig-dT-6ux"; */
+"Mig-dT-6ux.title" = "Data formatters";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "ReM-0L-71T"; */
+"ReM-0L-71T.title" = "Preferences";
+
+/* Class = "NSTextFieldCell"; title = "Result text format :"; ObjectID = "lty-BM-TA3"; */
+"lty-BM-TA3.title" = "Result text format :";
+
+/* Class = "NSTextFieldCell"; title = "%F : Foreground colour\n%B : Background colour\n%L : Luminosity level\n%AA : AA result\n%AAA: AAA result\n%AAL : AA result for large text\n%AAAL : AAA result for large text"; ObjectID = "qII-A3-jl3"; */
+"qII-A3-jl3.title" = "%F : Foreground colour\n%B : Background colour\n%L : Luminosity level\n%AAN : AA result\n%AAAN: AAA result\n%AAL : AA result for large text\n%AAAL : AAA result for large text";

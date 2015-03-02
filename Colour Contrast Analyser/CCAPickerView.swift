@@ -34,7 +34,7 @@ class CCAPickerView: NSView {
         drawBorderForRect(context, rect: CGRectMake(1.0, 1.0, 125.0, 125.0));
 
         // drawing magnifier view aperture
-        let apertureRect:CGRect = CGRectMake(64.0, 64.0, 7.0, 7.0);
+        let apertureRect:CGRect = CGRectMake(64.0, 56.0, 7.0, 7.0);
         CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1)
         drawBorderForRect(context, rect: apertureRect)
         
