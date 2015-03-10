@@ -69,10 +69,16 @@ class CCALuminosityControler: NSViewController {
     func updateForeground(notification: NSNotification) {
         self.fColor = foreground.color
         self.updateResults()
-        textAA.textColor = self.fColor
-        textAAA.textColor = self.fColor
-        largeTextAA.textColor = self.fColor
-        largeTextAAA.textColor = self.fColor
+        
+        var color:NSColor = foreground.color
+        // Fix for #3 : use almost black color
+        if (color.isBlack()) {
+            color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
+        }
+        textAA.textColor = color
+        textAAA.textColor = color
+        largeTextAA.textColor = color
+        largeTextAAA.textColor = color
     }
     func updateBackground(notification: NSNotification) {
         self.bColor = background.color

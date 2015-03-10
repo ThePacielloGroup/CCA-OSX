@@ -133,4 +133,8 @@ extension NSColor {
             0.11400 * self.blueComponent
         )
     }
+    
+    func isBlack() -> Bool {
+        return (self.redComponent == 0 && self.greenComponent == 0 && self.blueComponent == 0)
+    }
 }

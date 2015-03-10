@@ -42,7 +42,13 @@ class CCAColourBrightnessDifferenceController: NSViewController {
     func updateForeground(notification: NSNotification) {
         self.fColor = foreground.color
         self.updateResults()
-        colourBrightnessSample.textColor = self.fColor
+        
+        var color:NSColor = foreground.color
+        // Fix for #3 : use almost black color
+        if (color.isBlack()) {
+            color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
+        }
+        colourBrightnessSample.textColor = color
     }
     func updateBackground(notification: NSNotification) {
         self.bColor = background.color

@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Colour Contrast Analyser/AppDelegate.swift"
-            timestampString = "446458141.641148"
+            timestampString = "447681281.273238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "copyResults(_:)"
             landmarkType = "5">
          </BreakpointContent>

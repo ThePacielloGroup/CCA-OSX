@@ -115,7 +115,7 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         }
         if columnIdentifier == "ContrastRatio" {
             if (!contrastRatio.isEmpty) {
-                result = String(format:"%.2f:1", contrastRatio[row])
+                result = String(format:"%.1f:1", contrastRatio[row])
             }
         }
         if columnIdentifier == "ColourBrightness" {
@@ -130,7 +130,12 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         var fieldCell = cell as NSTextFieldCell
         fieldCell.drawsBackground = true
         fieldCell.backgroundColor = backgroundColor[row]
-        fieldCell.textColor = foregroundColor[row]
+        var color:NSColor = foregroundColor[row]
+        // Fix for #3 : use almost black color
+        if (color.isBlack()) {
+            color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
+        }
+        fieldCell.textColor = color
     }
 }
 
