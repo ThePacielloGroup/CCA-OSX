@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ColorController: NSViewController {    
+class ColorController: NSViewController, NSTextFieldDelegate {
     var color: NSColor!
     @IBOutlet weak var redSlider: NSSlider!
     @IBOutlet weak var greenSlider: NSSlider!
@@ -30,6 +30,20 @@ class ColorController: NSViewController {
         self.updateSliders()
         self.updateRGB()
         self.updatePreview()
+        hexField.delegate = self
+    }
+    
+    override func controlTextDidChange(obj: NSNotification) {
+        var correctedString:NSString = hexField.stringValue
+        //Trims non-numerical characters
+        var regex = NSRegularExpression(pattern: "[^0-9AaBbCcDdEeFf]", options: nil, error: nil)
+        correctedString = regex!.stringByReplacingMatchesInString(correctedString, options:nil, range:NSMakeRange(0, correctedString.length), withTemplate:"")
+        // Length 6
+        if correctedString.length > 6 {
+            correctedString = correctedString.substringToIndex(6)
+        }
+        correctedString = correctedString.uppercaseString
+        hexField.stringValue = "#" + correctedString
     }
     
     @IBAction func sliderChanged(sender: NSSlider) {
@@ -50,11 +64,16 @@ class ColorController: NSViewController {
     }
 
     @IBAction func hexChanged(sender: NSTextField) {
-        self.color = NSColor(hexString: sender.stringValue)
-        self.updatePreview()
-        self.updateSliders()
-        self.updateRGB()
-        self.sendNotification()
+        if countElements(sender.stringValue) == 7 {
+            hexField.backgroundColor = NSColor.whiteColor()
+            self.color = NSColor(hexString: sender.stringValue)
+            self.updatePreview()
+            self.updateSliders()
+            self.updateRGB()
+            self.sendNotification()
+        } else {
+            hexField.backgroundColor = NSColor.redColor()
+        }
     }
 
     @IBAction func rgbChanged(sender: NSTextField) {
