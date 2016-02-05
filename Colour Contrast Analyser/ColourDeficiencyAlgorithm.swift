@@ -56,8 +56,8 @@ class ColourDeficiency {
         var blue  = pow (color.getBDouble(),  1.0 / gammaRGB[2])
         //			NSLog(@"\nA RED:%f - GREEN:%f - BLUE:%f",red,green,blue);
         /* Convert to LMS (dot product with transform matrix) */
-        var redOld   = red;
-        var greenOld = green;
+        let redOld   = red;
+        let greenOld = green;
         
         red   = redOld * rgb2lms[0] + greenOld * rgb2lms[1] + blue * rgb2lms[2];
         green = redOld * rgb2lms[3] + greenOld * rgb2lms[4] + blue * rgb2lms[5];
@@ -98,9 +98,9 @@ class ColourDeficiency {
     class func toColor(r:Double, g:Double, b:Double) -> NSColor {
         /* Ensure that we stay within the RGB gamut */
         /* *** FIX THIS: it would be better to desaturate than blindly clip. */
-        var red   = ColourDeficiency.clamp(r, low:0.0, high:255.0)/255.0
-        var green = ColourDeficiency.clamp(g, low:0.0, high:255.0)/255.0
-        var blue  = ColourDeficiency.clamp(b, low:0.0, high:255.0)/255.0
+        let red   = ColourDeficiency.clamp(r, low:0.0, high:255.0)/255.0
+        let green = ColourDeficiency.clamp(g, low:0.0, high:255.0)/255.0
+        let blue  = ColourDeficiency.clamp(b, low:0.0, high:255.0)/255.0
         //		NSLog(@"\nApres RED:%f - GREEN:%f - BLUE:%f",red,green,blue);
         return NSColor(redDouble:red, greenDouble:green, blueDouble:blue)!
     }
@@ -114,9 +114,9 @@ class ColourDeficiencyNone: ColourDeficiency {
 
 
 class ColourDeficiencyProtanopia: ColourDeficiency {
-    let a1, b1, c1: Double?
-    let a2, b2, c2: Double?
-    let inflection: Double?
+    var a1, b1, c1: Double?
+    var a2, b2, c2: Double?
+    var inflection: Double?
     
     override init() {
         super.init()
@@ -139,11 +139,11 @@ class ColourDeficiencyProtanopia: ColourDeficiency {
     }
     
     override func convertColor(color:NSColor) -> NSColor {
-        var initial = initialStep(color)
+        let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
         var blue = initial.blue
-        var tmp = blue / green
+        let tmp = blue / green
         
         /* See which side of the inflection line we fall... */
         if tmp < inflection {
@@ -151,7 +151,7 @@ class ColourDeficiencyProtanopia: ColourDeficiency {
         } else {
             red = -(b2! * green + c2! * blue) / a2!
         }
-        var final = finalStep(red, g:green, b:blue)
+        let final = finalStep(red, g:green, b:blue)
         red = final.red
         green = final.green
         blue = final.blue
@@ -161,9 +161,9 @@ class ColourDeficiencyProtanopia: ColourDeficiency {
 }
 
 class ColourDeficiencyDeuteranopia: ColourDeficiency {
-    let a1, b1, c1: Double?
-    let a2, b2, c2: Double?
-    let inflection: Double?
+    var a1, b1, c1: Double?
+    var a2, b2, c2: Double?
+    var inflection: Double?
     
     override init() {
         super.init()
@@ -186,11 +186,11 @@ class ColourDeficiencyDeuteranopia: ColourDeficiency {
     }
     
     override func convertColor(color:NSColor) -> NSColor {
-        var initial = initialStep(color)
+        let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
         var blue = initial.blue
-        var tmp = blue / red
+        let tmp = blue / red
         
         /* See which side of the inflection line we fall... */
         if tmp < inflection {
@@ -199,7 +199,7 @@ class ColourDeficiencyDeuteranopia: ColourDeficiency {
             green = -(a2! * red + c2! * blue) / b2!
         }
         
-        var final = finalStep(red, g:green, b:blue)
+        let final = finalStep(red, g:green, b:blue)
         red = final.red
         green = final.green
         blue = final.blue
@@ -209,9 +209,9 @@ class ColourDeficiencyDeuteranopia: ColourDeficiency {
 }
 
 class ColourDeficiencyTritanopia: ColourDeficiency {
-    let a1, b1, c1: Double?
-    let a2, b2, c2: Double?
-    let inflection: Double?
+    var a1, b1, c1: Double?
+    var a2, b2, c2: Double?
+    var inflection: Double?
     
     override init() {
         super.init()
@@ -234,11 +234,11 @@ class ColourDeficiencyTritanopia: ColourDeficiency {
     }
     
     override func convertColor(color:NSColor) -> NSColor {
-        var initial = initialStep(color)
+        let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
         var blue = initial.blue
-        var tmp = green / red
+        let tmp = green / red
         
         /* See which side of the inflection line we fall... */
         if tmp < inflection {
@@ -247,7 +247,7 @@ class ColourDeficiencyTritanopia: ColourDeficiency {
             blue = -(a2! * red + b2! * green) / c2!
         }
         
-        var final = finalStep(red, g:green, b:blue)
+        let final = finalStep(red, g:green, b:blue)
         red = final.red
         green = final.green
         blue = final.blue
@@ -258,10 +258,10 @@ class ColourDeficiencyTritanopia: ColourDeficiency {
 
 class ColourDeficiencyColorBlindness: ColourDeficiency {
     override func convertColor(color:NSColor) -> NSColor {
-        var gray = 0.3 * color.getRDouble() + 0.59 * color.getGDouble() + 0.11 * color.getBDouble()
-        var red = gray
-        var green = gray
-        var blue = gray
+        let gray = 0.3 * color.getRDouble() + 0.59 * color.getGDouble() + 0.11 * color.getBDouble()
+        let red = gray
+        let green = gray
+        let blue = gray
         
         return ColourDeficiency.toColor(red, g: green, b: blue)
     }

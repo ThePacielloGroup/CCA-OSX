@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,45 +15,43 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="background" destination="fJy-8A-6FS" id="saj-hY-zxU"/>
-                <outlet property="backgroundSliders" destination="uNs-Rh-YSF" id="DaL-Wv-SOb"/>
+                <outlet property="backgroundView" destination="cN9-hp-lRD" id="86h-xu-UE9"/>
                 <outlet property="colorBrightnessDifference" destination="SRJ-pJ-EYb" id="o5h-qI-FM9"/>
-                <outlet property="foreground" destination="VJN-JM-pEU" id="guf-2M-bVO"/>
-                <outlet property="foregroundSliders" destination="MwJ-P8-VW6" id="cMY-WU-jaB"/>
+                <outlet property="foregroundView" destination="Udw-9c-d5D" id="Sr3-0Z-16i"/>
                 <outlet property="luminosity" destination="7v4-0F-zyi" id="KEq-Ek-Fv0"/>
-                <outlet property="mainWindow" destination="QvC-M9-y7g" id="aPW-lI-wcm"/>
+                <outlet property="mainWindow" destination="QvC-M9-y7g" id="VEI-cG-fUh"/>
             </connections>
         </customObject>
-        <viewController id="VJN-JM-pEU" customClass="ForegroundColorController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+        <viewController id="lZT-KG-SLo" userLabel="Foreground" customClass="CCAForegroundColourController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="bField" destination="kj8-Kq-R0v" id="p8L-8q-Q9Y"/>
-                <outlet property="blueSlider" destination="nO3-f5-TWZ" id="VFM-Yb-2Bj"/>
-                <outlet property="colorPreview" destination="UiL-Si-3Jj" id="Eql-ef-Arh"/>
-                <outlet property="gField" destination="ZKg-sZ-frV" id="8rW-Ls-Ine"/>
-                <outlet property="greenSlider" destination="OAv-Iv-uoh" id="FuU-d7-UNb"/>
-                <outlet property="hexField" destination="jxl-9c-tfV" id="FgD-hR-eY6"/>
-                <outlet property="rField" destination="jNz-WF-muD" id="UHF-rI-EJr"/>
-                <outlet property="redSlider" destination="PMc-yh-IRP" id="7gf-Lx-p4K"/>
-                <outlet property="view" destination="xLq-Dp-ux3" id="n32-C2-x5L"/>
+                <outlet property="bField" destination="VIp-1O-Snp" id="M3R-pt-fmO"/>
+                <outlet property="blueSlider" destination="kwk-ca-gE8" id="Cxf-8x-wbU"/>
+                <outlet property="colorPreview" destination="OQl-4t-kgg" id="eTI-lu-bDh"/>
+                <outlet property="disclosureView" destination="UvQ-lS-vH3" id="p1P-tY-ABU"/>
+                <outlet property="gField" destination="nUe-16-eRp" id="7fd-R5-D2n"/>
+                <outlet property="greenSlider" destination="kdm-8Z-Kzy" id="ZSt-JN-PtF"/>
+                <outlet property="hexField" destination="1GI-vv-bf9" id="E13-Rx-rE0"/>
+                <outlet property="rField" destination="A1z-nD-cf5" id="i71-f9-9zp"/>
+                <outlet property="redSlider" destination="onM-Pa-x7Y" id="zhW-9P-6kK"/>
+                <outlet property="view" destination="Udw-9c-d5D" id="XwB-7o-AP3"/>
             </connections>
         </viewController>
-        <viewController id="fJy-8A-6FS" customClass="BackgroundColorController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+        <viewController id="YkF-Pt-mWY" userLabel="Background" customClass="CCABackgroundColourController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="bField" destination="a4j-nN-LRS" id="TXj-J5-ZxY"/>
-                <outlet property="blueSlider" destination="aGr-jf-mcb" id="I6t-ps-HWP"/>
-                <outlet property="colorPreview" destination="AVT-A3-QfS" id="ETi-4f-KgN"/>
-                <outlet property="gField" destination="9VW-f9-ttc" id="hdM-3s-8Sf"/>
-                <outlet property="greenSlider" destination="PsI-Jk-P9A" id="C9I-y6-Pmt"/>
-                <outlet property="hexField" destination="XI9-La-glV" id="5Tl-IL-tUv"/>
-                <outlet property="rField" destination="01D-4p-Fnq" id="JbL-8c-Je6"/>
-                <outlet property="redSlider" destination="lnu-XA-fw5" id="ZbW-Ae-iyI"/>
-                <outlet property="view" destination="T8D-ip-yNQ" id="46n-g3-TCW"/>
+                <outlet property="bField" destination="fCx-X4-mB7" id="9MU-Lv-x0Z"/>
+                <outlet property="blueSlider" destination="EsZ-bl-7YD" id="Twe-h7-qHI"/>
+                <outlet property="colorPreview" destination="IAh-ZL-OLs" id="QTA-Eu-jj0"/>
+                <outlet property="disclosureView" destination="Hxs-Oc-AW1" id="EYO-kb-msH"/>
+                <outlet property="gField" destination="onL-Pq-nOE" id="uht-HG-vCq"/>
+                <outlet property="greenSlider" destination="8Zo-VH-WY2" id="FXG-jL-Maw"/>
+                <outlet property="hexField" destination="tgR-h0-n5r" id="nfL-Yj-Eqw"/>
+                <outlet property="rField" destination="2Id-Vj-fFE" id="PVk-6m-Abr"/>
+                <outlet property="redSlider" destination="ydO-PF-cUc" id="feb-f8-8PZ"/>
+                <outlet property="view" destination="cN9-hp-lRD" id="wra-HU-jq7"/>
             </connections>
         </viewController>
         <viewController id="7v4-0F-zyi" customClass="CCALuminosityControler" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="background" destination="fJy-8A-6FS" id="Ma8-6m-g86"/>
-                <outlet property="foreground" destination="VJN-JM-pEU" id="zOn-zd-5TK"/>
                 <outlet property="largeTextAA" destination="tX7-Qe-sdz" id="QQj-n0-ozg"/>
                 <outlet property="largeTextAAA" destination="tLd-Dh-bMs" id="Zo2-6l-1Kc"/>
                 <outlet property="ratioText" destination="9QS-fX-EFi" id="aqD-eX-h5g"/>
@@ -63,18 +62,14 @@
         </viewController>
         <viewController id="SRJ-pJ-EYb" customClass="CCAColourBrightnessDifferenceController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="background" destination="fJy-8A-6FS" id="V0q-WN-D3p"/>
                 <outlet property="brightnessDifferenceText" destination="7lU-w8-LKR" id="Twt-8T-f5G"/>
                 <outlet property="colourBrightnessSample" destination="Hib-Qp-jtg" id="hnq-Ut-0M8"/>
                 <outlet property="colourDifferenceText" destination="vki-FN-fjx" id="5Ug-xM-y52"/>
-                <outlet property="foreground" destination="VJN-JM-pEU" id="AIu-Y9-8OY"/>
                 <outlet property="view" destination="xXw-Kw-eRT" id="Tv0-vn-GeZ"/>
             </connections>
         </viewController>
         <viewController id="HDz-FR-2n1" customClass="CCAColourDeficiencyController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="background" destination="fJy-8A-6FS" id="J55-36-sSp"/>
-                <outlet property="foreground" destination="VJN-JM-pEU" id="aHL-F2-wQ4"/>
                 <outlet property="tableView" destination="LOb-5o-Z5F" id="VUA-YQ-kR3"/>
             </connections>
         </viewController>
@@ -176,148 +171,150 @@
         <window title="Colour Contrast Analyser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="420" height="525"/>
+            <rect key="contentRect" x="335" y="390" width="380" height="503"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="420" height="525"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="503"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Foreground" borderType="line" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-Dp-ux3">
-                        <rect key="frame" x="13" y="351" width="390" height="170"/>
-                        <view key="contentView">
+                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Foreground" borderType="line" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="Udw-9c-d5D">
+                        <rect key="frame" x="-5" y="335" width="390" height="170"/>
+                        <view key="contentView" id="Y3h-2J-pxO">
                             <rect key="frame" x="1" y="1" width="388" height="152"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField toolTip="Hexadecimal value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-9c-tfV">
+                                <textField toolTip="Hexadecimal value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GI-vv-bf9" userLabel="Hex Field">
                                     <rect key="frame" x="259" y="121" width="84" height="22"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="#FFFFFF" drawsBackground="YES" id="htV-lc-iGb">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="#------" drawsBackground="YES" id="cCl-nd-2Ez">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                     <accessibility description="Hexadecimal"/>
                                     <connections>
-                                        <action selector="hexChanged:" target="VJN-JM-pEU" id="NdC-Y3-JU3"/>
-                                        <outlet property="nextKeyView" destination="PMc-yh-IRP" id="h0R-fl-d9X"/>
+                                        <action selector="hexChanged:" target="lZT-KG-SLo" id="qKc-fI-nim"/>
+                                        <outlet property="nextKeyView" destination="onM-Pa-x7Y" id="qHk-Xr-pE0"/>
                                     </connections>
                                 </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hhu-tF-GSj">
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7J7-WV-cTo" userLabel="Preview Field">
                                     <rect key="frame" x="72" y="115" width="172" height="34"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="UiL-Si-3Jj">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="OQl-4t-kgg">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-P8-VW6">
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UvQ-lS-vH3">
                                     <rect key="frame" x="7" y="7" width="372" height="96"/>
                                     <subviews>
-                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nO3-f5-TWZ">
-                                            <rect key="frame" x="60" y="6" width="258" height="21"/>
-                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="246.94096959969789" tickMarkPosition="above" sliderType="linear" id="OXd-44-W09"/>
-                                            <connections>
-                                                <accessibilityConnection property="title" destination="VoQ-Da-NWc" id="w37-V9-qSL"/>
-                                                <action selector="sliderChanged:" target="VJN-JM-pEU" id="wqq-xT-yEg"/>
-                                                <outlet property="nextKeyView" destination="kj8-Kq-R0v" id="Ulh-i6-juG"/>
-                                            </connections>
-                                        </slider>
-                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMc-yh-IRP">
-                                            <rect key="frame" x="60" y="70" width="258" height="21"/>
-                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="below" sliderType="linear" id="F8E-xf-K0E"/>
-                                            <connections>
-                                                <accessibilityConnection property="title" destination="gLX-7B-i6U" id="Ycc-Rv-aNu"/>
-                                                <action selector="sliderChanged:" target="VJN-JM-pEU" id="iWu-6x-lJ4"/>
-                                                <outlet property="nextKeyView" destination="jNz-WF-muD" id="u81-GS-Tzi"/>
-                                            </connections>
-                                        </slider>
-                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAv-Iv-uoh">
-                                            <rect key="frame" x="60" y="36" width="258" height="21"/>
-                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="2GP-Yj-sht"/>
-                                            <connections>
-                                                <accessibilityConnection property="title" destination="O2c-OM-ORq" id="Km4-6R-JA7"/>
-                                                <action selector="sliderChanged:" target="VJN-JM-pEU" id="xSL-o2-Ufd"/>
-                                                <outlet property="nextKeyView" destination="ZKg-sZ-frV" id="yGj-0l-cd4"/>
-                                            </connections>
-                                        </slider>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLX-7B-i6U">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vD-CL-exL" userLabel="Red Title">
                                             <rect key="frame" x="6" y="72" width="60" height="17"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Red" id="Yth-61-QPN">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Red" id="i9K-HS-UL2">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <accessibilityConnection property="title" destination="jNz-WF-muD" id="Vvg-1S-T8N"/>
+                                                <accessibilityConnection property="title" destination="A1z-nD-cf5" id="av1-aq-m3K"/>
                                             </connections>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2c-OM-ORq">
-                                            <rect key="frame" x="6" y="38" width="60" height="17"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Green" id="OUP-vt-sRS">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-Da-NWc">
-                                            <rect key="frame" x="6" y="8" width="60" height="17"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Blue" id="iyo-Va-gis">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField toolTip="Red value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNz-WF-muD">
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onM-Pa-x7Y" userLabel="Red Slider">
+                                            <rect key="frame" x="60" y="70" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="below" sliderType="linear" id="IoI-e5-Eel"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="6vD-CL-exL" id="HoP-qP-4ju"/>
+                                                <action selector="sliderChanged:" target="lZT-KG-SLo" id="JXU-Q9-Um0"/>
+                                                <outlet property="nextKeyView" destination="1GI-vv-bf9" id="bSW-Bg-LVW"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Red value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-nD-cf5" userLabel="Red Value">
                                             <rect key="frame" x="329" y="69" width="31" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="qr3-hb-2GC">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="fpK-V6-dae">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" red="1" green="0.66097348810000001" blue="0.63093853160000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </textFieldCell>
                                             <accessibility description="RGB value"/>
                                             <connections>
-                                                <accessibilityConnection property="title" destination="gLX-7B-i6U" id="asy-1K-57W"/>
-                                                <action selector="rgbChanged:" target="VJN-JM-pEU" id="OJl-84-Wgv"/>
-                                                <outlet property="nextKeyView" destination="OAv-Iv-uoh" id="QSQ-Mh-9Gn"/>
+                                                <accessibilityConnection property="title" destination="6vD-CL-exL" id="O5N-hA-MFm"/>
+                                                <action selector="rgbChanged:" target="lZT-KG-SLo" id="xqV-Ql-5rO"/>
+                                                <outlet property="nextKeyView" destination="kdm-8Z-Kzy" id="pYn-sT-CcC"/>
                                             </connections>
                                         </textField>
-                                        <textField toolTip="Green value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKg-sZ-frV">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-bB-bzm" userLabel="Green Title">
+                                            <rect key="frame" x="6" y="38" width="60" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Green" id="M9v-eu-lim">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdm-8Z-Kzy" userLabel="Green Slider">
+                                            <rect key="frame" x="60" y="36" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="aKE-96-lMI"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="8ZD-bB-bzm" id="Uz6-Na-ChT"/>
+                                                <action selector="sliderChanged:" target="lZT-KG-SLo" id="1iV-Yf-KIq"/>
+                                                <outlet property="nextKeyView" destination="nUe-16-eRp" id="ppE-po-caf"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Green value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUe-16-eRp" userLabel="Green Value">
                                             <rect key="frame" x="329" y="35" width="31" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="UwH-yR-0AZ">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="JIy-zN-tXg">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" red="0.63109434809999998" green="1" blue="0.59486901120000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </textFieldCell>
                                             <accessibility description="RGB value"/>
                                             <connections>
-                                                <accessibilityConnection property="title" destination="O2c-OM-ORq" id="GXc-i9-GrT"/>
-                                                <action selector="rgbChanged:" target="VJN-JM-pEU" id="2EZ-rT-cGJ"/>
-                                                <outlet property="nextKeyView" destination="nO3-f5-TWZ" id="tby-gK-Q32"/>
+                                                <accessibilityConnection property="title" destination="8ZD-bB-bzm" id="nKC-Ln-xpC"/>
+                                                <action selector="rgbChanged:" target="lZT-KG-SLo" id="rSS-Xk-7ki"/>
+                                                <outlet property="nextKeyView" destination="kwk-ca-gE8" id="W9s-tZ-plJ"/>
                                             </connections>
                                         </textField>
-                                        <textField toolTip="Blue value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kj8-Kq-R0v">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-6H-s9T" userLabel="Blue Title">
+                                            <rect key="frame" x="6" y="8" width="60" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Blue" id="S3b-ul-VFq">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwk-ca-gE8" userLabel="Blue Slider">
+                                            <rect key="frame" x="60" y="6" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="246.94096959969789" tickMarkPosition="above" sliderType="linear" id="Z95-kW-ire"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="iSf-6H-s9T" id="DPt-ll-Coe"/>
+                                                <action selector="sliderChanged:" target="lZT-KG-SLo" id="tLE-R7-7OX"/>
+                                                <outlet property="nextKeyView" destination="VIp-1O-Snp" id="sI9-4Z-tt1"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Blue value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIp-1O-Snp" userLabel="Blue Value">
                                             <rect key="frame" x="329" y="5" width="31" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="RfR-JV-dlC">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="VG9-1R-H5q">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" red="0.66062671370000003" green="0.69571483180000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </textFieldCell>
                                             <accessibility description="RGB value"/>
                                             <connections>
-                                                <accessibilityConnection property="title" destination="VoQ-Da-NWc" id="jNa-2B-X4R"/>
-                                                <action selector="rgbChanged:" target="VJN-JM-pEU" id="0et-m2-9qo"/>
-                                                <outlet property="nextKeyView" destination="nAF-lt-8Ky" id="LiJ-nz-fKs"/>
+                                                <accessibilityConnection property="title" destination="iSf-6H-s9T" id="I9H-Nn-655"/>
+                                                <action selector="rgbChanged:" target="lZT-KG-SLo" id="VSx-Hw-AHd"/>
+                                                <outlet property="nextKeyView" destination="xhn-a1-2JD" id="JPS-KM-hRb"/>
                                             </connections>
                                         </textField>
                                     </subviews>
                                 </customView>
-                                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21N-Dt-xIU">
-                                    <rect key="frame" x="351" y="119" width="29" height="26"/>
-                                    <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="overlaps" alignment="center" borderStyle="border" tag="1" imageScaling="proportionallyDown" inset="2" id="2b5-E0-gsH">
-                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z1H-lC-Kko" userLabel="Picker Button">
+                                    <rect key="frame" x="18" y="109" width="46" height="47"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Picker" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="mtb-XE-55X">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <accessibility description="Foreground Color Picker"/>
                                     <connections>
-                                        <action selector="showRGBSliders:" target="Voe-Tx-rLC" id="gb1-3D-6eA"/>
+                                        <action selector="colorPickerClicked:" target="lZT-KG-SLo" id="aLE-4G-pGP"/>
+                                        <outlet property="nextKeyView" destination="1GI-vv-bf9" id="mVY-7z-5s0"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -325,175 +322,164 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-lL-d16">
-                        <rect key="frame" x="30" y="458" width="46" height="47"/>
-                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Picker" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="O72-D0-DSK">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <accessibility description="Foreground Color Picker"/>
-                        <connections>
-                            <action selector="buttonColorPickerPressed:" target="Voe-Tx-rLC" id="N1d-a6-xjd"/>
-                            <outlet property="nextKeyView" destination="jxl-9c-tfV" id="4aM-IJ-VvP"/>
-                        </connections>
-                    </button>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Background" borderType="line" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="T8D-ip-yNQ">
-                        <rect key="frame" x="13" y="181" width="390" height="168"/>
-                        <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="388" height="150"/>
+                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Background" borderType="line" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="cN9-hp-lRD">
+                        <rect key="frame" x="-5" y="170" width="390" height="170"/>
+                        <view key="contentView" id="ofn-4P-JzL">
+                            <rect key="frame" x="1" y="1" width="388" height="152"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="nAF-lt-8Ky">
-                                    <rect key="frame" x="14" y="107" width="46" height="47"/>
-                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Picker" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="pbM-vl-TEJ">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <accessibility description="Background Color Picker"/>
-                                    <connections>
-                                        <action selector="buttonColorPickerPressed:" target="Voe-Tx-rLC" id="3o8-XQ-v60"/>
-                                        <outlet property="nextKeyView" destination="XI9-La-glV" id="dpN-I6-g7N"/>
-                                    </connections>
-                                </button>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-12-kiZ">
-                                    <rect key="frame" x="72" y="112" width="175" height="36"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="AVT-A3-QfS">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNs-Rh-YSF">
-                                    <rect key="frame" x="6" y="7" width="375" height="96"/>
-                                </customView>
-                                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-jf-mcb">
-                                    <rect key="frame" x="68" y="11" width="258" height="21"/>
-                                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="246.94096959969789" tickMarkPosition="above" sliderType="linear" id="Cgk-Lm-iHT"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="9JB-35-VcJ" id="UiO-Yq-rgp"/>
-                                        <action selector="sliderChanged:" target="fJy-8A-6FS" id="2FQ-9h-rK2"/>
-                                    </connections>
-                                </slider>
-                                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnu-XA-fw5">
-                                    <rect key="frame" x="68" y="75" width="258" height="21"/>
-                                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="below" sliderType="linear" id="kAX-6I-13Z"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="YAv-iP-tgA" id="Vcs-CL-dMt"/>
-                                        <action selector="sliderChanged:" target="fJy-8A-6FS" id="7sh-cR-zsh"/>
-                                        <outlet property="nextKeyView" destination="01D-4p-Fnq" id="Q5Z-2i-nSN"/>
-                                    </connections>
-                                </slider>
-                                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-Jk-P9A">
-                                    <rect key="frame" x="68" y="41" width="258" height="21"/>
-                                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="dYr-rC-HIB"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="ZWK-lO-fyh" id="OyX-j3-2dz"/>
-                                        <action selector="sliderChanged:" target="fJy-8A-6FS" id="woe-UC-xnt"/>
-                                    </connections>
-                                </slider>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAv-iP-tgA">
-                                    <rect key="frame" x="14" y="77" width="59" height="17"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Red" id="jeI-WW-O71">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-lO-fyh">
-                                    <rect key="frame" x="14" y="43" width="59" height="17"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Green" id="dnD-0P-Pnj">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9JB-35-VcJ">
-                                    <rect key="frame" x="14" y="13" width="59" height="17"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Blue" id="wow-49-rmY">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField toolTip="Red value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01D-4p-Fnq">
-                                    <rect key="frame" x="337" y="74" width="31" height="22"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="nS4-my-BRZ">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" red="1" green="0.66097348810000001" blue="0.63093853160000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </textFieldCell>
-                                    <accessibility description="RGB value"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="YAv-iP-tgA" id="25J-AX-JnE"/>
-                                        <action selector="rgbChanged:" target="fJy-8A-6FS" id="tpR-Pv-ylq"/>
-                                        <outlet property="nextKeyView" destination="PsI-Jk-P9A" id="nEf-Zv-iFM"/>
-                                    </connections>
-                                </textField>
-                                <textField toolTip="Green value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9VW-f9-ttc">
-                                    <rect key="frame" x="337" y="40" width="31" height="22"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="7da-Dh-geu">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" red="0.63109434809999998" green="1" blue="0.59486901120000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </textFieldCell>
-                                    <accessibility description="RGB value"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="ZWK-lO-fyh" id="IDE-F9-kSl"/>
-                                        <action selector="rgbChanged:" target="fJy-8A-6FS" id="SlA-fY-ER4"/>
-                                    </connections>
-                                </textField>
-                                <textField toolTip="Blue value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4j-nN-LRS">
-                                    <rect key="frame" x="337" y="10" width="31" height="22"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="F6q-XU-ZFL">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" red="0.66062671370000003" green="0.69571483180000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </textFieldCell>
-                                    <accessibility description="RGB value"/>
-                                    <connections>
-                                        <accessibilityConnection property="title" destination="9JB-35-VcJ" id="xFt-0b-4ds"/>
-                                        <action selector="rgbChanged:" target="fJy-8A-6FS" id="X0q-D8-zod"/>
-                                    </connections>
-                                </textField>
-                                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="SjX-nI-g1a">
-                                    <rect key="frame" x="349" y="117" width="29" height="26"/>
-                                    <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bRV-QN-nU6">
-                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="showRGBSliders:" target="Voe-Tx-rLC" id="cfk-vK-R44"/>
-                                    </connections>
-                                </button>
-                                <textField toolTip="Hexadecimal value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XI9-La-glV">
-                                    <rect key="frame" x="260" y="119" width="84" height="22"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="#FFFFFF" drawsBackground="YES" id="JUg-Sv-zwn">
+                                <textField toolTip="Hexadecimal value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgR-h0-n5r" userLabel="Hex Field">
+                                    <rect key="frame" x="259" y="121" width="84" height="22"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="#------" drawsBackground="YES" id="R1z-Ep-fSu">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                     <accessibility description="Hexadecimal"/>
                                     <connections>
-                                        <action selector="hexChanged:" target="fJy-8A-6FS" id="TJW-rm-Qy2"/>
-                                        <outlet property="nextKeyView" destination="lnu-XA-fw5" id="GwD-eR-dpt"/>
+                                        <action selector="hexChanged:" target="YkF-Pt-mWY" id="T4K-pE-CBc"/>
+                                        <outlet property="nextKeyView" destination="ydO-PF-cUc" id="xhW-Pv-XWV"/>
                                     </connections>
                                 </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gze-Nw-QER" userLabel="Preview Field">
+                                    <rect key="frame" x="72" y="115" width="172" height="34"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="IAh-ZL-OLs">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hxs-Oc-AW1">
+                                    <rect key="frame" x="7" y="7" width="372" height="96"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDC-AX-OJ8" userLabel="Red Title">
+                                            <rect key="frame" x="6" y="72" width="60" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Red" id="p7Y-dq-Yp0">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="2Id-Vj-fFE" id="0QA-D5-kfa"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydO-PF-cUc" userLabel="Red Slider">
+                                            <rect key="frame" x="60" y="70" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="below" sliderType="linear" id="bpz-yA-Hci"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="UDC-AX-OJ8" id="Dg3-Iq-NGH"/>
+                                                <action selector="sliderChanged:" target="YkF-Pt-mWY" id="SSe-8D-Ihv"/>
+                                                <outlet property="nextKeyView" destination="2Id-Vj-fFE" id="z9G-FL-wom"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Red value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-Vj-fFE" userLabel="Red Value">
+                                            <rect key="frame" x="329" y="69" width="31" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="tC4-ix-YgG">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" red="1" green="0.66097348810000001" blue="0.63093853160000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </textFieldCell>
+                                            <accessibility description="RGB value"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="UDC-AX-OJ8" id="1yM-40-zSl"/>
+                                                <action selector="rgbChanged:" target="YkF-Pt-mWY" id="hVu-3q-qdL"/>
+                                                <outlet property="nextKeyView" destination="8Zo-VH-WY2" id="VOp-gc-h2L"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-jC-FhA" userLabel="Green Title">
+                                            <rect key="frame" x="6" y="38" width="60" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Green" id="1s5-gt-a3E">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Zo-VH-WY2" userLabel="Green Slider">
+                                            <rect key="frame" x="60" y="36" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="EEf-wj-BbN"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="cAO-jC-FhA" id="10j-OQ-Cbb"/>
+                                                <action selector="sliderChanged:" target="YkF-Pt-mWY" id="IUC-zt-AV1"/>
+                                                <outlet property="nextKeyView" destination="onL-Pq-nOE" id="0xk-ZI-1Hu"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Green value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onL-Pq-nOE" userLabel="Green Value">
+                                            <rect key="frame" x="329" y="35" width="31" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="aEd-OV-0r7">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" red="0.63109434809999998" green="1" blue="0.59486901120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </textFieldCell>
+                                            <accessibility description="RGB value"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="cAO-jC-FhA" id="1Yc-DN-vDo"/>
+                                                <action selector="rgbChanged:" target="YkF-Pt-mWY" id="RPY-yc-tC7"/>
+                                                <outlet property="nextKeyView" destination="EsZ-bl-7YD" id="uOe-VH-Lt3"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-X4-wyq" userLabel="Blue Title">
+                                            <rect key="frame" x="6" y="8" width="60" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Blue" id="dR0-hp-JhK">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EsZ-bl-7YD" userLabel="Blue Slider">
+                                            <rect key="frame" x="60" y="6" width="258" height="21"/>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="246.94096959969789" tickMarkPosition="above" sliderType="linear" id="stj-39-03q"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="BBa-X4-wyq" id="lnN-qJ-cSI"/>
+                                                <action selector="sliderChanged:" target="YkF-Pt-mWY" id="20p-K6-hHQ"/>
+                                                <outlet property="nextKeyView" destination="fCx-X4-mB7" id="WA9-tz-PRY"/>
+                                            </connections>
+                                        </slider>
+                                        <textField toolTip="Blue value" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-X4-mB7" userLabel="Blue Value">
+                                            <rect key="frame" x="329" y="5" width="31" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="255" drawsBackground="YES" id="bTZ-Ua-pwR">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" red="0.66062671370000003" green="0.69571483180000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </textFieldCell>
+                                            <accessibility description="RGB value"/>
+                                            <connections>
+                                                <accessibilityConnection property="title" destination="BBa-X4-wyq" id="KMt-5T-Fzc"/>
+                                                <action selector="rgbChanged:" target="YkF-Pt-mWY" id="rHj-9B-zkK"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </customView>
+                                <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="xhn-a1-2JD">
+                                    <rect key="frame" x="18" y="109" width="46" height="47"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Picker" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="a2p-BU-Jg3">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <accessibility description="Foreground Color Picker"/>
+                                    <connections>
+                                        <action selector="colorPickerClicked:" target="YkF-Pt-mWY" id="LH3-5H-21g"/>
+                                        <outlet property="nextKeyView" destination="tgR-h0-n5r" id="VKV-7c-gsb"/>
+                                    </connections>
+                                </button>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
-                        <rect key="frame" x="9" y="-1" width="398" height="184"/>
+                    <tabView translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
+                        <rect key="frame" x="-7" y="-10" width="394" height="182"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="380" id="Hwe-tp-tjw"/>
+                            <constraint firstAttribute="height" constant="166" id="YMe-OM-sIf"/>
+                        </constraints>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Luminosity" identifier="1" id="DSB-dr-xAs">
                                 <view key="view" id="eNc-6E-zIS">
-                                    <rect key="frame" x="10" y="33" width="378" height="138"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-fX-EFi">
-                                            <rect key="frame" x="13" y="118" width="354" height="17"/>
+                                            <rect key="frame" x="13" y="-20" width="354" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast ratio: 00:00" id="FWp-mQ-KTT">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -501,8 +487,8 @@
                                             </textFieldCell>
                                         </textField>
                                         <box fixedFrame="YES" title="Normal Text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-lm-RDA">
-                                            <rect key="frame" x="7" y="8" width="165" height="93"/>
-                                            <view key="contentView">
+                                            <rect key="frame" x="7" y="-130" width="165" height="93"/>
+                                            <view key="contentView" id="YX2-Dr-BMl">
                                                 <rect key="frame" x="3" y="3" width="159" height="75"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -544,8 +530,8 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box fixedFrame="YES" title="Large text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-Oh-bED">
-                                            <rect key="frame" x="174" y="8" width="194" height="93"/>
-                                            <view key="contentView">
+                                            <rect key="frame" x="174" y="-130" width="194" height="93"/>
+                                            <view key="contentView" id="jLo-Kn-Scb">
                                                 <rect key="frame" x="3" y="3" width="188" height="75"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -587,7 +573,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
-                                            <rect key="frame" x="10" y="107" width="355" height="5"/>
+                                            <rect key="frame" x="10" y="-31" width="355" height="5"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
@@ -597,11 +583,11 @@
                             </tabViewItem>
                             <tabViewItem label="Colour/Brightness" identifier="2" id="MoT-M5-z8P">
                                 <view key="view" id="cP4-ZH-L7A">
-                                    <rect key="frame" x="10" y="33" width="378" height="138"/>
+                                    <rect key="frame" x="10" y="33" width="374" height="136"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vki-FN-fjx">
-                                            <rect key="frame" x="10" y="117" width="260" height="17"/>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="vki-FN-fjx">
+                                            <rect key="frame" x="10" y="115" width="260" height="17"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Colour difference: xxx (minimum 125)" placeholderString="" id="eZA-Za-LPa">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -609,13 +595,13 @@
                                             </textFieldCell>
                                         </textField>
                                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-nI-gQc">
-                                            <rect key="frame" x="12" y="78" width="355" height="5"/>
+                                            <rect key="frame" x="12" y="76" width="355" height="5"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-Qp-jtg" customClass="CCAColourBrightnessDifferenceField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
-                                            <rect key="frame" x="36" y="29" width="331" height="26"/>
+                                            <rect key="frame" x="36" y="27" width="331" height="26"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="example text showing contrast" drawsBackground="YES" id="t5O-hq-k15">
                                                 <font key="font" size="12" name="Verdana"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -626,11 +612,11 @@
                                             </connections>
                                         </textField>
                                         <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DT5-Y9-cCt">
-                                            <rect key="frame" x="12" y="34" width="16" height="16"/>
+                                            <rect key="frame" x="12" y="32" width="16" height="16"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="Ct4-hc-nxu"/>
                                         </imageView>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-w8-LKR">
-                                            <rect key="frame" x="10" y="92" width="260" height="17"/>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-w8-LKR">
+                                            <rect key="frame" x="10" y="90" width="260" height="17"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Brightness difference: xxx (minimum 500)" placeholderString="" id="LA7-OT-u83">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -642,20 +628,20 @@
                             </tabViewItem>
                             <tabViewItem label="Colour Deficiency" identifier="" id="nRk-Mx-Jog">
                                 <view key="view" id="XIF-mH-lX6">
-                                    <rect key="frame" x="10" y="33" width="378" height="138"/>
+                                    <rect key="frame" x="10" y="33" width="374" height="136"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH5-it-v8E">
-                                            <rect key="frame" x="-3" y="0.0" width="384" height="135"/>
-                                            <clipView key="contentView" misplaced="YES" id="2bl-BU-K3u">
-                                                <rect key="frame" x="1" y="0.0" width="238" height="134"/>
+                                            <rect key="frame" x="6" y="5" width="362" height="126"/>
+                                            <clipView key="contentView" ambiguous="YES" id="2bl-BU-K3u">
+                                                <rect key="frame" x="1" y="0.0" width="360" height="125"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="3zU-UE-PfQ" id="LOb-5o-Z5F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="19"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="102"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
                                                             <tableColumn identifier="Deficiency" width="106" minWidth="40" maxWidth="1000" id="qJW-l0-AFT">
@@ -684,7 +670,7 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="ColourBrightness" width="140" minWidth="10" maxWidth="3.4028234663852886e+38" id="bCd-aq-yII">
+                                                            <tableColumn identifier="ColourBrightness" width="118" minWidth="10" maxWidth="3.4028234663852886e+38" id="bCd-aq-yII">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Colour/Brightness">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -707,15 +693,15 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="t2i-2V-OVI">
-                                                <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                                <rect key="frame" x="-7" y="8" width="0.0" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MPV-j3-suW">
-                                                <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="MPV-j3-suW">
+                                                <rect key="frame" x="-14" y="15" width="15" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="3zU-UE-PfQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
@@ -723,10 +709,18 @@
                                 </view>
                             </tabViewItem>
                         </tabViewItems>
+                        <connections>
+                            <outlet property="nextKeyView" destination="Z1H-lC-Kko" id="hip-So-gQK"/>
+                        </connections>
                     </tabView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xXw-Kw-eRT" secondAttribute="trailing" id="DG0-d3-72d"/>
+                    <constraint firstItem="xXw-Kw-eRT" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="RgK-A3-kgv"/>
+                    <constraint firstAttribute="bottom" secondItem="xXw-Kw-eRT" secondAttribute="bottom" id="dbg-vK-1mw"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="394" y="375.5"/>
+            <point key="canvasLocation" x="374" y="302.5"/>
         </window>
     </objects>
     <resources>

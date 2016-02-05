@@ -89,22 +89,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Colour Contrast Analyser/AppDelegate.swift"
-            timestampString = "447681281.273238"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "copyResults(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Colour Contrast Analyser/CCALuminosityLevelField.swift"
             timestampString = "446386707.089994"
             startingColumnNumber = "9223372036854775807"
@@ -128,22 +112,6 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "drawRect(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Colour Contrast Analyser/AppDelegate.swift"
-            timestampString = "446458141.641148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "applicationDidFinishLaunching(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,22 +160,6 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "setDisclosedView(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Colour Contrast Analyser/CCAPickerController.swift"
-            timestampString = "447002378.855179"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "windowDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

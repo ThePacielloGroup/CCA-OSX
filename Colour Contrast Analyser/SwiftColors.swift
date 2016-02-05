@@ -32,22 +32,22 @@ extension NSColor {
     
     // Check for hash and remove the hash
     if hex.hasPrefix("#") {
-      hex = hex.substringFromIndex(advance(hex.startIndex, 1))
+      hex = hex.substringFromIndex(hex.startIndex.advancedBy(1))
     }
     
-    if let match = hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) {
+    if (hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) != nil) {
         // Deal with 3 character Hex strings
-        if countElements(hex) == 3 {
-          var redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
-          var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
-          var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
+        if (hex.characters.count == 3) {
+          let redHex   = hex.substringToIndex(hex.startIndex.advancedBy(1))
+          let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(1), end: hex.startIndex.advancedBy(2)))
+          let blueHex  = hex.substringFromIndex(hex.startIndex.advancedBy(2))
           
           hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
         }
 
-        let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
-        let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
-        let blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
+        let redHex = hex.substringToIndex(hex.startIndex.advancedBy(2))
+        let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(2), end: hex.startIndex.advancedBy(4)))
+        let blueHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(4), end: hex.startIndex.advancedBy(6)))
         
         var redInt:   CUnsignedInt = 0
         var greenInt: CUnsignedInt = 0
@@ -88,7 +88,7 @@ extension NSColor {
     :returns: color with the given hex value and alpha
   */
   convenience init?(hex: Int, alpha: Float) {
-    var hexString = NSString(format: "%2X", hex)
+    let hexString = NSString(format: "%2X", hex) as String
     self.init(hexString: hexString, alpha: alpha)
   }
 
@@ -96,7 +96,7 @@ extension NSColor {
         let red = Int(round(self.redComponent * 0xFF))
         let grn = Int(round(self.greenComponent * 0xFF))
         let blu = Int(round(self.blueComponent * 0xFF))
-        let hexString = NSString(format: "#%02X%02X%02X", red, grn, blu)
+        let hexString = NSString(format: "#%02X%02X%02X", red, grn, blu) as String
         return hexString
     }
     

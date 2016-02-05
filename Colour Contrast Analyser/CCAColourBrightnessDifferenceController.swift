@@ -9,10 +9,6 @@
 import Cocoa
 
 class CCAColourBrightnessDifferenceController: NSViewController {
-
-    @IBOutlet weak var foreground: ForegroundColorController!
-    @IBOutlet weak var background: BackgroundColorController!
-
     @IBOutlet weak var colourDifferenceText: NSTextField!
     @IBOutlet weak var brightnessDifferenceText: NSTextField!
     @IBOutlet weak var colourBrightnessSample: CCAColourBrightnessDifferenceField!
@@ -40,10 +36,10 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         colourBrightnessSample.validateColourBrightnessDifference(brightnessDifferenceValue!, colour: colourDifferenceValue!)
     }
     func updateForeground(notification: NSNotification) {
-        self.fColor = foreground.color
+        self.fColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         
-        var color:NSColor = foreground.color
+        var color:NSColor = self.fColor
         // Fix for #3 : use almost black color
         if (color.isBlack()) {
             color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
@@ -51,7 +47,7 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         colourBrightnessSample.textColor = color
     }
     func updateBackground(notification: NSNotification) {
-        self.bColor = background.color
+        self.bColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         colourBrightnessSample.backgroundColor = self.bColor
     }

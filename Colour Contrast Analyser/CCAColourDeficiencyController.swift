@@ -26,8 +26,6 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
     let colourDeficiencyTritanopia:ColourDeficiencyTritanopia = ColourDeficiencyTritanopia()
     let colourDeficiencyColorBlindness:ColourDeficiencyColorBlindness = ColourDeficiencyColorBlindness()
     
-    @IBOutlet weak var foreground: ForegroundColorController!
-    @IBOutlet weak var background: BackgroundColorController!
     @IBOutlet weak var tableView: NSTableView!
     
     required init?(coder: NSCoder) {
@@ -54,11 +52,12 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
     }
 
     func updateForeground(notification: NSNotification) {
-        foregroundColor[0] = colourDeficiencyNone.convertColor(foreground.color)
-        foregroundColor[1] = colourDeficiencyProtanopia.convertColor(foreground.color)
-        foregroundColor[2] = colourDeficiencyDeuteranopia.convertColor(foreground.color)
-        foregroundColor[3] = colourDeficiencyTritanopia.convertColor(foreground.color)
-        foregroundColor[4] = colourDeficiencyColorBlindness.convertColor(foreground.color)
+        let color = notification.userInfo!["color"] as! NSColor
+        foregroundColor[0] = colourDeficiencyNone.convertColor(color)
+        foregroundColor[1] = colourDeficiencyProtanopia.convertColor(color)
+        foregroundColor[2] = colourDeficiencyDeuteranopia.convertColor(color)
+        foregroundColor[3] = colourDeficiencyTritanopia.convertColor(color)
+        foregroundColor[4] = colourDeficiencyColorBlindness.convertColor(color)
         updateContrastRatio()
         updateColourDiff()
         updateBrightnessDiff()
@@ -66,11 +65,12 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
     }
 
     func updateBackground(notification: NSNotification) {
-        backgroundColor[0] = colourDeficiencyNone.convertColor(background.color)
-        backgroundColor[1] = colourDeficiencyProtanopia.convertColor(background.color)
-        backgroundColor[2] = colourDeficiencyDeuteranopia.convertColor(background.color)
-        backgroundColor[3] = colourDeficiencyTritanopia.convertColor(background.color)
-        backgroundColor[4] = colourDeficiencyColorBlindness.convertColor(background.color)
+        let color = notification.userInfo!["color"] as! NSColor
+        backgroundColor[0] = colourDeficiencyNone.convertColor(color)
+        backgroundColor[1] = colourDeficiencyProtanopia.convertColor(color)
+        backgroundColor[2] = colourDeficiencyDeuteranopia.convertColor(color)
+        backgroundColor[3] = colourDeficiencyTritanopia.convertColor(color)
+        backgroundColor[4] = colourDeficiencyColorBlindness.convertColor(color)
         updateContrastRatio()
         updateColourDiff()
         updateBrightnessDiff()
@@ -101,15 +101,15 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         brightnessDiff[4] = ColourBrightnessDifference.getBrightnessDifference(foregroundColor[4], bc: backgroundColor[4])
     }
     
-    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int {
+    func numberOfRowsInTableView(_tableView: NSTableView) -> Int {
         return deficiency.count
     }
     
-    func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject!
+    func tableView(_tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?
     {
         var result = ""
 
-        var columnIdentifier = tableColumn.identifier
+        let columnIdentifier = tableColumn!.identifier
         if columnIdentifier == "Deficiency" {
             result = deficiency[row]
         }
@@ -127,7 +127,7 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
     }
     
     func tableView(tableView: NSTableView, willDisplayCell cell: AnyObject, forTableColumn tableColumn: NSTableColumn?, row: Int) {
-        var fieldCell = cell as NSTextFieldCell
+        let fieldCell = cell as! NSTextFieldCell
         fieldCell.drawsBackground = true
         fieldCell.backgroundColor = backgroundColor[row]
         var color:NSColor = foregroundColor[row]

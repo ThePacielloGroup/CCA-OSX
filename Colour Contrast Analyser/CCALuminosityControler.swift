@@ -9,12 +9,8 @@
 import Cocoa
 
 class CCALuminosityControler: NSViewController {
-
-    @IBOutlet weak var foreground: ForegroundColorController!
-    @IBOutlet weak var background: BackgroundColorController!
     
     @IBOutlet weak var ratioText: NSTextField!
-
     @IBOutlet weak var textAA: CCALuminosityLevelField!
     @IBOutlet weak var textAAA: CCALuminosityLevelField!
     @IBOutlet weak var largeTextAA: CCALuminosityLevelField!
@@ -67,10 +63,10 @@ class CCALuminosityControler: NSViewController {
         largeTextAAA.pass = passAAALarge
     }
     func updateForeground(notification: NSNotification) {
-        self.fColor = foreground.color
+        self.fColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         
-        var color:NSColor = foreground.color
+        var color:NSColor = self.fColor
         // Fix for #3 : use almost black color
         if (color.isBlack()) {
             color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
@@ -81,7 +77,7 @@ class CCALuminosityControler: NSViewController {
         largeTextAAA.textColor = color
     }
     func updateBackground(notification: NSNotification) {
-        self.bColor = background.color
+        self.bColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         textAA.backgroundColor = self.bColor
         textAAA.backgroundColor = self.bColor

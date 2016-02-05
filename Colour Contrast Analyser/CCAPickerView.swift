@@ -17,7 +17,7 @@ class CCAPickerView: NSView {
         super.drawRect(dirtyRect)
 
         let context = NSGraphicsContext.currentContext()!.CGContext
-        CGContextSetInterpolationQuality(context, kCGInterpolationNone)
+        CGContextSetInterpolationQuality(context, .None)
         CGContextSetShouldAntialias(context, false)
 
         // Drawing code here.

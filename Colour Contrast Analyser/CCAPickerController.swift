@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import CoreGraphics
+import AppKit
 
 class CCAPickerController: NSWindowController {
 
@@ -26,7 +28,7 @@ class CCAPickerController: NSWindowController {
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         
         /* Set always on top */
-        pickerWindow.level = Int(CGWindowLevelForKey(Int32(kCGFloatingWindowLevelKey)))
+        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
 
         //        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventGlobal)
         NSEvent.addLocalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventLocal)
@@ -64,12 +66,12 @@ class CCAPickerController: NSWindowController {
         
         let cgi = imageAtLocation(location)
         
-        var rect:NSRect = pickerView.bounds
-        
-        let context = NSGraphicsContext.currentContext()!.CGContext
-        
-        CGContextSetInterpolationQuality(context, kCGInterpolationNone)
-        CGContextSetShouldAntialias(context, false)
+        let rect:NSRect = pickerView.bounds
+
+//        let context:CGContext! = NSGraphicsContext.currentContext()?.CGContext
+
+//        CGContextSetInterpolationQuality(context, CGInterpolationQuality.None)
+//        CGContextSetShouldAntialias(context, false)
         
         pickerView.updateView(cgi, rect: rect)
         
@@ -81,7 +83,7 @@ class CCAPickerController: NSWindowController {
     
     func getScreenRect(point:NSPoint) -> NSRect {
         var screenRect:NSRect?
-        if let screens = NSScreen.screens() as? [NSScreen] {
+        if let screens = NSScreen.screens() as [NSScreen]? {
             for screen in screens {
                 if NSMouseInRect(point, screen.frame, false) {
                     screenRect = screen.frame
@@ -100,9 +102,9 @@ class CCAPickerController: NSWindowController {
         let imageRect:CGRect = CGRectMake(location.x, location.y, 1, 1)
         let imageRef:CGImageRef = CGWindowListCreateImage(
             imageRect,
-            CGWindowListOption(kCGWindowListOptionOnScreenBelowWindow),
+            CGWindowListOption.OptionOnScreenBelowWindow,
             windowID,
-            CGWindowImageOption(kCGWindowImageBestResolution)).takeRetainedValue()
+            CGWindowImageOption.BestResolution)!
         let bitmap: NSBitmapImageRep = NSBitmapImageRep(CGImage: imageRef)
         return bitmap.colorAtX(0, y:0)!
     }
@@ -116,9 +118,9 @@ class CCAPickerController: NSWindowController {
         let imageRect:CGRect = CGRectMake(location.x - 8, location.y - 8, 16, 16)
         let imageRef:CGImageRef = CGWindowListCreateImage(
             imageRect,
-            CGWindowListOption(kCGWindowListOptionOnScreenBelowWindow),
+            CGWindowListOption.OptionOnScreenBelowWindow,
             windowID,
-            CGWindowImageOption(kCGWindowImageBestResolution)).takeRetainedValue()
+            CGWindowImageOption.BestResolution)!
         return imageRef
     }
 }
