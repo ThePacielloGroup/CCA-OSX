@@ -55,7 +55,6 @@ class CCAColourController: NSViewController, NSTextFieldDelegate {
         // add an optional constraint (but with a priority stronger than a drag), that the disclosing view
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[disclosureView]-(0@600)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["disclosureView":disclosureView]))
 */
-        self.hexField.stringValue = "zzzzz"
         super.viewDidLoad()
         self.updateHex()
         self.updateSliders()

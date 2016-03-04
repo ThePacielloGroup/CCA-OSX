@@ -14,15 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let cca_url = "http://www.paciellogroup.com/resources/contrast-analyser.html"
     
     @IBOutlet weak var mainWindow: NSWindow!
-    @IBOutlet weak var foregroundView: NSView!
-    @IBOutlet weak var backgroundView: NSView!
     @IBOutlet weak var luminosity: CCALuminosityControler!
+    @IBOutlet weak var foreground: CCAForegroundColourView!
+    @IBOutlet weak var background: CCABackgroundColourView!
     @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!   
 
     var currentSender: CCAColourController?
-    
-    var foreground = CCAForegroundColourController(nibName: "ColorView", bundle: nil)
-    var background = CCABackgroundColourController(nibName: "ColorView", bundle: nil)
 
     var preferencesController = CCAPreferencesController(windowNibName: "Preferences")
     
@@ -31,11 +28,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        foreground?.title = "Foreground Color"
-        background?.title = "Background Color"
-        foregroundView.addSubview(foreground!.view)
-        backgroundView.addSubview(background!.view)
-        
         // Initialise Preferences
         if userDefaults.stringForKey("CCAResultsFormat") == nil {
             userDefaults.setObject(NSLocalizedString("results_format", comment:"Initial Results format text"), forKey: "CCAResultsFormat")

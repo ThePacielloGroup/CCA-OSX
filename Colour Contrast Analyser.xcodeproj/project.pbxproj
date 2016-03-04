@@ -22,7 +22,7 @@
 		8275E1541A961A9100EC53ED /* CCAPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8275E1531A961A9100EC53ED /* CCAPreferencesController.swift */; };
 		828B3BB91A77AC2E001A8BAF /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */; };
 		828B3BBB1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B3BBA1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift */; };
-		82A0DAED1AB048ED002F7DB1 /* ColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A0DAEC1AB048ED002F7DB1 /* ColorView.xib */; };
+		829F4F1F1C69D9A100F29C29 /* ColourView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829F4F1E1C69D9A100F29C29 /* ColourView.xib */; };
 		82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */; };
 		82C35FFF1A76621600D2B3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */; };
 		82C360011A76621600D2B3D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C360001A76621600D2B3D0 /* Images.xcassets */; };
@@ -31,6 +31,7 @@
 		82C360471A76AE4E00D2B3D0 /* CCAColourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C360461A76AE4E00D2B3D0 /* CCAColourController.swift */; };
 		82C745D71A7F939D00FC3648 /* CCALuminosityLevelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C745D61A7F939D00FC3648 /* CCALuminosityLevelField.swift */; };
 		82CD6E671A8BA4A10016798B /* CCAPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD6E661A8BA4A10016798B /* CCAPickerView.swift */; };
+		82FFCA261C688D86004F9E3C /* CCAColourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FFCA251C688D86004F9E3C /* CCAColourView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,7 @@
 		8275E1531A961A9100EC53ED /* CCAPreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAPreferencesController.swift; sourceTree = "<group>"; };
 		828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
 		828B3BBA1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourBrightnessDifferenceController.swift; sourceTree = "<group>"; };
-		82A0DAEC1AB048ED002F7DB1 /* ColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorView.xib; sourceTree = "<group>"; };
+		829F4F1E1C69D9A100F29C29 /* ColourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourView.xib; sourceTree = "<group>"; };
 		82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourDeficiencyAlgorithm.swift; sourceTree = "<group>"; };
 		82C35FF91A76621600D2B3D0 /* Colour Contrast Analyser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colour Contrast Analyser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C35FFD1A76621600D2B3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		82C360461A76AE4E00D2B3D0 /* CCAColourController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourController.swift; sourceTree = "<group>"; };
 		82C745D61A7F939D00FC3648 /* CCALuminosityLevelField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCALuminosityLevelField.swift; sourceTree = "<group>"; };
 		82CD6E661A8BA4A10016798B /* CCAPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAPickerView.swift; sourceTree = "<group>"; };
+		82FFCA251C688D86004F9E3C /* CCAColourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +121,13 @@
 		82C35FFB1A76621600D2B3D0 /* Colour Contrast Analyser */ = {
 			isa = PBXGroup;
 			children = (
+				829F4F1E1C69D9A100F29C29 /* ColourView.xib */,
 				8214D3D51A9B3B3A00CF666F /* Preferences.xib */,
 				828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */,
 				82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */,
 				82C360001A76621600D2B3D0 /* Images.xcassets */,
 				82C360021A76621600D2B3D0 /* MainWindow.xib */,
 				826E66411A93890E007FA9CA /* ColorPicker.xib */,
-				82A0DAEC1AB048ED002F7DB1 /* ColorView.xib */,
 				82C35FFC1A76621600D2B3D0 /* Supporting Files */,
 				825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */,
 				82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */,
@@ -140,6 +142,7 @@
 				826E663D1A935D0A007FA9CA /* CCAPickerWindow.swift */,
 				826E663F1A938586007FA9CA /* CCAPickerController.swift */,
 				8275E1531A961A9100EC53ED /* CCAPreferencesController.swift */,
+				82FFCA251C688D86004F9E3C /* CCAColourView.swift */,
 			);
 			path = "Colour Contrast Analyser";
 			sourceTree = "<group>";
@@ -254,12 +257,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82A0DAED1AB048ED002F7DB1 /* ColorView.xib in Resources */,
 				82C360011A76621600D2B3D0 /* Images.xcassets in Resources */,
 				8214D3DC1A9B3CEE00CF666F /* Localizable.strings in Resources */,
 				826E66421A93890E007FA9CA /* ColorPicker.xib in Resources */,
 				8214D3D31A9B3B3A00CF666F /* Preferences.xib in Resources */,
 				82C360041A76621600D2B3D0 /* MainWindow.xib in Resources */,
+				829F4F1F1C69D9A100F29C29 /* ColourView.xib in Resources */,
 				8275E14A1A96151B00EC53ED /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +286,7 @@
 				826E66401A938586007FA9CA /* CCAPickerController.swift in Sources */,
 				82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */,
 				823078B81A96369900C29429 /* CCALuminosityControler.swift in Sources */,
+				82FFCA261C688D86004F9E3C /* CCAColourView.swift in Sources */,
 				825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */,
 				826E663E1A935D0A007FA9CA /* CCAPickerWindow.swift in Sources */,
 				828B3BBB1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift in Sources */,
