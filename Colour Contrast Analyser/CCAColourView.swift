@@ -65,7 +65,7 @@ class CCAColourView: NSView {
     }
     
     @IBAction func hexChanged(sender: NSTextField) {
-        if (sender.stringValue.characters.count == 7) {
+        if (validateHex(sender.stringValue)) {
             hexField.backgroundColor = NSColor.whiteColor()
             self.color = NSColor(hexString: sender.stringValue)!
             self.updatePreview()
@@ -122,6 +122,20 @@ class CCAColourView: NSView {
         self.gField.integerValue = self.color.getGInt()
         self.bField.integerValue = self.color.getBInt()
     }
+    
+    func validateHex(value: String) -> Bool {
+        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6})|([0-9A-Fa-f]{3})$", options: NSRegularExpressionOptions.CaseInsensitive)
+        let valueRange = NSRange(location:0, length: value.characters.count )
+        let result = regexp.rangeOfFirstMatchInString(value, options: .Anchored, range: valueRange)
+        if (result.location == NSNotFound) {
+            // regexp validation failed
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
     /*
     override func controlTextDidChange(obj: NSNotification) {
         var correctedString:String = hexField.stringValue
