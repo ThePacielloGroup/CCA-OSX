@@ -19,11 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var background: CCABackgroundColourView!
     @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!   
 
-    var currentSender: CCAColourController?
-
     var preferencesController = CCAPreferencesController(windowNibName: "Preferences")
-    
-    var currentTag:Int = 0
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     

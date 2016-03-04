@@ -95,13 +95,29 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Results" id="XA6-JW-Noy">
+                <menuItem title="Edit" id="5Pu-NU-gPU">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Results" id="12G-TK-f79">
+                    <menu key="submenu" title="Edit" id="O0K-t4-cy9">
                         <items>
-                            <menuItem title="Copy Results" keyEquivalent="c" id="29A-sF-pet">
+                            <menuItem title="Cut" keyEquivalent="x" id="ltX-ie-i6X">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="OSm-Dz-hv2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="9fz-wf-o8B">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="wGr-Mv-k9J"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy Full Results" keyEquivalent="c" id="29A-sF-pet">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
                                     <action selector="copyResults:" target="Voe-Tx-rLC" id="CqQ-51-bHI"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="d7s-tJ-RF7">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="eZL-91-wvM"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -390,11 +406,11 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="t2i-2V-OVI">
-                                                <rect key="frame" x="1" y="7" width="0.0" height="16"/>
+                                                <rect key="frame" x="-7" y="8" width="0.0" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="MPV-j3-suW">
-                                                <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
+                                                <rect key="frame" x="-14" y="15" width="15" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="3zU-UE-PfQ">
