@@ -22,21 +22,47 @@ class CCAPickerController: NSWindowController {
     
     let DEFAULT_DIMENSION:UInt = 128
 
-    override func windowDidLoad() {
-        super.windowDidLoad()
+    override func windowWillLoad() {
+        super.windowWillLoad()
         
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-        
-        /* Set always on top */
-        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
-
         //        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventGlobal)
         NSEvent.addLocalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventLocal)
         dimension = DEFAULT_DIMENSION / 8
+        
+        NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask) { (aEvent) -> NSEvent? in
+            self.keyDown(aEvent)
+            return aEvent
+        }
+    }
+    
+    override func windowDidLoad() {
+        super.windowDidLoad()
+
+        /* Set always on top */
+        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
     }
     
     override func mouseUp(theEvent: NSEvent) {
         NSNotificationCenter.defaultCenter().postNotificationName("ColorSelectedNotification", object: nil)
+    }
+    
+    override func keyDown(theEvent: NSEvent) {
+        if (theEvent.keyCode == 53){
+            self.close()
+        }
+    }
+    
+    override func showWindow(sender: AnyObject?) {
+        // Hide the mouse
+        CGDisplayHideCursor(CGMainDisplayID())
+
+        super.showWindow(sender)
+    }
+    
+    override func close() {
+        // Unhide the mouse
+        CGDisplayShowCursor(CGMainDisplayID())
+        super.close()
     }
     
     /*

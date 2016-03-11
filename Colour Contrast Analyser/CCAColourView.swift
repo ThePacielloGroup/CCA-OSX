@@ -90,16 +90,11 @@ class CCAColourView: NSView {
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ColorSelectedNotification", object: nil)
         
-        // Unhide the mouse
-        CGDisplayShowCursor(CGMainDisplayID())
         colorPickerSelected(pickerController.color!)
     }
     
     @IBAction func colorPickerClicked(sender: NSButton) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "pickerColorSelected:", name: "ColorSelectedNotification", object: nil)
-        
-        // Hide the mouse
-        CGDisplayHideCursor(CGMainDisplayID())
         pickerController.showWindow(nil)
     }
     

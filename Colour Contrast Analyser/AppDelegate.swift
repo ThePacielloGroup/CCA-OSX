@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             userDefaults.setObject(NSLocalizedString("results_format", comment:"Initial Results format text"), forKey: "CCAResultsFormat")
         }
     }
-
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }

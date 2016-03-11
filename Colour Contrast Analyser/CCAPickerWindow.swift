@@ -16,6 +16,5 @@ class CCAPickerWindow: NSWindow {
     override func mouseUp(theEvent: NSEvent) {
         println(color!.getHexString())
     }*/
-    
-    
+
 }
