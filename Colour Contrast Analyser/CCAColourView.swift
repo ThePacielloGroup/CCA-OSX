@@ -23,6 +23,7 @@ class CCAColourView: NSView {
     @IBOutlet weak var bField: NSTextField!
     
     @IBOutlet var preview: NSView!
+    @IBOutlet weak var header: NSView!
 
     var pickerController = CCAPickerController(windowNibName: "ColorPicker")
     
@@ -40,11 +41,8 @@ class CCAColourView: NSView {
         // add XIB's view to Custom NSView Subclass
         self.addSubview(self.view)
         self.preview.wantsLayer = true
-    }
-    
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-        // Drawing code here.
+        self.header.wantsLayer = true
+        self.header.layer?.backgroundColor = NSColor.whiteColor().CGColor
     }
     
     @IBAction func sliderChanged(sender: NSSlider) {

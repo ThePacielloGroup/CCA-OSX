@@ -345,13 +345,13 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH5-it-v8E">
-                                            <rect key="frame" x="6" y="5" width="362" height="126"/>
+                                            <rect key="frame" x="6" y="5" width="381" height="126"/>
                                             <clipView key="contentView" ambiguous="YES" id="2bl-BU-K3u">
-                                                <rect key="frame" x="1" y="0.0" width="360" height="125"/>
+                                                <rect key="frame" x="1" y="0.0" width="379" height="125"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="3zU-UE-PfQ" id="LOb-5o-Z5F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="102"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="379" height="102"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -383,7 +383,7 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn identifier="ColourBrightness" width="118" minWidth="10" maxWidth="3.4028234663852886e+38" id="bCd-aq-yII">
+                                                            <tableColumn identifier="ColourBrightness" width="137" minWidth="10" maxWidth="3.4028234663852886e+38" id="bCd-aq-yII">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Colour/Brightness">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -414,7 +414,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="3zU-UE-PfQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="379" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
@@ -441,7 +441,7 @@
                     <constraint firstAttribute="trailing" secondItem="xXw-Kw-eRT" secondAttribute="trailing" constant="-1" id="yBx-zg-Tke"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="374" y="323"/>
+            <point key="canvasLocation" x="435" y="394"/>
         </window>
     </objects>
     <resources>

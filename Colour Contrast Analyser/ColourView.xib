@@ -11,6 +11,7 @@
                 <outlet property="blueSlider" destination="vtT-1m-grN" id="UWV-qm-qKg"/>
                 <outlet property="gField" destination="2Bn-Sf-Zcl" id="uEw-hQ-oIl"/>
                 <outlet property="greenSlider" destination="QOK-De-MVW" id="3an-K2-T4i"/>
+                <outlet property="header" destination="CO3-kw-AT4" id="IqC-50-AQ3"/>
                 <outlet property="hexField" destination="hg2-57-1Iu" id="tDQ-Wu-SRu"/>
                 <outlet property="preview" destination="apc-sT-nLM" id="LCy-1a-SNg"/>
                 <outlet property="rField" destination="fGm-8W-Zic" id="Csa-kP-7tK"/>
@@ -43,21 +44,14 @@
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiU-WB-5Ma" userLabel="Picker">
-                            <rect key="frame" x="218" y="4" width="81" height="17"/>
-                            <buttonCell key="cell" type="inline" title="Picker" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rhl-lt-u8g" userLabel="Picker">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                <font key="font" metaFont="smallSystemBold"/>
+                            <rect key="frame" x="299" y="2" width="81" height="19"/>
+                            <buttonCell key="cell" type="roundRect" title="Picker" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rhl-lt-u8g" userLabel="Picker">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
                             </buttonCell>
                             <connections>
                                 <action selector="colorPickerClicked:" target="-2" id="FnA-t5-JFO"/>
                             </connections>
-                        </button>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK0-QL-pse">
-                            <rect key="frame" x="307" y="4" width="81" height="17"/>
-                            <buttonCell key="cell" type="inline" title="Hide RGB" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cgu-xC-sYx">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                <font key="font" metaFont="smallSystemBold"/>
-                            </buttonCell>
                         </button>
                         <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="nYl-fM-Ytf">
                             <rect key="frame" x="0.0" y="-1" width="400" height="4"/>
@@ -92,7 +86,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="400" height="99"/>
                     <subviews>
                         <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="hu0-ay-3Ub">
-                            <rect key="frame" x="0.0" y="95" width="400" height="5"/>
+                            <rect key="frame" x="0.0" y="95" width="400" height="4"/>
                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <font key="titleFont" metaFont="system"/>
