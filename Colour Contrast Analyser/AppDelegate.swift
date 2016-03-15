@@ -13,8 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let cca_url = "http://www.paciellogroup.com/resources/contrast-analyser.html"
     
-    var foreground: CCAColorForeground = CCAColorForeground.sharedInstance
-    var background: CCAColorBackground = CCAColorBackground.sharedInstance
+    var foreground: CCAColourForeground = CCAColourForeground.sharedInstance
+    var background: CCAColourBackground = CCAColourBackground.sharedInstance
 
     @IBOutlet weak var mainWindow: NSWindow!
     @IBOutlet weak var luminosity: CCALuminosityControler!

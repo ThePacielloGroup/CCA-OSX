@@ -12,16 +12,17 @@ import AppKit
 
 class CCAPickerController: NSWindowController {
 
-    @IBOutlet var pickerWindow: CCAPickerWindow!
+    @IBOutlet var pickerWindow: NSWindow!
     @IBOutlet weak var pickerView: CCAPickerView!
     @IBOutlet weak var hexaText: NSTextField!
     
+    var color: CCAColour!
     var cgImage:CGImage?
     var dimension:UInt = 0
-    var color:NSColor?
+    var tmpcolor:NSColor?
     
     let DEFAULT_DIMENSION:UInt = 128
-
+    
     override func windowWillLoad() {
         super.windowWillLoad()
         
@@ -43,7 +44,8 @@ class CCAPickerController: NSWindowController {
     }
     
     override func mouseUp(theEvent: NSEvent) {
-        NSNotificationCenter.defaultCenter().postNotificationName("ColorSelectedNotification", object: nil)
+        self.color.update(self.tmpcolor!)
+        self.close()
     }
     
     override func keyDown(theEvent: NSEvent) {
@@ -51,12 +53,13 @@ class CCAPickerController: NSWindowController {
             self.close()
         }
     }
-    
-    override func showWindow(sender: AnyObject?) {
+
+    func open(color:CCAColour) {
+        self.color = color
         // Hide the mouse
         CGDisplayHideCursor(CGMainDisplayID())
 
-        super.showWindow(sender)
+        super.showWindow(nil)
     }
     
     override func close() {
@@ -102,9 +105,9 @@ class CCAPickerController: NSWindowController {
         pickerView.updateView(cgi, rect: rect)
         
         // getting color
-        color = colorAtLocation(location)
-        hexaText.backgroundColor = color
-        hexaText.stringValue = color!.getHexString()
+        self.tmpcolor = colorAtLocation(location)
+        hexaText.backgroundColor = self.tmpcolor
+        hexaText.stringValue = self.tmpcolor!.getHexString()
     }
     
     func getScreenRect(point:NSPoint) -> NSRect {

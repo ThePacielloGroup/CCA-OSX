@@ -160,31 +160,53 @@
         <window title="Colour Contrast Analyser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="400" height="552"/>
+            <rect key="contentRect" x="335" y="390" width="400" height="571"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="552"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="571"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="552"/>
+                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
+                        <rect key="frame" x="0.0" y="-61" width="400" height="632"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-4Q-cFj" customClass="CCAForegroundColourView" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="367" width="400" height="185"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-js-gAy" userLabel="Foreground Header" customClass="CCAForegroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="606" width="400" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="NEg-HI-3nh"/>
-                                    <constraint firstAttribute="height" constant="185" id="cc6-Op-QVX"/>
+                                    <constraint firstAttribute="height" constant="26" id="FuL-rg-GyN"/>
                                 </constraints>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="sD1-z4-opA" customClass="CCABackgroundColourView" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="182" width="400" height="185"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enp-Se-0pg" userLabel="Foreground Preview" customClass="CCAForegroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="546" width="400" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="IX1-jV-pob"/>
-                                    <constraint firstAttribute="width" constant="400" id="toN-op-Iab"/>
+                                    <constraint firstAttribute="height" constant="60" id="qXu-Px-Oza"/>
                                 </constraints>
                             </customView>
-                            <tabView translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
-                                <rect key="frame" x="-7" y="-10" width="414" height="198"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-4Q-cFj" userLabel="Foreground RGB" customClass="CCAForegroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="446" width="400" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bYU-Ls-dgZ"/>
+                                </constraints>
+                            </customView>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-af-cnX" userLabel="Background Header" customClass="CCABackgroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="420" width="400" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Ueg-CS-Hw1"/>
+                                </constraints>
+                            </customView>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-gb-7FA" userLabel="Background Preview" customClass="CCABackgroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="360" width="400" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Mgy-xk-nxV"/>
+                                </constraints>
+                            </customView>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-z4-opA" userLabel="Background RGB" customClass="CCABackgroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="260" width="400" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZQ7-XD-zqF"/>
+                                </constraints>
+                            </customView>
+                            <tabView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
+                                <rect key="frame" x="-7" y="-10" width="414" height="276"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="Hwe-tp-tjw"/>
                                 </constraints>
@@ -192,11 +214,11 @@
                                 <tabViewItems>
                                     <tabViewItem label="Luminosity" identifier="1" id="DSB-dr-xAs">
                                         <view key="view" id="eNc-6E-zIS">
-                                            <rect key="frame" x="10" y="33" width="394" height="152"/>
+                                            <rect key="frame" x="10" y="33" width="394" height="230"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-fX-EFi">
-                                                    <rect key="frame" x="13" y="132" width="368" height="17"/>
+                                                    <rect key="frame" x="13" y="210" width="368" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast ratio: 00:00" id="FWp-mQ-KTT">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -204,7 +226,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box fixedFrame="YES" title="Normal Text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-lm-RDA">
-                                                    <rect key="frame" x="7" y="22" width="187" height="93"/>
+                                                    <rect key="frame" x="7" y="100" width="187" height="93"/>
                                                     <view key="contentView" id="YX2-Dr-BMl">
                                                         <rect key="frame" x="3" y="3" width="181" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +269,7 @@
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
                                                 <box fixedFrame="YES" title="Large text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-Oh-bED">
-                                                    <rect key="frame" x="196" y="22" width="194" height="93"/>
+                                                    <rect key="frame" x="196" y="100" width="194" height="93"/>
                                                     <view key="contentView" id="jLo-Kn-Scb">
                                                         <rect key="frame" x="3" y="3" width="188" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +312,7 @@
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
-                                                    <rect key="frame" x="10" y="121" width="377" height="5"/>
+                                                    <rect key="frame" x="10" y="199" width="377" height="5"/>
                                                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <font key="titleFont" metaFont="system"/>
@@ -300,11 +322,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Colour/Brightness" identifier="2" id="MoT-M5-z8P">
                                         <view key="view" id="cP4-ZH-L7A">
-                                            <rect key="frame" x="10" y="33" width="394" height="136"/>
+                                            <rect key="frame" x="10" y="33" width="394" height="146"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="vki-FN-fjx">
-                                                    <rect key="frame" x="10" y="115" width="260" height="17"/>
+                                                    <rect key="frame" x="10" y="125" width="260" height="17"/>
                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Colour difference: xxx (minimum 125)" placeholderString="" id="eZA-Za-LPa">
                                                         <font key="font" metaFont="cellTitle"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -312,13 +334,13 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-nI-gQc">
-                                                    <rect key="frame" x="12" y="76" width="355" height="5"/>
+                                                    <rect key="frame" x="12" y="86" width="355" height="5"/>
                                                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <font key="titleFont" metaFont="system"/>
                                                 </box>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-Qp-jtg" customClass="CCAColourBrightnessDifferenceField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
-                                                    <rect key="frame" x="36" y="27" width="331" height="26"/>
+                                                    <rect key="frame" x="36" y="37" width="331" height="26"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="example text showing contrast" drawsBackground="YES" id="t5O-hq-k15">
                                                         <font key="font" size="12" name="Verdana"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -329,11 +351,11 @@
                                                     </connections>
                                                 </textField>
                                                 <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DT5-Y9-cCt">
-                                                    <rect key="frame" x="12" y="32" width="16" height="16"/>
+                                                    <rect key="frame" x="12" y="42" width="16" height="16"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="Ct4-hc-nxu"/>
                                                 </imageView>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-w8-LKR">
-                                                    <rect key="frame" x="10" y="90" width="260" height="17"/>
+                                                    <rect key="frame" x="10" y="100" width="260" height="17"/>
                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Brightness difference: xxx (minimum 500)" placeholderString="" id="LA7-OT-u83">
                                                         <font key="font" metaFont="cellTitle"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -345,11 +367,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Colour Deficiency" identifier="" id="nRk-Mx-Jog">
                                         <view key="view" id="XIF-mH-lX6">
-                                            <rect key="frame" x="10" y="33" width="394" height="136"/>
+                                            <rect key="frame" x="10" y="33" width="394" height="146"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH5-it-v8E">
-                                                    <rect key="frame" x="6" y="5" width="381" height="126"/>
+                                                    <rect key="frame" x="6" y="15" width="381" height="126"/>
                                                     <clipView key="contentView" ambiguous="YES" id="2bl-BU-K3u">
                                                         <rect key="frame" x="1" y="0.0" width="379" height="125"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,12 +450,34 @@
                                 </tabViewItems>
                             </tabView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rpZ-af-cnX" secondAttribute="trailing" id="0r7-0i-3Na"/>
+                            <constraint firstAttribute="trailing" secondItem="sRe-js-gAy" secondAttribute="trailing" id="7iJ-UU-caf"/>
+                            <constraint firstAttribute="trailing" secondItem="Cpo-4Q-cFj" secondAttribute="trailing" id="8ss-x6-LcO"/>
+                            <constraint firstAttribute="trailing" secondItem="PK2-gb-7FA" secondAttribute="trailing" id="BGW-dB-BOq"/>
+                            <constraint firstItem="sD1-z4-opA" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="HKX-f6-HzB"/>
+                            <constraint firstItem="rpZ-af-cnX" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="Ind-On-rmP"/>
+                            <constraint firstItem="enp-Se-0pg" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="N38-he-H8L"/>
+                            <constraint firstAttribute="trailing" secondItem="enp-Se-0pg" secondAttribute="trailing" id="TUQ-3v-BfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="sD1-z4-opA" secondAttribute="trailing" id="Vst-6H-GMM"/>
+                            <constraint firstItem="PK2-gb-7FA" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="huO-sF-Jd7"/>
+                            <constraint firstItem="sRe-js-gAy" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="pB0-nO-4Lk"/>
+                            <constraint firstItem="Cpo-4Q-cFj" firstAttribute="leading" secondItem="abj-AF-RZM" secondAttribute="leading" id="q4f-4i-IIB"/>
+                        </constraints>
                         <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
                             <integer value="1000"/>
                             <integer value="1000"/>
                             <integer value="1000"/>
                         </visibilityPriorities>
                         <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
@@ -447,7 +491,7 @@
                     <constraint firstAttribute="trailing" secondItem="abj-AF-RZM" secondAttribute="trailing" id="oaS-28-0Uz"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="435" y="398"/>
+            <point key="canvasLocation" x="435" y="407.5"/>
         </window>
     </objects>
     <resources>
