@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -164,9 +164,9 @@
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="400" height="552"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
+                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="552"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-4Q-cFj" customClass="CCAForegroundColourView" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
@@ -177,14 +177,14 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="sD1-z4-opA" customClass="CCABackgroundColourView" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="174" width="400" height="185"/>
+                                <rect key="frame" x="0.0" y="182" width="400" height="185"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="185" id="IX1-jV-pob"/>
                                     <constraint firstAttribute="width" constant="400" id="toN-op-Iab"/>
                                 </constraints>
                             </customView>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
-                                <rect key="frame" x="-7" y="-10" width="414" height="182"/>
+                                <rect key="frame" x="-7" y="-10" width="414" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="Hwe-tp-tjw"/>
                                 </constraints>
@@ -192,11 +192,11 @@
                                 <tabViewItems>
                                     <tabViewItem label="Luminosity" identifier="1" id="DSB-dr-xAs">
                                         <view key="view" id="eNc-6E-zIS">
-                                            <rect key="frame" x="10" y="33" width="394" height="0.0"/>
+                                            <rect key="frame" x="10" y="33" width="394" height="152"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-fX-EFi">
-                                                    <rect key="frame" x="13" y="-20" width="368" height="17"/>
+                                                    <rect key="frame" x="13" y="132" width="368" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast ratio: 00:00" id="FWp-mQ-KTT">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -204,7 +204,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box fixedFrame="YES" title="Normal Text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-lm-RDA">
-                                                    <rect key="frame" x="7" y="-130" width="187" height="93"/>
+                                                    <rect key="frame" x="7" y="22" width="187" height="93"/>
                                                     <view key="contentView" id="YX2-Dr-BMl">
                                                         <rect key="frame" x="3" y="3" width="181" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
                                                 <box fixedFrame="YES" title="Large text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-Oh-bED">
-                                                    <rect key="frame" x="196" y="-130" width="194" height="93"/>
+                                                    <rect key="frame" x="196" y="22" width="194" height="93"/>
                                                     <view key="contentView" id="jLo-Kn-Scb">
                                                         <rect key="frame" x="3" y="3" width="188" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
-                                                    <rect key="frame" x="10" y="-31" width="377" height="5"/>
+                                                    <rect key="frame" x="10" y="121" width="377" height="5"/>
                                                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <font key="titleFont" metaFont="system"/>

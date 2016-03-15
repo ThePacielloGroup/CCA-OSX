@@ -10,7 +10,7 @@ import Cocoa
 
 class CCAColourView: NSView {
 
-    var color: NSColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+    var color: CCAColor!
 
     @IBOutlet var view: NSView!
     @IBOutlet weak var title: NSTextField!
@@ -46,44 +46,38 @@ class CCAColourView: NSView {
     }
     
     @IBAction func sliderChanged(sender: NSSlider) {
-        self.color = NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue)!
+        self.color.update(NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue)!)
         self.updatePreview()
         self.updateHex()
         self.updateRGB()
-        self.sendNotification()
     }
     
     @IBAction func colorPickerSelected(selectedColor: NSColor) {
-        self.color = selectedColor
+        self.color.update(selectedColor)
         self.updatePreview()
         self.updateHex()
         self.updateSliders()
         self.updateRGB()
-        self.sendNotification()
     }
     
     @IBAction func hexChanged(sender: NSTextField) {
         if (validateHex(sender.stringValue)) {
             hexField.backgroundColor = NSColor.whiteColor()
-            self.color = NSColor(hexString: sender.stringValue)!
+            self.color.update(NSColor(hexString: sender.stringValue)!)
             self.updatePreview()
             self.updateSliders()
             self.updateRGB()
-            self.sendNotification()
         } else {
             hexField.backgroundColor = NSColor.redColor()
         }
     }
     
     @IBAction func rgbChanged(sender: NSTextField) {
-        self.color = NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!
+        self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!)
         self.updatePreview()
         self.updateHex()
         self.updateSliders()
-        self.sendNotification()
     }
-    
-    func sendNotification() {}
     
     func pickerColorSelected(notification: NSNotification){
         pickerController.close()
@@ -99,21 +93,21 @@ class CCAColourView: NSView {
     }
     
     func updatePreview() {
-        self.preview.layer?.backgroundColor = self.color.CGColor
+        self.preview.layer?.backgroundColor = self.color.value.CGColor
     }
     func updateHex() {
-        self.hexField.stringValue = self.color.getHexString()
+        self.hexField.stringValue = self.color.value.getHexString()
         
     }
     func updateSliders() {
-        self.redSlider.integerValue = self.color.getRInt()
-        self.greenSlider.integerValue = self.color.getGInt()
-        self.blueSlider.integerValue = self.color.getBInt()
+        self.redSlider.integerValue = self.color.value.getRInt()
+        self.greenSlider.integerValue = self.color.value.getGInt()
+        self.blueSlider.integerValue = self.color.value.getBInt()
     }
     func updateRGB() {
-        self.rField.integerValue = self.color.getRInt()
-        self.gField.integerValue = self.color.getGInt()
-        self.bField.integerValue = self.color.getBInt()
+        self.rField.integerValue = self.color.value.getRInt()
+        self.gField.integerValue = self.color.value.getGInt()
+        self.bField.integerValue = self.color.value.getBInt()
     }
     
     func validateHex(value: String) -> Bool {
@@ -149,16 +143,11 @@ class CCAForegroundColourView: CCAColourView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.title.stringValue = "Foreground Colour"
-        self.color = NSColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        self.color = CCAColorForeground.sharedInstance
         self.updateHex()
         self.updateSliders()
         self.updateRGB()
         self.updatePreview()
-    }
-    
-    override func sendNotification() {
-        let userInfo = ["color" : self.color]
-        NSNotificationCenter.defaultCenter().postNotificationName("ForegroundColorChangedNotification", object: nil, userInfo: userInfo)
     }
 }
 
@@ -166,15 +155,10 @@ class CCABackgroundColourView: CCAColourView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.title.stringValue = "Background Colour"
-        self.color = NSColor(red: 1, green: 1, blue: 1, alpha: 1.0)
+        self.color = CCAColorBackground.sharedInstance
         self.updateHex()
         self.updateSliders()
         self.updateRGB()
         self.updatePreview()
-    }
-    
-    override func sendNotification() {
-        let userInfo = ["color" : self.color]
-        NSNotificationCenter.defaultCenter().postNotificationName("BackgroundColorChangedNotification", object: nil, userInfo: userInfo)
     }
 }

@@ -13,11 +13,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let cca_url = "http://www.paciellogroup.com/resources/contrast-analyser.html"
     
+    var foreground: CCAColorForeground = CCAColorForeground.sharedInstance
+    var background: CCAColorBackground = CCAColorBackground.sharedInstance
+
     @IBOutlet weak var mainWindow: NSWindow!
     @IBOutlet weak var luminosity: CCALuminosityControler!
-    @IBOutlet weak var foreground: CCAForegroundColourView!
-    @IBOutlet weak var background: CCABackgroundColourView!
-    @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!   
+    @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!
 
     var preferencesController = CCAPreferencesController(windowNibName: "Preferences")
     
@@ -45,8 +46,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func copyResults(sender: AnyObject) {
         var results:String = userDefaults.stringForKey("CCAResultsFormat")!
-        results = results.replace("%F", withString: foreground!.color.getHexString())
-        results = results.replace("%B", withString: background!.color.getHexString())
+        results = results.replace("%F", withString: foreground.value.getHexString())
+        results = results.replace("%B", withString: background.value.getHexString())
         results = results.replace("%L", withString: luminosity.contrastRatioString!)
         results = results.replace("%AAN ", withString:((luminosity.passAA == true) ? NSLocalizedString("passed_normal_AA", comment:"Normal text passed at level AA") : NSLocalizedString("failed_normal_AA", comment:"Normal text failed at level AA")))
         results = results.replace("%AAAN", withString:((luminosity.passAAA == true) ? NSLocalizedString("passed_normal_AAA", comment:"Normal text passed at level AAA") : NSLocalizedString("failed_normal_AAA", comment:"Normal text failed at level AAA")))

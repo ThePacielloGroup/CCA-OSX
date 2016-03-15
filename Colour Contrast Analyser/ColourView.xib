@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CCAColourView" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
@@ -26,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="185"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="CO3-kw-AT4" userLabel="Header View">
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-kw-AT4" userLabel="Header View">
                     <rect key="frame" x="0.0" y="159" width="400" height="26"/>
                     <subviews>
                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ieN-Ih-zDi">
@@ -178,17 +178,13 @@
                 </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="CO3-kw-AT4" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="6bX-e9-XZw"/>
                 <constraint firstItem="HUN-Om-AAD" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="CzS-d5-CRN"/>
                 <constraint firstItem="apc-sT-nLM" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="EY2-tb-hp6"/>
-                <constraint firstItem="CO3-kw-AT4" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="WmP-3y-amL"/>
                 <constraint firstItem="HUN-Om-AAD" firstAttribute="top" secondItem="apc-sT-nLM" secondAttribute="bottom" constant="-2" id="ckQ-gS-eC0"/>
-                <constraint firstItem="HUN-Om-AAD" firstAttribute="top" secondItem="CO3-kw-AT4" secondAttribute="bottom" constant="60" id="hCP-2d-WI0"/>
                 <constraint firstAttribute="bottom" secondItem="HUN-Om-AAD" secondAttribute="bottom" id="lMu-eG-rNM"/>
                 <constraint firstItem="apc-sT-nLM" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="25" id="oq9-jE-TiJ"/>
                 <constraint firstAttribute="trailing" secondItem="apc-sT-nLM" secondAttribute="trailing" id="uaP-DL-oIZ"/>
                 <constraint firstAttribute="trailing" secondItem="HUN-Om-AAD" secondAttribute="trailing" id="xvx-Y1-ZLe"/>
-                <constraint firstAttribute="trailing" secondItem="CO3-kw-AT4" secondAttribute="trailing" id="ybL-ED-IY4"/>
             </constraints>
             <point key="canvasLocation" x="89" y="154.5"/>
         </customView>
