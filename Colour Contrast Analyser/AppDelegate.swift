@@ -13,35 +13,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let cca_url = "http://www.paciellogroup.com/resources/contrast-analyser.html"
     
-    @IBOutlet weak var mainWindow: NSWindow!
-    @IBOutlet weak var foregroundView: NSView!
-    @IBOutlet weak var backgroundView: NSView!
-    @IBOutlet weak var luminosity: CCALuminosityControler!
-    @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!   
+    var foreground: CCAColourForeground = CCAColourForeground.sharedInstance
+    var background: CCAColourBackground = CCAColourBackground.sharedInstance
 
-    var currentSender: CCAColourController?
-    
-    var foreground = CCAForegroundColourController(nibName: "ColorView", bundle: nil)
-    var background = CCABackgroundColourController(nibName: "ColorView", bundle: nil)
+    @IBOutlet weak var mainWindow: NSWindow!
+    @IBOutlet weak var luminosity: CCALuminosityControler!
+    @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!
 
     var preferencesController = CCAPreferencesController(windowNibName: "Preferences")
-    
-    var currentTag:Int = 0
+
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        foreground?.title = "Foreground Color"
-        background?.title = "Background Color"
-        foregroundView.addSubview(foreground!.view)
-        backgroundView.addSubview(background!.view)
-        
         // Initialise Preferences
         if userDefaults.stringForKey("CCAResultsFormat") == nil {
             userDefaults.setObject(NSLocalizedString("results_format", comment:"Initial Results format text"), forKey: "CCAResultsFormat")
         }
     }
-
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
@@ -57,8 +47,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func copyResults(sender: AnyObject) {
         var results:String = userDefaults.stringForKey("CCAResultsFormat")!
-        results = results.replace("%F", withString: foreground!.color.getHexString())
-        results = results.replace("%B", withString: background!.color.getHexString())
+        results = results.replace("%F", withString: foreground.value.getHexString())
+        results = results.replace("%B", withString: background.value.getHexString())
         results = results.replace("%L", withString: luminosity.contrastRatioString!)
         results = results.replace("%AAN ", withString:((luminosity.passAA == true) ? NSLocalizedString("passed_normal_AA", comment:"Normal text passed at level AA") : NSLocalizedString("failed_normal_AA", comment:"Normal text failed at level AA")))
         results = results.replace("%AAAN", withString:((luminosity.passAAA == true) ? NSLocalizedString("passed_normal_AAA", comment:"Normal text passed at level AAA") : NSLocalizedString("failed_normal_AAA", comment:"Normal text failed at level AAA")))

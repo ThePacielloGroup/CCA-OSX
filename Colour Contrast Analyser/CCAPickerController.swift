@@ -12,31 +12,60 @@ import AppKit
 
 class CCAPickerController: NSWindowController {
 
-    @IBOutlet var pickerWindow: CCAPickerWindow!
+    @IBOutlet var pickerWindow: NSWindow!
     @IBOutlet weak var pickerView: CCAPickerView!
     @IBOutlet weak var hexaText: NSTextField!
     
+    var color: CCAColour!
     var cgImage:CGImage?
     var dimension:UInt = 0
-    var color:NSColor?
+    var tmpcolor:NSColor?
     
     let DEFAULT_DIMENSION:UInt = 128
-
-    override func windowDidLoad() {
-        super.windowDidLoad()
+    
+    override func windowWillLoad() {
+        super.windowWillLoad()
         
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-        
-        /* Set always on top */
-        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
-
         //        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventGlobal)
         NSEvent.addLocalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventLocal)
         dimension = DEFAULT_DIMENSION / 8
+        
+        NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask) { (aEvent) -> NSEvent? in
+            self.keyDown(aEvent)
+            return aEvent
+        }
+    }
+    
+    override func windowDidLoad() {
+        super.windowDidLoad()
+
+        /* Set always on top */
+        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
     }
     
     override func mouseUp(theEvent: NSEvent) {
-        NSNotificationCenter.defaultCenter().postNotificationName("ColorSelectedNotification", object: nil)
+        self.color.update(self.tmpcolor!)
+        self.close()
+    }
+    
+    override func keyDown(theEvent: NSEvent) {
+        if (theEvent.keyCode == 53){
+            self.close()
+        }
+    }
+
+    func open(color:CCAColour) {
+        self.color = color
+        // Hide the mouse
+        CGDisplayHideCursor(CGMainDisplayID())
+
+        super.showWindow(nil)
+    }
+    
+    override func close() {
+        // Unhide the mouse
+        CGDisplayShowCursor(CGMainDisplayID())
+        super.close()
     }
     
     /*
@@ -76,9 +105,9 @@ class CCAPickerController: NSWindowController {
         pickerView.updateView(cgi, rect: rect)
         
         // getting color
-        color = colorAtLocation(location)
-        hexaText.backgroundColor = color
-        hexaText.stringValue = color!.getHexString()
+        self.tmpcolor = colorAtLocation(location)
+        hexaText.backgroundColor = self.tmpcolor
+        hexaText.stringValue = self.tmpcolor!.getHexString()
     }
     
     func getScreenRect(point:NSPoint) -> NSRect {
