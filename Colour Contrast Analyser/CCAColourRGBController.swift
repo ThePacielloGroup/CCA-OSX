@@ -19,7 +19,12 @@ class CCAColourRGBController: NSView {
     @IBOutlet weak var rField: NSTextField!
     @IBOutlet weak var gField: NSTextField!
     @IBOutlet weak var bField: NSTextField!
-    
+    @IBOutlet weak var rView: NSView!
+    @IBOutlet weak var gView: NSView!
+    @IBOutlet weak var bView: NSView!
+    @IBOutlet weak var showhide: NSButton!
+    var rgbHidden: Bool = true
+
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
     }
@@ -33,6 +38,14 @@ class CCAColourRGBController: NSView {
         self.view.frame = self.bounds
         // add XIB's view to Custom NSView Subclass
         self.addSubview(self.view)
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        // these are 10.11-only APIs, but you can use the visual format language or any other autolayout APIs
+        self.view.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor).active = true
+        self.view.topAnchor.constraintEqualToAnchor(self.topAnchor).active = true
+        self.view.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true
+        self.view.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor).active = true
+        self.hideRGB(true)
     }
     
     @IBAction func sliderChanged(sender: NSSlider) {
@@ -41,6 +54,17 @@ class CCAColourRGBController: NSView {
     
     @IBAction func rgbChanged(sender: NSTextField) {
         self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!)
+    }
+    
+    @IBAction func disclosureClicked(sender: AnyObject) {
+        self.hideRGB(!self.rgbHidden)
+    }
+    
+    func hideRGB(value:Bool) {
+        self.rView.hidden = value
+        self.gView.hidden = value
+        self.bView.hidden = value
+        self.rgbHidden = value
     }
     
     func update(notification: NSNotification) {

@@ -32,6 +32,13 @@ class CCAColourHeaderController: NSView {
         self.addSubview(self.view)
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        // these are 10.11-only APIs, but you can use the visual format language or any other autolayout APIs
+        self.view.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor).active = true
+        self.view.topAnchor.constraintEqualToAnchor(self.topAnchor).active = true
+        self.view.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true
+        self.view.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor).active = true
     }
     
     @IBAction func colorPickerClicked(sender: NSButton) {

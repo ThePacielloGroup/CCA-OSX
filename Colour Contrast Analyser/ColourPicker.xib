@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="CCAPickerController" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="CCAPickerController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
                 <outlet property="hexaText" destination="aV9-qo-FyD" id="J74-2d-k98"/>
                 <outlet property="pickerView" destination="OHW-uN-GUV" id="QJO-ZK-ZUW"/>

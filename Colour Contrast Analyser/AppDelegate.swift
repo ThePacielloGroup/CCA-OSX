@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!
 
     var preferencesController = CCAPreferencesController(windowNibName: "Preferences")
+
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
