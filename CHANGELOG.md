@@ -1,0 +1,19 @@
+# Change Log
+
+## [2.3](https://github.com/ThePacielloGroup/CCA-OSX/tree/2.3) (2016-03-16)
+[Full Changelog](https://github.com/ThePacielloGroup/CCA-OSX/compare/2.2...2.3)
+
+**Implemented enhancements:**
+
+- Use ESC to dismiss color picker [\#6](https://github.com/ThePacielloGroup/CCA-OSX/issues/6)
+- Feature to hide the RGB sliders [\#2](https://github.com/ThePacielloGroup/CCA-OSX/issues/2)
+
+**Fixed bugs:**
+
+- CCA doesn’t allow pasting color values into the foreground/background boxes. [\#17](https://github.com/ThePacielloGroup/CCA-OSX/issues/17)
+- CCA disappears when it’s not the front-most app? [\#16](https://github.com/ThePacielloGroup/CCA-OSX/issues/16)
+- Paste from keyboard not working [\#10](https://github.com/ThePacielloGroup/CCA-OSX/issues/10)
+
+**Closed issues:**
+
+- the binary is not available to download on the github release page [\#15](https://github.com/ThePacielloGroup/CCA-OSX/issues/15)
