@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
@@ -159,67 +160,55 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="400" height="538"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="538"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="542"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
-                        <rect key="frame" x="0.0" y="-4" width="400" height="542"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="542"/>
                         <subviews>
-                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-js-gAy" userLabel="Foreground Header" customClass="CCAForegroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="sRe-js-gAy" userLabel="Foreground Header" customClass="CCAForegroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="516" width="400" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="FuL-rg-GyN"/>
                                 </constraints>
                             </customView>
-                            <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-os-Le4">
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-os-Le4">
                                 <rect key="frame" x="0.0" y="513" width="400" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
-                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enp-Se-0pg" userLabel="Foreground Preview" customClass="CCAForegroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="enp-Se-0pg" userLabel="Foreground Preview" customClass="CCAForegroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="455" width="400" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="qXu-Px-Oza"/>
                                 </constraints>
                             </customView>
-                            <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-4Q-cFj" userLabel="Foreground RGB" customClass="CCAForegroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-4Q-cFj" userLabel="Foreground RGB" customClass="CCAForegroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="355" width="400" height="100"/>
                             </customView>
-                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="F18-jl-zCO">
+                            <box verticalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="F18-jl-zCO">
                                 <rect key="frame" x="0.0" y="352" width="400" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
-                            <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-af-cnX" userLabel="Background Header" customClass="CCABackgroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-af-cnX" userLabel="Background Header" customClass="CCABackgroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="328" width="400" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="Ueg-CS-Hw1"/>
                                 </constraints>
                             </customView>
-                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="fE8-HV-XHX">
+                            <box verticalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fE8-HV-XHX">
                                 <rect key="frame" x="0.0" y="325" width="400" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
-                            <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-gb-7FA" userLabel="Background Preview" customClass="CCABackgroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-gb-7FA" userLabel="Background Preview" customClass="CCABackgroundColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="267" width="400" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Mgy-xk-nxV"/>
                                 </constraints>
                             </customView>
-                            <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-z4-opA" userLabel="Background RGB" customClass="CCABackgroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-z4-opA" userLabel="Background RGB" customClass="CCABackgroundColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="167" width="400" height="100"/>
                             </customView>
-                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-Xm-mYs">
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-Xm-mYs">
                                 <rect key="frame" x="0.0" y="164" width="400" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
                             <tabView controlSize="small" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Kw-eRT">
                                 <rect key="frame" x="-7" y="-10" width="414" height="179"/>
@@ -229,25 +218,28 @@
                                 <tabViewItems>
                                     <tabViewItem label="Luminosity" identifier="1" id="DSB-dr-xAs">
                                         <view key="view" id="eNc-6E-zIS">
-                                            <rect key="frame" x="10" y="25" width="394" height="141"/>
+                                            <rect key="frame" x="10" y="29" width="394" height="137"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-fX-EFi">
-                                                    <rect key="frame" x="13" y="121" width="368" height="17"/>
+                                                    <rect key="frame" x="13" y="117" width="368" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast ratio: 00:00" id="FWp-mQ-KTT">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <box fixedFrame="YES" title="Normal Text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-lm-RDA">
-                                                    <rect key="frame" x="7" y="11" width="187" height="93"/>
+                                                <box fixedFrame="YES" boxType="secondary" borderType="bezel" title="Normal Text" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-lm-RDA">
+                                                    <rect key="frame" x="7" y="7" width="187" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="YX2-Dr-BMl">
                                                         <rect key="frame" x="3" y="3" width="181" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzj-NQ-Bri" customClass="CCALuminosityLevelField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                                                 <rect key="frame" x="30" y="41" width="143" height="26"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="PASS AA" drawsBackground="YES" id="cVb-oV-yvd">
                                                                     <font key="font" size="12" name="Verdana"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -260,6 +252,7 @@
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-NM-SpP" customClass="CCALuminosityLevelField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                                                 <rect key="frame" x="30" y="10" width="143" height="25"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="PASS AAA" drawsBackground="YES" id="zNO-FF-wok">
                                                                     <font key="font" size="12" name="Verdana"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -272,25 +265,27 @@
                                                             </textField>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epb-KA-Lmx">
                                                                 <rect key="frame" x="6" y="46" width="16" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="XhR-0v-zFZ"/>
                                                             </imageView>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-eI-sd6">
                                                                 <rect key="frame" x="6" y="14" width="16" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="S76-i0-7Cs"/>
                                                             </imageView>
                                                         </subviews>
                                                     </view>
-                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
-                                                <box fixedFrame="YES" title="Large text" boxType="secondary" borderType="bezel" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-Oh-bED">
-                                                    <rect key="frame" x="196" y="11" width="194" height="93"/>
+                                                <box fixedFrame="YES" boxType="secondary" borderType="bezel" title="Large text" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-Oh-bED">
+                                                    <rect key="frame" x="196" y="7" width="194" height="93"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="jLo-Kn-Scb">
                                                         <rect key="frame" x="3" y="3" width="188" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tX7-Qe-sdz" customClass="CCALuminosityLevelField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                                                 <rect key="frame" x="31" y="41" width="148" height="26"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="PASS AA" drawsBackground="YES" id="Eqk-Lv-iwT">
                                                                     <font key="font" size="14" name="Verdana-Bold"/>
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -303,6 +298,7 @@
                                                             </textField>
                                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLd-Dh-bMs" customClass="CCALuminosityLevelField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                                                 <rect key="frame" x="31" y="10" width="148" height="25"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="PASS AAA" drawsBackground="YES" id="JL2-ff-GmV">
                                                                     <font key="font" size="14" name="Verdana-Bold"/>
                                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -315,22 +311,20 @@
                                                             </textField>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWW-Sd-nWm">
                                                                 <rect key="frame" x="7" y="46" width="16" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="8zP-A8-WG3"/>
                                                             </imageView>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-VA-mWT">
                                                                 <rect key="frame" x="7" y="14" width="16" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="Peg-ou-rdS"/>
                                                             </imageView>
                                                         </subviews>
                                                     </view>
-                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </box>
-                                                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
-                                                    <rect key="frame" x="10" y="110" width="377" height="5"/>
-                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <font key="titleFont" metaFont="system"/>
+                                                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
+                                                    <rect key="frame" x="10" y="106" width="377" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </box>
                                             </subviews>
                                         </view>
@@ -342,20 +336,20 @@
                                             <subviews>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="vki-FN-fjx">
                                                     <rect key="frame" x="10" y="115" width="260" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Colour difference: xxx (minimum 125)" placeholderString="" id="eZA-Za-LPa">
                                                         <font key="font" metaFont="cellTitle"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-nI-gQc">
+                                                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-nI-gQc">
                                                     <rect key="frame" x="12" y="76" width="355" height="5"/>
-                                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <font key="titleFont" metaFont="system"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </box>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-Qp-jtg" customClass="CCAColourBrightnessDifferenceField" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                                     <rect key="frame" x="36" y="27" width="331" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="example text showing contrast" drawsBackground="YES" id="t5O-hq-k15">
                                                         <font key="font" size="12" name="Verdana"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -367,10 +361,12 @@
                                                 </textField>
                                                 <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DT5-Y9-cCt">
                                                     <rect key="frame" x="12" y="32" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="Yes" id="Ct4-hc-nxu"/>
                                                 </imageView>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="7lU-w8-LKR">
                                                     <rect key="frame" x="10" y="90" width="260" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Brightness difference: xxx (minimum 500)" placeholderString="" id="LA7-OT-u83">
                                                         <font key="font" metaFont="cellTitle"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -387,9 +383,10 @@
                                             <subviews>
                                                 <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH5-it-v8E">
                                                     <rect key="frame" x="6" y="5" width="381" height="126"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" id="2bl-BU-K3u">
                                                         <rect key="frame" x="1" y="0.0" width="379" height="125"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="3zU-UE-PfQ" id="LOb-5o-Z5F">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="102"/>
@@ -444,14 +441,13 @@
                                                                 </connections>
                                                             </tableView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </clipView>
                                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="t2i-2V-OVI">
                                                         <rect key="frame" x="-7" y="8" width="0.0" height="15"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="MPV-j3-suW">
-                                                        <rect key="frame" x="-14" y="15" width="15" height="0.0"/>
+                                                        <rect key="frame" x="-14" y="16" width="15" height="0.0"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <tableHeaderView key="headerView" id="3zU-UE-PfQ">

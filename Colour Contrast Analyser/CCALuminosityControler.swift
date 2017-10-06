@@ -53,9 +53,16 @@ class CCALuminosityControler: NSViewController {
     }
     
     func updateResults() {
+        //    if ((2.95 <= eRaw) and (3 > eRaw)) or ((4.45 <= eRaw) and (4.5 > eRaw)) then
         luminosityValue = Luminosity.getResult(self.fColor, bColor:self.bColor)
-        contrastRatioString = String(format:"%.2f:1", luminosityValue!)
-        ratioText.stringValue = String(format:NSLocalizedString("contrast_ratio", comment:"Contrast Ratio: %.2f:1"), luminosityValue!)
+        let roundedValue = round(luminosityValue!*1000)/1000
+        contrastRatioString = String(format:"%.3f:1", roundedValue)
+        if ((luminosityValue! >= 6.95 && luminosityValue! < 7) || (luminosityValue! >= 4.45 && luminosityValue! < 4.5) || (luminosityValue! >= 2.95 && luminosityValue! < 3)) {
+            ratioText.stringValue = String(format:NSLocalizedString("contrast_ratio_below", comment:"")) + String(format:"%.1f:1 (%.3f:1)", luminosityValue!, roundedValue)
+        } else {
+            ratioText.stringValue = String(format:NSLocalizedString("contrast_ratio", comment:"")) + String(format:"%.1f:1", luminosityValue!)
+        }
+
         passAA = true
         passAAA = true
         passAALarge = true

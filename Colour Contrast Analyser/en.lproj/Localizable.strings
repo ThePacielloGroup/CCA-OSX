@@ -1,5 +1,6 @@
-﻿/* Contrast Ratio: %.2f:1 */
-"contrast_ratio" = "Contrast Ratio: %.1f:1";
+/* Contrast Ratio: %.1f:1 */
+"contrast_ratio" = "Contrast Ratio: ";
+"contrast_ratio_below" = "Contrast Ratio: just below ";
 
 /* Colour/Brightness difference */
 "colour_diff" = "Colour difference: %d (minimum 500)";
