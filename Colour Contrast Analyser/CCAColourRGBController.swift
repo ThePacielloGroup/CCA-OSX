@@ -32,7 +32,7 @@ class CCAColourRGBController: NSView {
     // init for Ibuilder
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        NSBundle.mainBundle().loadNibNamed("ColourRGBView", owner: self, topLevelObjects: nil)
+        Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ColourRGBView"), owner: self, topLevelObjects: nil)
         
         // Makes XIB View size same
         self.view.frame = self.bounds
@@ -41,33 +41,33 @@ class CCAColourRGBController: NSView {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         
         // these are 10.11-only APIs, but you can use the visual format language or any other autolayout APIs
-        self.view.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor).active = true
-        self.view.topAnchor.constraintEqualToAnchor(self.topAnchor).active = true
-        self.view.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true
-        self.view.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor).active = true
+        self.view.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.view.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.view.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.hideRGB(true)
     }
     
-    @IBAction func sliderChanged(sender: NSSlider) {
+    @IBAction func sliderChanged(_ sender: NSSlider) {
         self.color.update(NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue)!)
     }
     
-    @IBAction func rgbChanged(sender: NSTextField) {
+    @IBAction func rgbChanged(_ sender: NSTextField) {
         self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!)
     }
     
-    @IBAction func disclosureClicked(sender: AnyObject) {
+    @IBAction func disclosureClicked(_ sender: AnyObject) {
         self.hideRGB(!self.rgbHidden)
     }
     
-    func hideRGB(value:Bool) {
-        self.rView.hidden = value
-        self.gView.hidden = value
-        self.bView.hidden = value
+    func hideRGB(_ value:Bool) {
+        self.rView.isHidden = value
+        self.gView.isHidden = value
+        self.bView.isHidden = value
         self.rgbHidden = value
     }
     
-    func update(notification: NSNotification) {
+    @objc func update(_ notification: Notification) {
         self.updateSliders()
         self.updateRGB()
     }
@@ -90,7 +90,7 @@ class CCAForegroundColourRGBController: CCAColourRGBController {
         self.color = CCAColourForeground.sharedInstance
         self.updateSliders()
         self.updateRGB()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update:", name: "ForegroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourRGBController.update(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
     }
 }
 
@@ -100,6 +100,6 @@ class CCABackgroundColourRGBController: CCAColourRGBController {
         self.color = CCAColourBackground.sharedInstance
         self.updateSliders()
         self.updateRGB()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update:", name: "BackgroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourRGBController.update(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
 }

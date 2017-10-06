@@ -10,7 +10,7 @@ import Cocoa
 
 class Luminosity {
     
-    class func getResult(fColor:NSColor, bColor:NSColor) -> Double {
+    class func getResult(_ fColor:NSColor, bColor:NSColor) -> Double {
         let lf:CGFloat = relativeLuminance(fColor)
         let lb:CGFloat = relativeLuminance(bColor)
         let cr = contrastRatio(lf, lb:lb)
@@ -19,7 +19,7 @@ class Luminosity {
         return Double(rounded)
     }
     
-    class func contrastRatio (lf:CGFloat, lb:CGFloat) -> CGFloat {
+    class func contrastRatio (_ lf:CGFloat, lb:CGFloat) -> CGFloat {
         var cr:CGFloat
         if lf >= lb {
             cr = (lf + 0.05)/(lb + 0.05);
@@ -29,7 +29,7 @@ class Luminosity {
         return cr;
     }
     
-    class func relativeLuminance(color:NSColor) -> CGFloat {
+    class func relativeLuminance(_ color:NSColor) -> CGFloat {
         var Rs:CGFloat = color.redComponent
         var Gs:CGFloat = color.greenComponent
         var Bs:CGFloat = color.blueComponent

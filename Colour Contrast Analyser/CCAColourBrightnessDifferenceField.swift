@@ -12,26 +12,26 @@ class CCAColourBrightnessDifferenceField: NSTextField {
     @IBOutlet weak var statusImage:NSImageView!
     var currentStatus:Bool = false
     
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
         // Drawing code here.
     }
     func setFail() {
         if (currentStatus == true) {
-            self.statusImage.image = NSImage(named: "No")
+            self.statusImage.image = NSImage(named: NSImage.Name(rawValue: "No"))
             currentStatus = false;
         }
     }
     
     func setPass() {
         if (currentStatus == false) {
-            self.statusImage.image = NSImage(named: "Yes")
+            self.statusImage.image = NSImage(named: NSImage.Name(rawValue: "Yes"))
             currentStatus = true;
         }
     }
     
-    func validateColourBrightnessDifference(brightness:Int, colour:Int) {
+    func validateColourBrightnessDifference(_ brightness:Int, colour:Int) {
         if brightness > 125 && colour > 500 {
             self.setPass();
         } else {

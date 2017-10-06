@@ -24,8 +24,8 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         self.updateResults()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateForeground:", name: "ForegroundColorChangedNotification", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateBackground:", name: "BackgroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourBrightnessDifferenceController.updateForeground(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourBrightnessDifferenceController.updateBackground(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
     
     func updateResults() {
@@ -35,7 +35,7 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         brightnessDifferenceText.stringValue = String(format: NSLocalizedString("brightness_diff", comment:"Brightness difference: %d (minimum 125)"), brightnessDifferenceValue!)
         colourBrightnessSample.validateColourBrightnessDifference(brightnessDifferenceValue!, colour: colourDifferenceValue!)
     }
-    func updateForeground(notification: NSNotification) {
+    @objc func updateForeground(_ notification: Notification) {
         self.fColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         
@@ -46,7 +46,7 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         }
         colourBrightnessSample.textColor = color
     }
-    func updateBackground(notification: NSNotification) {
+    @objc func updateBackground(_ notification: Notification) {
         self.bColor = notification.userInfo!["color"] as! NSColor
         self.updateResults()
         colourBrightnessSample.backgroundColor = self.bColor

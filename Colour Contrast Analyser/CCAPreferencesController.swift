@@ -12,15 +12,15 @@ class CCAPreferencesController: NSWindowController, NSWindowDelegate {
     
     @IBOutlet var resultText: NSTextView!
 
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        resultText.string = userDefaults.stringForKey("CCAResultsFormat")
+        resultText.string = userDefaults.string(forKey: "CCAResultsFormat")!
         self.window?.delegate = self
     }
 
-    func windowWillClose(notification: NSNotification) {
-        userDefaults.setObject(resultText.string, forKey: "CCAResultsFormat")
+    func windowWillClose(_ notification: Notification) {
+        userDefaults.set(resultText.string, forKey: "CCAResultsFormat")
     }
 }

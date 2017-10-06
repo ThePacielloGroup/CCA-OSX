@@ -14,9 +14,9 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         NSLocalizedString("deuteranopia", comment:"Deuteranopia"),
         NSLocalizedString("tritanopia", comment:"Tritanopia"),
         NSLocalizedString("color_blindness", comment:"Color blindness")]
-    var contrastRatio: [Double] = [Double](count: 5, repeatedValue: 0.0)
-    var colourDiff: [Int] = [Int](count: 5, repeatedValue: 0)
-    var brightnessDiff: [Int] = [Int](count: 5, repeatedValue: 0)
+    var contrastRatio: [Double] = [Double](repeating: 0.0, count: 5)
+    var colourDiff: [Int] = [Int](repeating: 0, count: 5)
+    var brightnessDiff: [Int] = [Int](repeating: 0, count: 5)
     var foregroundColor: [NSColor] = [NSColor]()
     var backgroundColor: [NSColor] = [NSColor]()
     
@@ -47,11 +47,11 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         updateColourDiff()
         updateBrightnessDiff()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateForeground:", name: "ForegroundColorChangedNotification", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateBackground:", name: "BackgroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourDeficiencyController.updateForeground(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourDeficiencyController.updateBackground(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
 
-    func updateForeground(notification: NSNotification) {
+    @objc func updateForeground(_ notification: Notification) {
         let color = notification.userInfo!["color"] as! NSColor
         foregroundColor[0] = colourDeficiencyNone.convertColor(color)
         foregroundColor[1] = colourDeficiencyProtanopia.convertColor(color)
@@ -64,7 +64,7 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         self.tableView.reloadData()
     }
 
-    func updateBackground(notification: NSNotification) {
+    @objc func updateBackground(_ notification: Notification) {
         let color = notification.userInfo!["color"] as! NSColor
         backgroundColor[0] = colourDeficiencyNone.convertColor(color)
         backgroundColor[1] = colourDeficiencyProtanopia.convertColor(color)
@@ -101,24 +101,24 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         brightnessDiff[4] = ColourBrightnessDifference.getBrightnessDifference(foregroundColor[4], bc: backgroundColor[4])
     }
     
-    func numberOfRowsInTableView(_tableView: NSTableView) -> Int {
+    func numberOfRows(in _tableView: NSTableView) -> Int {
         return deficiency.count
     }
     
-    func tableView(_tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?
+    func tableView(_ _tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
     {
         var result = ""
 
         let columnIdentifier = tableColumn!.identifier
-        if columnIdentifier == "Deficiency" {
+        if columnIdentifier.rawValue == "Deficiency" {
             result = deficiency[row]
         }
-        if columnIdentifier == "ContrastRatio" {
+        if columnIdentifier.rawValue == "ContrastRatio" {
             if (!contrastRatio.isEmpty) {
                 result = String(format:"%.1f:1", contrastRatio[row])
             }
         }
-        if columnIdentifier == "ColourBrightness" {
+        if columnIdentifier.rawValue == "ColourBrightness" {
             if (!colourDiff.isEmpty) && (!brightnessDiff.isEmpty) {
                 result = String(format:"%d / %d", colourDiff[row], brightnessDiff[row])
             }
@@ -126,7 +126,7 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
         return result
     }
     
-    func tableView(tableView: NSTableView, willDisplayCell cell: AnyObject, forTableColumn tableColumn: NSTableColumn?, row: Int) {
+    func tableView(_ tableView: NSTableView, willDisplayCell cell: Any, for tableColumn: NSTableColumn?, row: Int) {
         let fieldCell = cell as! NSTextFieldCell
         fieldCell.drawsBackground = true
         fieldCell.backgroundColor = backgroundColor[row]

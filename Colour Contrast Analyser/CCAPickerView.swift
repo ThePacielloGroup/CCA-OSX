@@ -13,55 +13,55 @@ class CCAPickerView: NSView {
     var cgImage:CGImage?
     var cgRect:NSRect?
     
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
-        let context = NSGraphicsContext.currentContext()!.CGContext
-        CGContextSetInterpolationQuality(context, .None)
-        CGContextSetShouldAntialias(context, false)
+        let context = NSGraphicsContext.current!.cgContext
+        context.interpolationQuality = .none
+        context.setShouldAntialias(false)
 
         // Drawing code here.
         self.lockFocus()
 
         if cgImage != nil {
-            CGContextDrawImage(context, NSRectToCGRect(cgRect!), cgImage)
+            context.draw(cgImage!, in: NSRectToCGRect(cgRect!))
         }
         
         // drawing magnifier view borders
-        CGContextSetGrayStrokeColor(context, 1.0, 1.0);
-        drawBorderForRect(context, rect: CGRectMake(0.0, 0.0, 127.0, 127.0));
-        CGContextSetGrayStrokeColor(context, 1.0, 1.0);
-        drawBorderForRect(context, rect: CGRectMake(1.0, 1.0, 125.0, 125.0));
+        context.setStrokeColor(gray: 1.0, alpha: 1.0);
+        drawBorderForRect(context, rect: CGRect(x: 0.0, y: 0.0, width: 127.0, height: 127.0));
+        context.setStrokeColor(gray: 1.0, alpha: 1.0);
+        drawBorderForRect(context, rect: CGRect(x: 1.0, y: 1.0, width: 125.0, height: 125.0));
 
         // drawing magnifier view aperture
-        let apertureRect:CGRect = CGRectMake(64.0, 56.0, 7.0, 7.0);
-        CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1)
+        let apertureRect:CGRect = CGRect(x: 64.0, y: 56.0, width: 7.0, height: 7.0);
+        context.setStrokeColor(red: 1.0, green: 0, blue: 0, alpha: 1)
         drawBorderForRect(context, rect: apertureRect)
         
         self.unlockFocus()
     }
     
-    func updateView(image:CGImage, rect:NSRect) {
+    func updateView(_ image:CGImage, rect:NSRect) {
         cgImage = image
         cgRect = rect
-        self.setNeedsDisplayInRect(self.bounds)
+        self.setNeedsDisplay(self.bounds)
     }
     
-    func drawBorderForRect(context:CGContextRef, rect:CGRect) {
+    func drawBorderForRect(_ context:CGContext, rect:CGRect) {
         let x:CGFloat = rect.origin.x;
         let y:CGFloat = rect.origin.y;
         let w:CGFloat = rect.size.width;
         let h:CGFloat = rect.size.height;
         
-        CGContextBeginPath(context);
-        CGContextMoveToPoint(context, x, y);
-        CGContextAddLineToPoint(context, x + w, y);
-        CGContextMoveToPoint(context, x + w, y);
-        CGContextAddLineToPoint(context, x + w, y + h);
-        CGContextMoveToPoint(context, x + w, y + h);
-        CGContextAddLineToPoint(context, x, y + h);
-        CGContextMoveToPoint(context, x, y + h);
-        CGContextAddLineToPoint(context, x, y);
-        CGContextStrokePath(context);
+        context.beginPath();
+        context.move(to: CGPoint(x: x, y: y));
+        context.addLine(to: CGPoint(x: x + w, y: y));
+        context.move(to: CGPoint(x: x + w, y: y));
+        context.addLine(to: CGPoint(x: x + w, y: y + h));
+        context.move(to: CGPoint(x: x + w, y: y + h));
+        context.addLine(to: CGPoint(x: x, y: y + h));
+        context.move(to: CGPoint(x: x, y: y + h));
+        context.addLine(to: CGPoint(x: x, y: y));
+        context.strokePath();
     }
 }

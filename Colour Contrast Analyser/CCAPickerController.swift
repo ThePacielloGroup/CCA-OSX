@@ -27,11 +27,11 @@ class CCAPickerController: NSWindowController {
         super.windowWillLoad()
         
         //        NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventGlobal)
-        NSEvent.addLocalMonitorForEventsMatchingMask(NSEventMask.MouseMovedMask, handler: handlerEventLocal)
+        NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.mouseMoved, handler: handlerEventLocal)
         dimension = DEFAULT_DIMENSION / 8
         
-        NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask) { (aEvent) -> NSEvent? in
-            self.keyDown(aEvent)
+        NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown) { (aEvent) -> NSEvent? in
+            self.keyDown(with: aEvent)
             return aEvent
         }
     }
@@ -40,21 +40,21 @@ class CCAPickerController: NSWindowController {
         super.windowDidLoad()
 
         /* Set always on top */
-        pickerWindow.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
+        pickerWindow.level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(CGWindowLevelKey.floatingWindow)))
     }
     
-    override func mouseUp(theEvent: NSEvent) {
+    override func mouseUp(with theEvent: NSEvent) {
         self.color.update(self.tmpcolor!)
         self.close()
     }
     
-    override func keyDown(theEvent: NSEvent) {
+    override func keyDown(with theEvent: NSEvent) {
         if (theEvent.keyCode == 53){
             self.close()
         }
     }
 
-    func open(color:CCAColour) {
+    func open(_ color:CCAColour) {
         self.color = color
         // Hide the mouse
         CGDisplayHideCursor(CGMainDisplayID())
@@ -74,14 +74,14 @@ class CCAPickerController: NSWindowController {
         pickerView.mouseMoved(aEvent)
     }*/
     
-    func handlerEventLocal(aEvent: (NSEvent!)) -> NSEvent {
-        mouseMoved(aEvent)
-        pickerView.mouseMoved(aEvent)
+    func handlerEventLocal(_ aEvent: (NSEvent!)) -> NSEvent {
+        mouseMoved(with: aEvent)
+        pickerView.mouseMoved(with: aEvent)
         return aEvent
     }
 
-    override func mouseMoved(theEvent:NSEvent) {
-        let mouseLocation:NSPoint = NSEvent.mouseLocation()
+    override func mouseMoved(with theEvent:NSEvent) {
+        let mouseLocation:NSPoint = NSEvent.mouseLocation
         var center:NSPoint = mouseLocation
         center.x -= 64
         center.y -= 64
@@ -110,9 +110,9 @@ class CCAPickerController: NSWindowController {
         hexaText.stringValue = self.tmpcolor!.getHexString()
     }
     
-    func getScreenRect(point:NSPoint) -> NSRect {
+    func getScreenRect(_ point:NSPoint) -> NSRect {
         var screenRect:NSRect?
-        if let screens = NSScreen.screens() as [NSScreen]? {
+        if let screens = NSScreen.screens as [NSScreen]? {
             for screen in screens {
                 if NSMouseInRect(point, screen.frame, false) {
                     screenRect = screen.frame
@@ -122,34 +122,34 @@ class CCAPickerController: NSWindowController {
         return screenRect!
     }
     
-    func colorAtLocation(location: NSPoint) -> NSColor {
+    func colorAtLocation(_ location: NSPoint) -> NSColor {
         var windowID = CGWindowID(0)
         if pickerWindow.windowNumber > 0 {
             windowID = CGWindowID(pickerWindow.windowNumber)
         }
 
-        let imageRect:CGRect = CGRectMake(location.x, location.y, 1, 1)
-        let imageRef:CGImageRef = CGWindowListCreateImage(
+        let imageRect:CGRect = CGRect(x: location.x, y: location.y, width: 1, height: 1)
+        let imageRef:CGImage = CGWindowListCreateImage(
             imageRect,
-            CGWindowListOption.OptionOnScreenBelowWindow,
+            CGWindowListOption.optionOnScreenBelowWindow,
             windowID,
-            CGWindowImageOption.BestResolution)!
-        let bitmap: NSBitmapImageRep = NSBitmapImageRep(CGImage: imageRef)
-        return bitmap.colorAtX(0, y:0)!
+            CGWindowImageOption.bestResolution)!
+        let bitmap: NSBitmapImageRep = NSBitmapImageRep(cgImage: imageRef)
+        return bitmap.colorAt(x: 0, y:0)!
     }
 
-    func imageAtLocation(location: NSPoint) -> CGImage {
+    func imageAtLocation(_ location: NSPoint) -> CGImage {
         var windowID = CGWindowID(0)
         if pickerWindow.windowNumber > 0 {
             windowID = CGWindowID(pickerWindow.windowNumber)
         }
         
-        let imageRect:CGRect = CGRectMake(location.x - 8, location.y - 8, 16, 16)
-        let imageRef:CGImageRef = CGWindowListCreateImage(
+        let imageRect:CGRect = CGRect(x: location.x - 8, y: location.y - 8, width: 16, height: 16)
+        let imageRef:CGImage = CGWindowListCreateImage(
             imageRect,
-            CGWindowListOption.OptionOnScreenBelowWindow,
+            CGWindowListOption.optionOnScreenBelowWindow,
             windowID,
-            CGWindowImageOption.BestResolution)!
+            CGWindowImageOption.bestResolution)!
         return imageRef
     }
 }

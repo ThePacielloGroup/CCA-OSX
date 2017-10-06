@@ -21,8 +21,8 @@ class CCALuminosityLevelField: NSTextField {
             }
         }
     }
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
         
         // Drawing code here.
     }
@@ -30,7 +30,7 @@ class CCALuminosityLevelField: NSTextField {
     func setFail() {
         if (currentStatus == true) {
             self.stringValue = NSLocalizedString("fail", comment:"Fail") + " " + level!
-            self.statusImage.image = NSImage(named: "No")
+            self.statusImage.image = NSImage(named: NSImage.Name(rawValue: "No"))
             currentStatus = false;
         }
     }
@@ -38,7 +38,7 @@ class CCALuminosityLevelField: NSTextField {
     func setPass() {
         if (currentStatus == false) {
             self.stringValue = NSLocalizedString("pass", comment:"Pass") + " " + level!
-            self.statusImage.image = NSImage(named: "Yes")
+            self.statusImage.image = NSImage(named: NSImage.Name(rawValue: "Yes"))
             currentStatus = true;
         }
     }

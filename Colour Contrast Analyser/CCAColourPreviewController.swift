@@ -8,13 +8,14 @@
 
 import Cocoa
 
-class CCAColourPreviewController: NSView {
+class CCAColourPreviewController: NSView, NSTextFieldDelegate {
 
     var color: CCAColour!
 
     @IBOutlet var view: NSView!
     @IBOutlet weak var hexField: NSTextField!
-    
+    @IBOutlet weak var warning: NSImageView!
+
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
     }
@@ -22,7 +23,9 @@ class CCAColourPreviewController: NSView {
     // init for Ibuilder
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        NSBundle.mainBundle().loadNibNamed("ColourPreviewView", owner: self, topLevelObjects: nil)
+        Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ColourPreviewView"), owner: self, topLevelObjects: nil)
+        
+        hexField.delegate = self
         
         // Makes XIB View size same
         self.view.frame = self.bounds
@@ -32,39 +35,46 @@ class CCAColourPreviewController: NSView {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         
         // these are 10.11-only APIs, but you can use the visual format language or any other autolayout APIs
-        self.view.leadingAnchor.constraintEqualToAnchor(self.leadingAnchor).active = true
-        self.view.topAnchor.constraintEqualToAnchor(self.topAnchor).active = true
-        self.view.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true
-        self.view.trailingAnchor.constraintEqualToAnchor(self.trailingAnchor).active = true
+        self.view.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.view.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.view.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
-    @IBAction func hexChanged(sender: NSTextField) {
-        if (validateHex(sender.stringValue)) {
-            hexField.backgroundColor = NSColor.whiteColor()
-            self.color.update(NSColor(hexString: sender.stringValue)!)
-        } else {
-            hexField.backgroundColor = NSColor.redColor()
-        }
-    }
-
-    func update(notification: NSNotification) {
+    @objc func update(_ notification: Notification) {
         self.updateHex()
         self.updatePreview()
     }
     
     func updatePreview() {
-        self.view.layer?.backgroundColor = self.color.value.CGColor
+        self.view.layer?.backgroundColor = self.color.value.cgColor
     }
     
     func updateHex() {
-        self.hexField.stringValue = self.color.hexvalue
-        
+        let hex = NSColor(hexString: self.hexField.stringValue)?.getHexString()
+        if (hex != self.color.hexvalue) {
+            self.hexField.stringValue = self.color.hexvalue
+        }
+        // Reset Warning status
+        self.hexField.backgroundColor = NSColor.white
+        self.warning.isHidden = true
     }
     
-    func validateHex(value: String) -> Bool {
-        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6})|([0-9A-Fa-f]{3})$", options: NSRegularExpressionOptions.CaseInsensitive)
+    override func controlTextDidChange(_ obj: Notification) {
+        if (validateHex(self.hexField.stringValue)) {
+            self.hexField.backgroundColor = NSColor.white
+            self.warning.isHidden = true
+            self.color.update(NSColor(hexString: self.hexField.stringValue)!)
+        } else {
+            self.warning.isHidden = false
+            self.hexField.backgroundColor = NSColor.red
+        }
+    }
+
+    func validateHex(_ value: String) -> Bool {
+        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options.caseInsensitive)
         let valueRange = NSRange(location:0, length: value.characters.count )
-        let result = regexp.rangeOfFirstMatchInString(value, options: .Anchored, range: valueRange)
+        let result = regexp.rangeOfFirstMatch(in: value, options: .anchored, range: valueRange)
         if (result.location == NSNotFound) {
             // regexp validation failed
             return false
@@ -81,7 +91,7 @@ class CCAForegroundColourPreviewController: CCAColourPreviewController {
         self.color = CCAColourForeground.sharedInstance
         self.updateHex()
         self.updatePreview()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update:", name: "ForegroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourPreviewController.update(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
     }
 }
 
@@ -91,6 +101,6 @@ class CCABackgroundColourPreviewController: CCAColourPreviewController {
         self.color = CCAColourBackground.sharedInstance
         self.updateHex()
         self.updatePreview()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update:", name: "BackgroundColorChangedNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourPreviewController.update(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
 }

@@ -10,7 +10,6 @@
 		8214D3D31A9B3B3A00CF666F /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8214D3D51A9B3B3A00CF666F /* Preferences.xib */; };
 		8214D3DC1A9B3CEE00CF666F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8214D3DE1A9B3CEE00CF666F /* Localizable.strings */; };
 		823078B81A96369900C29429 /* CCALuminosityControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823078B71A96369900C29429 /* CCALuminosityControler.swift */; };
-		823A7C801A9B33FD008870C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823A7C821A9B33FD008870C4 /* InfoPlist.strings */; };
 		824A66A41A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */; };
 		824A66A61A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */; };
 		825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */; };
@@ -29,23 +28,12 @@
 		829F4F1F1C69D9A100F29C29 /* ColourRGBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829F4F1E1C69D9A100F29C29 /* ColourRGBView.xib */; };
 		82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */; };
 		82C35FFF1A76621600D2B3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */; };
-		82C360011A76621600D2B3D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C360001A76621600D2B3D0 /* Images.xcassets */; };
 		82C360041A76621600D2B3D0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C360021A76621600D2B3D0 /* MainWindow.xib */; };
-		82C360101A76621600D2B3D0 /* Colour_Contrast_AnalyserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C3600F1A76621600D2B3D0 /* Colour_Contrast_AnalyserTests.swift */; };
 		82C745D71A7F939D00FC3648 /* CCALuminosityLevelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C745D61A7F939D00FC3648 /* CCALuminosityLevelField.swift */; };
 		82CD6E671A8BA4A10016798B /* CCAPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD6E661A8BA4A10016798B /* CCAPickerView.swift */; };
+		82ED9EBC1CF87617004E3A82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9EBB1CF87617004E3A82 /* Images.xcassets */; };
 		82FFCA261C688D86004F9E3C /* CCAColourRGBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FFCA251C688D86004F9E3C /* CCAColourRGBController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		82C3600A1A76621600D2B3D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82C35FF11A76621600D2B3D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82C35FF81A76621600D2B3D0;
-			remoteInfo = "Colour Contrast Analyser";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8214D3D41A9B3B3A00CF666F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Preferences.xib; sourceTree = "<group>"; };
@@ -56,7 +44,6 @@
 		823078B71A96369900C29429 /* CCALuminosityControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCALuminosityControler.swift; sourceTree = "<group>"; };
 		823A7C761A9B22DE008870C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainWindow.strings; sourceTree = "<group>"; };
 		823A7C781A9B2893008870C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainWindow.strings; sourceTree = "<group>"; };
-		823A7C811A9B33FD008870C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourBrightnessDifferenceAlgorithm.swift; sourceTree = "<group>"; };
 		824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourBrightnessDifferenceField.swift; sourceTree = "<group>"; };
 		825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminosityAlgorithm.swift; sourceTree = "<group>"; };
@@ -78,25 +65,15 @@
 		82C35FF91A76621600D2B3D0 /* Colour Contrast Analyser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colour Contrast Analyser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C35FFD1A76621600D2B3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82C360001A76621600D2B3D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82C360031A76621600D2B3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		82C360091A76621600D2B3D0 /* Colour Contrast AnalyserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Colour Contrast AnalyserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		82C3600E1A76621600D2B3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82C3600F1A76621600D2B3D0 /* Colour_Contrast_AnalyserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colour_Contrast_AnalyserTests.swift; sourceTree = "<group>"; };
 		82C745D61A7F939D00FC3648 /* CCALuminosityLevelField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCALuminosityLevelField.swift; sourceTree = "<group>"; };
 		82CD6E661A8BA4A10016798B /* CCAPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAPickerView.swift; sourceTree = "<group>"; };
+		82ED9EBB1CF87617004E3A82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82FFCA251C688D86004F9E3C /* CCAColourRGBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourRGBController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		82C35FF61A76621600D2B3D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82C360061A76621600D2B3D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				82C35FFB1A76621600D2B3D0 /* Colour Contrast Analyser */,
-				82C3600C1A76621600D2B3D0 /* Colour Contrast AnalyserTests */,
 				82C35FFA1A76621600D2B3D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				82C35FF91A76621600D2B3D0 /* Colour Contrast Analyser.app */,
-				82C360091A76621600D2B3D0 /* Colour Contrast AnalyserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +102,7 @@
 		82C35FFB1A76621600D2B3D0 /* Colour Contrast Analyser */ = {
 			isa = PBXGroup;
 			children = (
+				82ED9EBB1CF87617004E3A82 /* Images.xcassets */,
 				827DD9A71C981FA90063E7E5 /* CCAColourPreviewController.swift */,
 				827DD9A31C9812F40063E7E5 /* CCAColourHeaderController.swift */,
 				82FFCA251C688D86004F9E3C /* CCAColourRGBController.swift */,
@@ -137,7 +113,6 @@
 				8214D3D51A9B3B3A00CF666F /* Preferences.xib */,
 				828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */,
 				82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */,
-				82C360001A76621600D2B3D0 /* Images.xcassets */,
 				82C360021A76621600D2B3D0 /* MainWindow.xib */,
 				826E66411A93890E007FA9CA /* ColourPicker.xib */,
 				82C35FFC1A76621600D2B3D0 /* Supporting Files */,
@@ -166,24 +141,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		82C3600C1A76621600D2B3D0 /* Colour Contrast AnalyserTests */ = {
-			isa = PBXGroup;
-			children = (
-				82C3600F1A76621600D2B3D0 /* Colour_Contrast_AnalyserTests.swift */,
-				82C3600D1A76621600D2B3D0 /* Supporting Files */,
-			);
-			path = "Colour Contrast AnalyserTests";
-			sourceTree = "<group>";
-		};
-		82C3600D1A76621600D2B3D0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				823A7C821A9B33FD008870C4 /* InfoPlist.strings */,
-				82C3600E1A76621600D2B3D0 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,24 +161,6 @@
 			productReference = 82C35FF91A76621600D2B3D0 /* Colour Contrast Analyser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		82C360081A76621600D2B3D0 /* Colour Contrast AnalyserTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 82C360161A76621600D2B3D0 /* Build configuration list for PBXNativeTarget "Colour Contrast AnalyserTests" */;
-			buildPhases = (
-				82C360051A76621600D2B3D0 /* Sources */,
-				82C360061A76621600D2B3D0 /* Frameworks */,
-				82C360071A76621600D2B3D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				82C3600B1A76621600D2B3D0 /* PBXTargetDependency */,
-			);
-			name = "Colour Contrast AnalyserTests";
-			productName = "Colour Contrast AnalyserTests";
-			productReference = 82C360091A76621600D2B3D0 /* Colour Contrast AnalyserTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,15 +168,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Cédric Trévisan";
 				TargetAttributes = {
 					82C35FF81A76621600D2B3D0 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					82C360081A76621600D2B3D0 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 82C35FF81A76621600D2B3D0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -256,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				82C35FF81A76621600D2B3D0 /* Colour Contrast Analyser */,
-				82C360081A76621600D2B3D0 /* Colour Contrast AnalyserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82C360011A76621600D2B3D0 /* Images.xcassets in Resources */,
+				82ED9EBC1CF87617004E3A82 /* Images.xcassets in Resources */,
 				8214D3DC1A9B3CEE00CF666F /* Localizable.strings in Resources */,
 				826E66421A93890E007FA9CA /* ColourPicker.xib in Resources */,
 				8214D3D31A9B3B3A00CF666F /* Preferences.xib in Resources */,
@@ -275,14 +210,6 @@
 				829F4F1F1C69D9A100F29C29 /* ColourRGBView.xib in Resources */,
 				8275E14A1A96151B00EC53ED /* Credits.rtf in Resources */,
 				827DD9A01C980F4A0063E7E5 /* ColourHeaderView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82C360071A76621600D2B3D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				823A7C801A9B33FD008870C4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,23 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82C360051A76621600D2B3D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82C360101A76621600D2B3D0 /* Colour_Contrast_AnalyserTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		82C3600B1A76621600D2B3D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 82C35FF81A76621600D2B3D0 /* Colour Contrast Analyser */;
-			targetProxy = 82C3600A1A76621600D2B3D0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8214D3D51A9B3B3A00CF666F /* Preferences.xib */ = {
@@ -349,14 +260,6 @@
 				8214D3E01A9B3CF300CF666F /* fr */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		823A7C821A9B33FD008870C4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				823A7C811A9B33FD008870C4 /* fr */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		8275E14C1A96151B00EC53ED /* Credits.rtf */ = {
@@ -385,17 +288,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -404,6 +316,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -421,6 +334,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -428,17 +342,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -447,6 +370,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -457,6 +381,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -471,6 +397,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "TPG.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -485,44 +413,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "TPG.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		82C360171A76621600D2B3D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Colour Contrast AnalyserTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TPG.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser";
-			};
-			name = Debug;
-		};
-		82C360181A76621600D2B3D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Colour Contrast AnalyserTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TPG.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Colour Contrast Analyser.app/Contents/MacOS/Colour Contrast Analyser";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -543,15 +435,6 @@
 			buildConfigurations = (
 				82C360141A76621600D2B3D0 /* Debug */,
 				82C360151A76621600D2B3D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		82C360161A76621600D2B3D0 /* Build configuration list for PBXNativeTarget "Colour Contrast AnalyserTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82C360171A76621600D2B3D0 /* Debug */,
-				82C360181A76621600D2B3D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

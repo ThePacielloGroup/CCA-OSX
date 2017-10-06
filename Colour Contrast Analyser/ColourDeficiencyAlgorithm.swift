@@ -7,6 +7,19 @@
 //
 
 import Cocoa
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class ColourDeficiency {
     /* For most modern Cathode-Ray Tube monitors (CRTs), the following
@@ -45,11 +58,11 @@ class ColourDeficiency {
     let anchor:[Double] = [0.08008, 0.1579, 0.5897, 0.1284, 0.2237, 0.3636, 0.9856, 0.7325, 0.001079, 0.0914, 0.007009, 0.0]
     
     
-    func convertColor(color:NSColor) -> NSColor {
+    func convertColor(_ color:NSColor) -> NSColor {
         return color
     }
     
-    func initialStep(color:NSColor) -> (red:Double, green:Double, blue:Double) {
+    func initialStep(_ color:NSColor) -> (red:Double, green:Double, blue:Double) {
         /* Remove gamma to linearize RGB intensities */
         var red   = pow (color.getRDouble(),   1.0 / gammaRGB[0])
         var green = pow (color.getGDouble(), 1.0 / gammaRGB[1])
@@ -66,7 +79,7 @@ class ColourDeficiency {
         return (red, green, blue)
     }
     
-    func finalStep(r:Double, g:Double, b:Double) -> (red:Double, green:Double, blue:Double) {
+    func finalStep(_ r:Double, g:Double, b:Double) -> (red:Double, green:Double, blue:Double) {
         //			NSLog(@"\n Tmp:%f - Inflection:%f",tmp, inflection);
         //			NSLog(@"\nC RED:%f - GREEN:%f - BLUE:%f",red,green,blue);
         /* Convert back to RGB (cross product with transform matrix) */
@@ -82,20 +95,20 @@ class ColourDeficiency {
         return (red, green, blue)
     }
     
-    class func clamp(x:Double, low:Double, high:Double) -> Double {
+    class func clamp(_ x:Double, low:Double, high:Double) -> Double {
         var ret: Double
         if x > high {
             ret = high;
         } else if x < low {
             ret = low;
-        } else if isnan(x) {
+        } else if x.isNaN {
             ret = low;
         } else {
             ret = x;
         }
         return ret;
     }
-    class func toColor(r:Double, g:Double, b:Double) -> NSColor {
+    class func toColor(_ r:Double, g:Double, b:Double) -> NSColor {
         /* Ensure that we stay within the RGB gamut */
         /* *** FIX THIS: it would be better to desaturate than blindly clip. */
         let red   = ColourDeficiency.clamp(r, low:0.0, high:255.0)/255.0
@@ -107,7 +120,7 @@ class ColourDeficiency {
 }
 
 class ColourDeficiencyNone: ColourDeficiency {
-    override func convertColor(color:NSColor) -> NSColor {
+    override func convertColor(_ color:NSColor) -> NSColor {
         return color
     }
 }
@@ -138,7 +151,7 @@ class ColourDeficiencyProtanopia: ColourDeficiency {
         inflection = (anchor_e[2] / anchor_e[1]);
     }
     
-    override func convertColor(color:NSColor) -> NSColor {
+    override func convertColor(_ color:NSColor) -> NSColor {
         let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
@@ -185,7 +198,7 @@ class ColourDeficiencyDeuteranopia: ColourDeficiency {
         inflection = (anchor_e[2] / anchor_e[0]);
     }
     
-    override func convertColor(color:NSColor) -> NSColor {
+    override func convertColor(_ color:NSColor) -> NSColor {
         let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
@@ -233,7 +246,7 @@ class ColourDeficiencyTritanopia: ColourDeficiency {
         inflection = (anchor_e[1] / anchor_e[0]);
     }
     
-    override func convertColor(color:NSColor) -> NSColor {
+    override func convertColor(_ color:NSColor) -> NSColor {
         let initial = initialStep(color)
         var red = initial.red
         var green = initial.green
@@ -257,7 +270,7 @@ class ColourDeficiencyTritanopia: ColourDeficiency {
 }
 
 class ColourDeficiencyColorBlindness: ColourDeficiency {
-    override func convertColor(color:NSColor) -> NSColor {
+    override func convertColor(_ color:NSColor) -> NSColor {
         let gray = 0.3 * color.getRDouble() + 0.59 * color.getGDouble() + 0.11 * color.getBDouble()
         let red = gray
         let green = gray

@@ -13,17 +13,17 @@ class CCAColour {
     var hexvalue: String
     var notification: String
     
-    private init(value: NSColor, notification: String) {
+    fileprivate init(value: NSColor, notification: String) {
         self.value = value
         self.hexvalue = value.getHexString()
         self.notification = notification
     }
     
-    func update(value: NSColor) {
+    func update(_ value: NSColor) {
         self.value = value
         self.hexvalue = value.getHexString()
         let userInfo = ["color" : self.value]
-        NSNotificationCenter.defaultCenter().postNotificationName(self.notification, object: nil, userInfo: userInfo)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
     }
 }
 
