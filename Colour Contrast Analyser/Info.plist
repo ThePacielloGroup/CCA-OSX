@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -27,7 +27,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 Cédric Trévisan. All rights reserved.</string>
+	<string>Copyright © 2017 Cédric Trévisan. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
 	<key>NSPrincipalClass</key>
