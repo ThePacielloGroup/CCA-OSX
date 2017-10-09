@@ -2,7 +2,7 @@
 
 The Colour Contrast Analyser (CCA) helps you determine the legibility of text and the contrast of visual elements, such as graphical controls and visual indicators.
 
-The macOS version was developed by Cédric Trévisan Based on the Windows version developed by Jun in collaboration with Steve Faulkner.
+The macOS version was developed by Cédric Trévisan based on the Windows version developed by Jun in collaboration with Steve Faulkner.
 
 For further information, see [The Paciello Group's Colour Contrast Analyser resource page](https://developer.paciellogroup.com/resources/contrastanalyser/).
 
