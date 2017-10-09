@@ -14,7 +14,8 @@ class CCAColourHeaderController: NSView {
 
     @IBOutlet var view: NSView!
     @IBOutlet weak var title: NSTextField!
-    
+    @IBOutlet weak var colorWell: NSColorWell!
+
     var pickerController = CCAPickerController(windowNibName: NSNib.Name(rawValue: "ColourPicker"))
     
     override init(frame frameRect: NSRect) {
@@ -45,6 +46,17 @@ class CCAColourHeaderController: NSView {
         pickerController.open(self.color)
     }
     
+    @IBAction func colorWellChanged(_ sender: NSColorWell) {
+        self.color.update(sender.color)
+    }
+    
+    @objc func update(_ notification: Notification) {
+        self.updateColorWell()
+    }
+    
+    func updateColorWell() {
+        self.colorWell.color = self.color.value
+    }
 }
 
 class CCAForegroundColourHeaderController: CCAColourHeaderController {
@@ -52,6 +64,8 @@ class CCAForegroundColourHeaderController: CCAColourHeaderController {
         super.init(coder: coder)
         self.title.stringValue = "Foreground Colour"
         self.color = CCAColourForeground.sharedInstance
+        self.updateColorWell()
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourHeaderController.update(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
     }
 }
 
@@ -60,5 +74,7 @@ class CCABackgroundColourHeaderController: CCAColourHeaderController {
         super.init(coder: coder)
         self.title.stringValue = "Background Colour"
         self.color = CCAColourBackground.sharedInstance
+        self.updateColorWell()
+        NotificationCenter.default.addObserver(self, selector: #selector(CCAColourHeaderController.update(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
 }

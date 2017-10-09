@@ -121,9 +121,12 @@ extension NSColor {
     
     
     func getSRGBColor() -> NSColor {
-        let sRGB:NSColorSpace = NSColorSpace.genericRGB
-        let components = [self.redComponent, self.greenComponent, self.blueComponent]
+        /*
+        let sRGB:NSColorSpace = NSColorSpace.sRGB
+        let components = [self.redComponent, self.greenComponent, self.blueComponent, 1.0]
         return NSColor(colorSpace:sRGB, components:components, count:4);
+ */
+        return self.usingColorSpace(NSColorSpace.sRGB)!
     }
     
     func grayScaleComponent() -> CGFloat {

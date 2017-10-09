@@ -20,8 +20,23 @@ class CCAColour {
     }
     
     func update(_ value: NSColor) {
-        self.value = value
-        self.hexvalue = value.getHexString()
+        /*
+        print("\n\n")
+        print(value.getHexString())
+        print(value)
+        print(value.usingColorSpace(NSColorSpace.deviceRGB)!.getHexString())
+        print(value.usingColorSpace(NSColorSpace.deviceRGB)!)
+        print(value.usingColorSpace(NSColorSpace.sRGB)!.getHexString())
+        print(value.usingColorSpace(NSColorSpace.sRGB)!)
+        print(value.usingColorSpace(NSColorSpace.genericRGB)!.getHexString())
+        print(value.usingColorSpace(NSColorSpace.genericRGB)!)
+        print(value.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!.getHexString())
+        print(value.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!)
+        print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!.getHexString())
+        print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!)
+*/
+        self.value = value.usingColorSpace(NSColorSpace.sRGB)!
+        self.hexvalue = self.value.getHexString()
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
     }

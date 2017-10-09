@@ -19,7 +19,7 @@ class CCAPickerController: NSWindowController {
     var color: CCAColour!
     var cgImage:CGImage?
     var dimension:UInt = 0
-    var tmpcolor:NSColor?
+    var rawColor:NSColor?
     
     let DEFAULT_DIMENSION:UInt = 128
     
@@ -44,7 +44,11 @@ class CCAPickerController: NSWindowController {
     }
     
     override func mouseUp(with theEvent: NSEvent) {
-        self.color.update(self.tmpcolor!)
+        print(self.pickerWindow.colorSpace!)
+        print(self.rawColor!)
+        let color = self.rawColor!.usingColorSpace(self.pickerWindow.colorSpace!)
+        print(color!)
+        self.color.update(color!)
         self.close()
     }
     
@@ -105,9 +109,10 @@ class CCAPickerController: NSWindowController {
         pickerView.updateView(cgi, rect: rect)
         
         // getting color
-        self.tmpcolor = colorAtLocation(location)
-        hexaText.backgroundColor = self.tmpcolor
-        hexaText.stringValue = self.tmpcolor!.getHexString()
+        self.rawColor = colorAtLocation(location)
+        
+        hexaText.backgroundColor = self.rawColor!
+        hexaText.stringValue = self.rawColor!.getHexString()
     }
     
     func getScreenRect(_ point:NSPoint) -> NSRect {

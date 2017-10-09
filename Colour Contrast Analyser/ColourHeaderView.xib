@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CCAColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
+                <outlet property="colorWell" destination="18C-tu-Yiu" id="T7H-g6-nqi"/>
                 <outlet property="title" destination="DiW-ok-W4W" id="Mm6-hV-m6F"/>
                 <outlet property="view" destination="c22-O7-iKe" id="Vfy-uR-oE2"/>
             </connections>
@@ -25,8 +27,8 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-Lm-V75" userLabel="Picker">
-                    <rect key="frame" x="401" y="13" width="69" height="19"/>
+                <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-Lm-V75" userLabel="Picker">
+                    <rect key="frame" x="327" y="13" width="69" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Picker" bezelStyle="roundedRect" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GsJ-Iz-9ra" userLabel="Picker">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -35,12 +37,31 @@
                         <action selector="colorPickerClicked:" target="-2" id="dP6-dl-Y3f"/>
                     </connections>
                 </button>
+                <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="18C-tu-Yiu">
+                    <rect key="frame" x="426" y="12" width="44" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="dGi-1e-Yrx"/>
+                        <constraint firstAttribute="width" constant="44" id="u1U-aG-zVT"/>
+                    </constraints>
+                    <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="colorWellChanged:" target="-2" id="fFw-sM-2I8"/>
+                    </connections>
+                </colorWell>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zvm-xZ-nCX">
+                    <rect key="frame" x="407" y="16" width="14" height="14"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSRevealFreestandingTemplate" id="ycX-Ix-mkA"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="4aF-Lm-V75" secondAttribute="trailing" constant="10" id="0Yc-LH-PgU"/>
+                <constraint firstAttribute="trailing" secondItem="18C-tu-Yiu" secondAttribute="trailing" constant="10" id="5hP-0d-zGN"/>
+                <constraint firstItem="18C-tu-Yiu" firstAttribute="leading" secondItem="4aF-Lm-V75" secondAttribute="trailing" constant="20" id="6dw-Sb-ZMo"/>
+                <constraint firstItem="18C-tu-Yiu" firstAttribute="leading" secondItem="zvm-xZ-nCX" secondAttribute="trailing" constant="5" id="6s9-J0-Azd"/>
+                <constraint firstItem="zvm-xZ-nCX" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="M0p-oG-qYj"/>
                 <constraint firstItem="4aF-Lm-V75" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="NdI-X5-RqK"/>
                 <constraint firstItem="DiW-ok-W4W" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="bfH-mB-U8f"/>
                 <constraint firstItem="DiW-ok-W4W" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="g2t-Yd-eJL"/>
+                <constraint firstItem="18C-tu-Yiu" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="qZa-EK-FCO"/>
             </constraints>
             <point key="canvasLocation" x="288" y="410"/>
         </customView>

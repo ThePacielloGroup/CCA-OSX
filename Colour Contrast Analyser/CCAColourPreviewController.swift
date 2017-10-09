@@ -15,7 +15,7 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
     @IBOutlet var view: NSView!
     @IBOutlet weak var hexField: NSTextField!
     @IBOutlet weak var warning: NSImageView!
-
+    
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
     }
@@ -45,8 +45,9 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
         self.updateHex()
         self.updatePreview()
     }
-    
+       
     func updatePreview() {
+        self.view.alphaValue = 1
         self.view.layer?.backgroundColor = self.color.value.cgColor
     }
     
