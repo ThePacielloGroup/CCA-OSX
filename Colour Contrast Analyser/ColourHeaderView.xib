@@ -27,7 +27,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-Lm-V75" userLabel="Picker">
+                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-Lm-V75" userLabel="Picker">
                     <rect key="frame" x="327" y="13" width="69" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Picker" bezelStyle="roundedRect" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GsJ-Iz-9ra" userLabel="Picker">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
