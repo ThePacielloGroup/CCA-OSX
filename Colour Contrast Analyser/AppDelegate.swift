@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CoreGraphics
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,17 +20,83 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var mainWindow: NSWindow!
     @IBOutlet weak var luminosity: CCALuminosityControler!
     @IBOutlet weak var colorBrightnessDifference: CCAColourBrightnessDifferenceController!
-
+    @IBOutlet weak var colorProfilesMenu: NSMenu!
+    
     var preferencesController = CCAPreferencesController(windowNibName: NSNib.Name(rawValue: "Preferences"))
-
     
     let userDefaults = UserDefaults.standard
+    
+    // Called on ColorProfiles menuitem selection
+    @objc func setColorProfile(sender : NSMenuItem) {
+        let screenNumber = sender.parent?.representedObject as! CGDirectDisplayID
+        let colorProfile = sender.representedObject as! NSColorSpace
+
+        // Save into preferences
+        var data = userDefaults.object(forKey: "CCAColorProfiles") as! Data
+        var colorProfiles = NSKeyedUnarchiver.unarchiveObject(with: data) as! [CGDirectDisplayID : NSColorSpace]
+        colorProfiles[screenNumber] = colorProfile
+        data = NSKeyedArchiver.archivedData(withRootObject: colorProfiles as Any)
+        userDefaults.set(data, forKey: "CCAColorProfiles")
+
+        // Clear and set menuitems state
+        for menuItem in (sender.menu?.items)! {
+            if (colorProfile.isEqual(menuItem.representedObject)) {
+                menuItem.state = NSControl.StateValue(rawValue: 1)
+            } else {
+                menuItem.state = NSControl.StateValue(rawValue: 0)
+            }
+        }
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Initialise Preferences
         if userDefaults.string(forKey: "CCAResultsFormat") == nil {
             userDefaults.set(NSLocalizedString("results_format", comment:"Initial Results format text"), forKey: "CCAResultsFormat")
         }
+        
+        var colorProfiles = [CGDirectDisplayID: NSColorSpace]()
+        
+        if userDefaults.object(forKey: "CCAColorProfiles") == nil {
+            let data = NSKeyedArchiver.archivedData(withRootObject: colorProfiles as Any)
+            userDefaults.set(data, forKey: "CCAColorProfiles")
+        } else {
+            let data = userDefaults.object(forKey: "CCAColorProfiles") as! Data
+            colorProfiles = NSKeyedUnarchiver.unarchiveObject(with: data) as! [CGDirectDisplayID : NSColorSpace]
+        }
+
+        // Create the color profile menu
+        let colorSpaces = NSColorSpace.availableColorSpaces(with: .RGB)
+        colorProfilesMenu.removeAllItems()
+        let screens = NSScreen.screens
+        for screen in screens {
+            let screenNumber = screen.number
+            if (colorProfiles[screenNumber] == nil) {
+                // Init with screen color profile
+                colorProfiles[screenNumber] = screen.colorSpace
+            }
+            // Save the default preferences
+            let data = NSKeyedArchiver.archivedData(withRootObject: colorProfiles as Any)
+            userDefaults.set(data, forKey: "CCAColorProfiles")
+            
+            let screenColorProfile = colorProfiles[screenNumber]
+
+            let colorSpacesMenu = NSMenu()
+            for colorSpace in colorSpaces {
+                let menuItem = NSMenuItem(title: colorSpace.localizedName!, action: #selector(AppDelegate.setColorProfile(sender:)), keyEquivalent: "")
+                menuItem.representedObject = colorSpace
+                if (colorSpace.isEqual(screenColorProfile)) {
+                    menuItem.state = NSControl.StateValue(rawValue: 1)
+                }
+                colorSpacesMenu.addItem(menuItem)
+            }
+
+            let menuItem = NSMenuItem(title:screen.displayName, action:nil,  keyEquivalent:"")
+            menuItem.representedObject = screenNumber
+            menuItem.submenu = colorSpacesMenu
+            colorProfilesMenu.addItem(menuItem)
+
+        }
+        colorProfilesMenu.update()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

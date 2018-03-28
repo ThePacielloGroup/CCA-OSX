@@ -35,7 +35,7 @@ class CCAColour {
         print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!.getHexString())
         print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!)
 */
-        self.value = value.usingColorSpace(NSColorSpace.sRGB)!
+        self.value = value//.usingColorSpace(NSColorSpace.sRGB)!
         self.hexvalue = self.value.getHexString()
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)

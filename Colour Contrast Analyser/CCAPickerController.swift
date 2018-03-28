@@ -19,13 +19,16 @@ class CCAPickerController: NSWindowController {
     var color: CCAColour!
     var cgImage:CGImage?
     var dimension:UInt = 0
-    var rawColor:NSColor?
+    var adjustedColor:NSColor?
+    var colorProfiles:[CGDirectDisplayID: NSColorSpace]?
+    var currentScreenNumber:CGDirectDisplayID?
+    var currentScreenColorSpace:NSColorSpace?
     
     let DEFAULT_DIMENSION:UInt = 128
+    let userDefaults = UserDefaults.standard
     
     override func windowWillLoad() {
         super.windowWillLoad()
-        
         NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.mouseMoved, handler: handlerEventLocal)
         dimension = DEFAULT_DIMENSION / 8
         
@@ -43,11 +46,7 @@ class CCAPickerController: NSWindowController {
     }
     
     override func mouseUp(with theEvent: NSEvent) {
-//        print(self.pickerWindow.colorSpace!)
-//        print(self.rawColor!)
-        let color = self.rawColor!.usingColorSpace(self.pickerWindow.colorSpace!)
-//        print(color!)
-        self.color.update(color!)
+        self.color.update(self.adjustedColor!)
         self.close()
     }
     
@@ -58,6 +57,11 @@ class CCAPickerController: NSWindowController {
     }
 
     func open(_ color:CCAColour) {
+        // Retrieve latest color profiles selections
+        let data = userDefaults.object(forKey: "CCAColorProfiles") as! Data
+        self.colorProfiles = NSKeyedUnarchiver.unarchiveObject(with: data) as? [CGDirectDisplayID : NSColorSpace]
+        
+        self.currentScreenNumber = nil
         self.color = color
         // Hide the mouse
         CGDisplayHideCursor(CGMainDisplayID())
@@ -95,44 +99,52 @@ class CCAPickerController: NSWindowController {
         // Center the windows to the mouse
         pickerWindow.setFrameOrigin(center)
         
-        let screen:NSScreen = getScreen(mouseLocation)
-        
+        let screen:NSScreen = NSScreen.getScreen(mouseLocation)
+        let screenNumber = screen.number
+        if (screenNumber != self.currentScreenNumber) {
+            self.currentScreenNumber = screenNumber
+            // Get screen color profile
+            self.currentScreenColorSpace = self.colorProfiles![screenNumber]
+        }
+
         //Because AppKit and CoreGraphics use different coordinat systems
         let location:NSPoint = convertPointToScreenCoordinates(point: mouseLocation)
 
         let cgi = imageAtLocation(location)
-        
+//        print(cgi.colorSpace)
         let rect:NSRect = pickerView.bounds
         
         pickerView.updateView(cgi, rect: rect)
         
         // getting color
-        self.rawColor = colorAtCenter(screen: screen, imageRef: cgi)
-        
-        hexaText.backgroundColor = self.rawColor!
-        hexaText.stringValue = self.rawColor!.getHexString()
-    }
-    
-    func getScreen(_ point:NSPoint) -> NSScreen {
-        var screenRes:NSScreen?
-        if let screens = NSScreen.screens as [NSScreen]? {
-            for screen in screens {
-                if NSMouseInRect(point, screen.frame, false) {
-                    screenRes = screen
-                }
-            }
-        }
-        return screenRes!
+        let rawColor = colorAtCenter(screen: screen, imageRef: cgi)
+//        print(self.currentScreenColorSpace)
+        self.adjustedColor = rawColor.usingColorSpace(self.currentScreenColorSpace!)
+        hexaText.backgroundColor = adjustedColor
+        hexaText.stringValue = adjustedColor!.getHexString()
     }
     
     func colorAtCenter(screen:NSScreen, imageRef:CGImage) -> NSColor {
-        let bitmap: NSBitmapImageRep = NSBitmapImageRep(cgImage: imageRef)
+        let bitmap: NSBitmapImageRep = NSBitmapImageRep(cgImage: imageRef)//.converting(to: NSColorSpace.sRGB, renderingIntent: NSColorRenderingIntent(rawValue: 0)!)!
+//        print(bitmap.colorSpace)
 //        bitmap.colorSpace = NSDeviceRGBColorSpace
+        var color:NSColor
         if (screen.backingScaleFactor == 2.0) { // Retina display
-            return bitmap.colorAt(x: 16, y:16)!
+            color = bitmap.colorAt(x: 16, y:16)!
         } else {
-            return bitmap.colorAt(x: 8, y:8)!
+            color = bitmap.colorAt(x: 8, y:8)!
         }
+        
+        // https://stackoverflow.com/questions/46961761/accurately-get-a-color-from-pixel-on-screen-and-convert-its-color-space
+        // need a pointer to a C-style array of CGFloat
+        let compCount = color.numberOfComponents
+        let comps = UnsafeMutablePointer<CGFloat>.allocate(capacity: compCount)
+        // get the components
+        color.getComponents(comps)
+        // construct a new color in the device/bitmap space with the same components
+        return NSColor(colorSpace: bitmap.colorSpace,
+                                     components: comps,
+                                     count: compCount)
     }
 
     func imageAtLocation(_ location: NSPoint) -> CGImage {
