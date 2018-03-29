@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEditingDelegate {
+class CCAColourPreviewController: NSView, NSTextFieldDelegate {
 
     var color: CCAColour!
 
@@ -52,6 +52,8 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
         let format = self.formatPopup.selectedItem?.title
         if (format == "RGB") {
             self.formatTextField.stringValue = self.color.rgbString
+        } else if (format == "HSL") {
+            self.formatTextField.stringValue = self.color.hslString
         } else {
             self.formatTextField.stringValue = self.color.hexString
         }
@@ -80,6 +82,14 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
                     self.formatTextField.stringValue = self.color.rgbString
                 }
             }
+        } else if (format == "HSL") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.hslString
+            } else {
+                if (!self.color.isHSLStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.hslString
+                }
+            }
         }
 
         // Reset Warning status
@@ -87,10 +97,6 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
         self.warning.isHidden = true
     }
     
-    func control(_ control: NSControl, didFailToValidatePartialString string: String, errorDescription error: String?) {
-        NSSound.beep()
-    }
-
     override func controlTextDidChange(_ obj: Notification) {
         let string = self.formatTextField.stringValue
         if (self.validateColor(self.formatTextField.stringValue)) {
@@ -108,6 +114,8 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
         let format = self.formatPopup.selectedItem?.title
         if (format == "RGB") {
             return NSColor.isRGB(string: value)
+        } else if (format == "HSL") {
+            return NSColor.isHSL(string: value)
         } else {
             return NSColor.isHex(string: value)
         }

@@ -18,6 +18,15 @@ extension NSColor {
             return NSString(format: "rgb(%lu, %lu, %lu)", red, grn, blu) as String
         }
     }
+
+    var hslString: String {
+        get {
+            let hue = Int(round(self.hueComponent * 360))
+            let saturation = Int(round(self.saturationComponent * 100))
+            let brightness = Int(round(self.brightnessComponent * 100))
+            return NSString(format: "hsl(%lu, %lu%%, %lu%%)", hue, saturation, brightness) as String
+        }
+    }
     
     convenience init?(redInt: Int, greenInt: Int, blueInt:Int) {
         self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
@@ -52,20 +61,25 @@ extension NSColor {
         :returns: color with the given hex string
       */
       convenience init?(hexString: String) {
+        let (redInt, greenInt, blueInt) = NSColor.parseHex(string: hexString)
+        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
+      }
+
+    static func parseHex(string: String) -> (UInt32, UInt32, UInt32) {
         var value:   UInt32 = 0
         
-        let scanner = Scanner(string: hexString)
+        let scanner = Scanner(string: string)
         scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
         
         scanner.scanHexInt32(&value)
         
-        let r:CGFloat = CGFloat((value & 0xFF0000) >> 16) / 255.0
-        let g:CGFloat = CGFloat((value & 0xFF00) >> 8) / 255.0
-        let b:CGFloat = CGFloat((value & 0xFF)) / 255.0
-        
-        self.init(red: r, green: g, blue: b, alpha: 1.0)
-      }
+        let redInt:   UInt32 = (value & 0xFF0000) >> 16
+        let greenInt: UInt32 = (value & 0xFF00) >> 8
+        let blueInt:  UInt32 = (value & 0xFF)
 
+        return (redInt, greenInt, blueInt)
+    }
+    
     /**
      Create non-autoreleased color with in the given rgb string
      
@@ -73,18 +87,22 @@ extension NSColor {
      :returns: color with the given rgb string
      */
     convenience init?(rgbString: String) {
+        let (redInt, greenInt, blueInt) = NSColor.parseRGB(string: rgbString)
+        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
+    }
+    
+    static func parseRGB(string: String) -> (Int, Int, Int) {
         var redInt:   Int = 0
         var greenInt: Int = 0
         var blueInt:  Int = 0
         
-        let scanner = Scanner(string: rgbString)
+        let scanner = Scanner(string: string)
         scanner.charactersToBeSkipped = NSCharacterSet.decimalDigits.inverted
         
         scanner.scanInt(&redInt)
         scanner.scanInt(&greenInt)
         scanner.scanInt(&blueInt)
-        
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
+        return (redInt, greenInt, blueInt)
     }
     
     /**
@@ -94,22 +112,51 @@ extension NSColor {
      :returns: color with the given rgba string
      */
     convenience init?(rgbaString: String) {
+        let (redInt, greenInt, blueInt, alphaFloat) = NSColor.parseRGBA(string: rgbaString)
+        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alphaFloat))
+    }
+
+    static func parseRGBA(string: String) -> (Int, Int, Int, Float) {
         var redInt:   Int = 0
         var greenInt: Int = 0
         var blueInt:  Int = 0
         var alphaFloat: Float = 0.0
         
-        let scanner = Scanner(string: rgbaString)
+        let scanner = Scanner(string: string)
         scanner.charactersToBeSkipped = NSCharacterSet.decimalDigits.inverted
         
         scanner.scanInt(&redInt)
         scanner.scanInt(&greenInt)
         scanner.scanInt(&blueInt)
         scanner.scanFloat(&alphaFloat)
-
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alphaFloat))
+        return (redInt, greenInt, blueInt, alphaFloat)
     }
-
+    
+    /**
+     Create non-autoreleased color with in the given hsl string
+     
+     :param:   hslString
+     :returns: color with the given hsl string
+     */
+    convenience init?(hslString: String) {
+        let (hueInt, saturationInt, brightnessInt) = NSColor.parseHSL(string: hslString)
+        self.init(calibratedHue: CGFloat(hueInt) / 360.0, saturation: CGFloat(saturationInt) / 100.0, brightness: CGFloat(brightnessInt) / 100, alpha: 1.0)
+    }
+    
+    static func parseHSL(string: String) -> (Int, Int, Int) {
+        var hueInt:   Int = 0
+        var saturationInt: Int = 0
+        var brightnessInt:  Int = 0
+        
+        let scanner = Scanner(string: string)
+        scanner.charactersToBeSkipped = NSCharacterSet.decimalDigits.inverted
+        
+        scanner.scanInt(&hueInt)
+        scanner.scanInt(&saturationInt)
+        scanner.scanInt(&brightnessInt)
+        return (hueInt, saturationInt, brightnessInt)
+    }
+    
     func getRInt() -> Int {
         return Int(round(self.redComponent * 255))
     }
@@ -159,6 +206,14 @@ extension NSColor {
     static func isRGB(string: String) -> Bool {
         let lcstring = string.lowercased()
         let regexp = try! NSRegularExpression(pattern: "^(?:rgb)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[\\s]?[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
+        let valueRange = NSRange(location:0, length: lcstring.count )
+        let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
+        return (result.location != NSNotFound)
+    }
+    
+    static func isHSL(string: String) -> Bool {
+        let lcstring = string.lowercased()
+        let regexp = try! NSRegularExpression(pattern: "^(?:hsl)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}%[(\\s)|(,)]+[\\s+]?\\d{1,3}%[\\s]?[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
         let valueRange = NSRange(location:0, length: lcstring.count )
         let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)

@@ -12,6 +12,7 @@ class CCAColour {
     var value: NSColor
     private var hexStringVal: String?
     private var rgbStringVal: String?
+    private var hslStringVal: String?
     private var notification: String
     
     var hexString: String {
@@ -31,6 +32,15 @@ class CCAColour {
             return self.rgbStringVal!
         }
     }
+
+    var hslString: String {
+        get {
+            if (self.hslStringVal == nil) {
+                self.hslStringVal = self.value.hslString
+            }
+            return self.hslStringVal!
+        }
+    }
     
     fileprivate init(value: NSColor, notification: String) {
         self.value = value
@@ -41,18 +51,34 @@ class CCAColour {
         self.value = value
         self.hexStringVal = nil
         self.rgbStringVal = nil
+        self.hslStringVal = nil
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
     }
     
     func isHexStringEqual(string: String) -> Bool {
-        let color = NSColor(hexString: string)
-        return (color?.hexString == self.hexString)
+        let (redA, grnA, bluA) = NSColor.parseHex(string: string)
+        let redB = Int(round(self.value.redComponent * 255))
+        let grnB = Int(round(self.value.greenComponent * 255))
+        let bluB = Int(round(self.value.blueComponent * 255))
+        return (redA == redB && grnA == grnB && bluA == bluB)
     }
     
     func isRGBStringEqual(string: String) -> Bool {
-        let color = NSColor(rgbString: string)
-        return (color?.rgbString == self.rgbString)
+        let (redA, grnA, bluA) = NSColor.parseRGB(string: string)
+        let redB = Int(round(self.value.redComponent * 255))
+        let grnB = Int(round(self.value.greenComponent * 255))
+        let bluB = Int(round(self.value.blueComponent * 255))
+        return (redA == redB && grnA == grnB && bluA == bluB)
+    }
+    
+    func isHSLStringEqual(string: String) -> Bool {
+        let (hueA, saturationA, brightnessA) = NSColor.parseHSL(string: string)
+        let hueB = Int(round(self.value.hueComponent * 360))
+        let saturationB = Int(round(self.value.saturationComponent * 100))
+        let brightnessB = Int(round(self.value.brightnessComponent * 100))
+        
+        return (hueA == hueB && saturationA == saturationB && brightnessA == brightnessB)
     }
 }
 
