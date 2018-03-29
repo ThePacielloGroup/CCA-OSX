@@ -45,43 +45,27 @@ extension NSColor {
     }
   }
 
-  /**
-    Create non-autoreleased color with in the given hex string and alpha
-    
-    :param:   hexString
-    :param:   alpha
-    :returns: color with the given hex string and alpha
-  */
-  convenience init?(hexString: String, alpha: Float) {
-    var hex = hexString
-    
-    // Check for hash and remove the hash
-    if hex.hasPrefix("#") {
-      hex = String(hex.dropFirst())
-    }
-    // Deal with 3 character Hex strings
-    if (hex.count == 3) {
-      let redHex   = String(hex.prefix(1))
-      let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 1) ..< hex.index(hex.startIndex, offsetBy: 2)])
-      let blueHex  = String(hex.suffix(1))
-      
-      hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
-    }
-
-    let redHex = String(hex.prefix(2))
-    let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 2) ..< hex.index(hex.startIndex, offsetBy: 4)])
-    let blueHex = String(hex.suffix(2))
-    
-    var redInt:   CUnsignedInt = 0
-    var greenInt: CUnsignedInt = 0
-    var blueInt:  CUnsignedInt = 0
-
-    Scanner(string: redHex).scanHexInt32(&redInt)
-    Scanner(string: greenHex).scanHexInt32(&greenInt)
-    Scanner(string: blueHex).scanHexInt32(&blueInt)
-
-    self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
-  }
+      /**
+        Create non-autoreleased color with in the given hex string and alpha
+     
+        :param:   hexString
+        :param:   alpha
+        :returns: color with the given hex string and alpha
+      */
+      convenience init?(hexString: String, alpha: CGFloat) {
+        var value:   UInt32 = 0
+        
+        let scanner = Scanner(string: hexString)
+        scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
+        
+        scanner.scanHexInt32(&value)
+        
+        let r:CGFloat = CGFloat((value & 0xFF0000) >> 16) / 255.0
+        let g:CGFloat = CGFloat((value & 0xFF00) >> 8) / 255.0
+        let b:CGFloat = CGFloat((value & 0xFF)) / 255.0
+        
+        self.init(red: r, green: g, blue: b, alpha: alpha)
+      }
 
     /**
      Create non-autoreleased color with in the given rgba string
@@ -93,7 +77,7 @@ extension NSColor {
         var redInt:   Int = 0
         var greenInt: Int = 0
         var blueInt:  Int = 0
-        var alphaFloat: Float = 0
+        var alphaFloat: Float = 0.0
         
         let scanner = Scanner(string: rgbaString)
         scanner.charactersToBeSkipped = NSCharacterSet.decimalDigits.inverted
@@ -125,7 +109,7 @@ extension NSColor {
     :param:   alpha
     :returns: color with the given hex value and alpha
   */
-  convenience init?(hex: Int, alpha: Float) {
+  convenience init?(hex: Int, alpha: CGFloat) {
     let hexString = NSString(format: "%2X", hex) as String
     self.init(hexString: hexString, alpha: alpha)
   }
@@ -162,7 +146,7 @@ extension NSColor {
     }
     
     static func isHex(string: String) -> Bool {
-        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options.caseInsensitive)
+        let regexp = try! NSRegularExpression(pattern: "^#?[0-9A-Fa-f]{6}$", options: NSRegularExpression.Options.caseInsensitive)
         let valueRange = NSRange(location:0, length: string.count )
         let result = regexp.rangeOfFirstMatch(in: string, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)
