@@ -13,8 +13,6 @@
 		824A66A41A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */; };
 		824A66A61A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */; };
 		8255DB5D206A831E001F23FE /* ExtNSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255DB5C206A831E001F23FE /* ExtNSScreen.swift */; };
-		8255DB66206CE975001F23FE /* FormatterHexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255DB64206CE975001F23FE /* FormatterHexColor.swift */; };
-		8255DB67206CE975001F23FE /* FormatterRGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255DB65206CE975001F23FE /* FormatterRGBAColor.swift */; };
 		825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */; };
 		826E66401A938586007FA9CA /* CCAPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E663F1A938586007FA9CA /* CCAPickerController.swift */; };
 		826E66421A93890E007FA9CA /* ColourPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826E66411A93890E007FA9CA /* ColourPicker.xib */; };
@@ -50,8 +48,6 @@
 		824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourBrightnessDifferenceAlgorithm.swift; sourceTree = "<group>"; };
 		824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourBrightnessDifferenceField.swift; sourceTree = "<group>"; };
 		8255DB5C206A831E001F23FE /* ExtNSScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSScreen.swift; sourceTree = "<group>"; };
-		8255DB64206CE975001F23FE /* FormatterHexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterHexColor.swift; sourceTree = "<group>"; };
-		8255DB65206CE975001F23FE /* FormatterRGBAColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterRGBAColor.swift; sourceTree = "<group>"; };
 		825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminosityAlgorithm.swift; sourceTree = "<group>"; };
 		826E663F1A938586007FA9CA /* CCAPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAPickerController.swift; sourceTree = "<group>"; };
 		826E66411A93890E007FA9CA /* ColourPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourPicker.xib; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 		82C35FFB1A76621600D2B3D0 /* Colour Contrast Analyser */ = {
 			isa = PBXGroup;
 			children = (
-				8255DB64206CE975001F23FE /* FormatterHexColor.swift */,
-				8255DB65206CE975001F23FE /* FormatterRGBAColor.swift */,
 				82ED9EBB1CF87617004E3A82 /* Images.xcassets */,
 				827DD9A71C981FA90063E7E5 /* CCAColourPreviewController.swift */,
 				827DD9A31C9812F40063E7E5 /* CCAColourHeaderController.swift */,
@@ -232,14 +226,12 @@
 				827DD9A81C981FA90063E7E5 /* CCAColourPreviewController.swift in Sources */,
 				824A66A61A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift in Sources */,
 				826E66401A938586007FA9CA /* CCAPickerController.swift in Sources */,
-				8255DB67206CE975001F23FE /* FormatterRGBAColor.swift in Sources */,
 				82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */,
 				823078B81A96369900C29429 /* CCALuminosityControler.swift in Sources */,
 				82FFCA261C688D86004F9E3C /* CCAColourRGBController.swift in Sources */,
 				825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */,
 				828B3BBB1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift in Sources */,
 				827DD9A41C9812F40063E7E5 /* CCAColourHeaderController.swift in Sources */,
-				8255DB66206CE975001F23FE /* FormatterHexColor.swift in Sources */,
 				82C745D71A7F939D00FC3648 /* CCALuminosityLevelField.swift in Sources */,
 				8255DB5D206A831E001F23FE /* ExtNSScreen.swift in Sources */,
 				8275E1541A961A9100EC53ED /* CCAPreferencesController.swift in Sources */,

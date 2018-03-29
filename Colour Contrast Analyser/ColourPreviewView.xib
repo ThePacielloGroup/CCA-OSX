@@ -41,10 +41,10 @@
                     <rect key="frame" x="190" y="52" width="0.0" height="0.0"/>
                 </stackView>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-Cf-xt3">
-                    <rect key="frame" x="192" y="52" width="96" height="0.0"/>
+                    <rect key="frame" x="192" y="52" width="0.0" height="0.0"/>
                 </stackView>
                 <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-l0-6vr">
-                    <rect key="frame" x="54" y="37" width="68" height="29"/>
+                    <rect key="frame" x="63" y="37" width="59" height="29"/>
                     <popUpButtonCell key="cell" type="bevel" title="HEX" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" preferredEdge="maxY" selectedItem="yYY-wa-QEH" id="haL-O8-Fgr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
@@ -53,7 +53,7 @@
                                 <menuItem title="HEX" state="on" id="yYY-wa-QEH">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
-                                <menuItem title="RGBA" id="1TD-p6-KUo"/>
+                                <menuItem title="RGB" id="1TD-p6-KUo"/>
                                 <menuItem title="HSL" id="gWa-Ab-glM"/>
                             </items>
                         </menu>

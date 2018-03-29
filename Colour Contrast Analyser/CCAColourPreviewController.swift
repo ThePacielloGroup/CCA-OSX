@@ -27,7 +27,6 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
         Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ColourPreviewView"), owner: self, topLevelObjects: nil)
         
         self.formatTextField.delegate = self
-        self.formatTextField.formatter = HexColorFormatter()
         
         // Makes XIB View size same
         self.view.frame = self.bounds
@@ -51,12 +50,9 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
        
     @IBAction func formatPopupChanged(_ sender: Any) {
         let format = self.formatPopup.selectedItem?.title
-        if (format == "RGBA") {
-            self.formatTextField.formatter = RGBAColorFormatter()
-            self.formatTextField.stringValue = self.color.rgbaString
-            self.formatTextField.sizeToFit()
+        if (format == "RGB") {
+            self.formatTextField.stringValue = self.color.rgbString
         } else {
-            self.formatTextField.formatter = HexColorFormatter()
             self.formatTextField.stringValue = self.color.hexString
         }
     }
@@ -76,12 +72,12 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
                     self.formatTextField.stringValue = self.color.hexString
                 }
             }
-        } else if (format == "RGBA") {
+        } else if (format == "RGB") {
             if (self.formatTextField.stringValue.isEmpty) {
-                self.formatTextField.stringValue = self.color.hexString
+                self.formatTextField.stringValue = self.color.rgbString
             } else {
-                if (!self.color.isRGBAStringEqual(string: self.formatTextField.stringValue)) {
-                    self.formatTextField.stringValue = self.color.rgbaString
+                if (!self.color.isRGBStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.rgbString
                 }
             }
         }
@@ -110,8 +106,8 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate, NSControlTextEdit
     
     func validateColor(_ value: String) -> Bool {
         let format = self.formatPopup.selectedItem?.title
-        if (format == "RGBA") {
-            return NSColor.isRGBA(string: value)
+        if (format == "RGB") {
+            return NSColor.isRGB(string: value)
         } else {
             return NSColor.isHex(string: value)
         }

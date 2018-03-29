@@ -11,7 +11,7 @@ import Cocoa
 class CCAColour {
     var value: NSColor
     private var hexStringVal: String?
-    private var rgbaStringVal: String?
+    private var rgbStringVal: String?
     private var notification: String
     
     var hexString: String {
@@ -23,12 +23,12 @@ class CCAColour {
         }
     }
 
-    var rgbaString: String {
+    var rgbString: String {
         get {
-            if (self.rgbaStringVal == nil) {
-                self.rgbaStringVal = self.value.rgbaString
+            if (self.rgbStringVal == nil) {
+                self.rgbStringVal = self.value.rgbString
             }
-            return self.rgbaStringVal!
+            return self.rgbStringVal!
         }
     }
     
@@ -40,19 +40,19 @@ class CCAColour {
     func update(_ value: NSColor) {
         self.value = value
         self.hexStringVal = nil
-        self.rgbaStringVal = nil
+        self.rgbStringVal = nil
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
     }
     
     func isHexStringEqual(string: String) -> Bool {
-        let color = NSColor(hexString: string, alpha: 1.0)
+        let color = NSColor(hexString: string)
         return (color?.hexString == self.hexString)
     }
     
-    func isRGBAStringEqual(string: String) -> Bool {
-        let color = NSColor(rgbaString: string)
-        return (color?.rgbaString == self.rgbaString)
+    func isRGBStringEqual(string: String) -> Bool {
+        let color = NSColor(rgbString: string)
+        return (color?.rgbString == self.rgbString)
     }
 }
 
