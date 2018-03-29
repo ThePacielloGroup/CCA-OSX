@@ -10,35 +10,49 @@ import Cocoa
 
 class CCAColour {
     var value: NSColor
-    var hexvalue: String
-    var notification: String
+    private var hexStringVal: String?
+    private var rgbaStringVal: String?
+    private var notification: String
+    
+    var hexString: String {
+        get {
+            if (self.hexStringVal == nil) {
+                self.hexStringVal = self.value.hexString
+            }
+            return self.hexStringVal!
+        }
+    }
+
+    var rgbaString: String {
+        get {
+            if (self.rgbaStringVal == nil) {
+                self.rgbaStringVal = self.value.rgbaString
+            }
+            return self.rgbaStringVal!
+        }
+    }
     
     fileprivate init(value: NSColor, notification: String) {
         self.value = value
-        self.hexvalue = value.getHexString()
         self.notification = notification
     }
     
     func update(_ value: NSColor) {
-        /*
-        print("\n\n")
-        print(value.getHexString())
-        print(value)
-        print(value.usingColorSpace(NSColorSpace.deviceRGB)!.getHexString())
-        print(value.usingColorSpace(NSColorSpace.deviceRGB)!)
-        print(value.usingColorSpace(NSColorSpace.sRGB)!.getHexString())
-        print(value.usingColorSpace(NSColorSpace.sRGB)!)
-        print(value.usingColorSpace(NSColorSpace.genericRGB)!.getHexString())
-        print(value.usingColorSpace(NSColorSpace.genericRGB)!)
-        print(value.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!.getHexString())
-        print(value.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!)
-        print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!.getHexString())
-        print(value.usingColorSpaceName(NSColorSpaceName.deviceRGB)!)
-*/
-        self.value = value//.usingColorSpace(NSColorSpace.sRGB)!
-        self.hexvalue = self.value.getHexString()
+        self.value = value
+        self.hexStringVal = nil
+        self.rgbaStringVal = nil
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
+    }
+    
+    func isHexStringEqual(string: String) -> Bool {
+        let color = NSColor(hexString: string, alpha: 1.0)
+        return (color?.hexString == self.hexString)
+    }
+    
+    func isRGBAStringEqual(string: String) -> Bool {
+        let color = NSColor(rgbaString: string)
+        return (color?.rgbaString == self.rgbaString)
     }
 }
 

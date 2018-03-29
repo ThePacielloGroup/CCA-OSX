@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CCAColourPreviewController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
-                <outlet property="hexField" destination="8sb-Qs-Mxw" id="BDX-R1-x6x"/>
+                <outlet property="formatPopup" destination="NuZ-l0-6vr" id="Eqf-xU-gfz"/>
+                <outlet property="formatTextField" destination="8sb-Qs-Mxw" id="Gox-88-Ods"/>
                 <outlet property="view" destination="c22-O7-iKe" id="Dfm-Cm-9Gf"/>
                 <outlet property="warning" destination="FRX-vA-XzD" id="Ldq-Ay-raM"/>
             </connections>
@@ -20,11 +22,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField toolTip="Hexadecimal value" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-Qs-Mxw">
-                    <rect key="frame" x="190" y="38" width="100" height="28"/>
+                    <rect key="frame" x="130" y="38" width="220" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="uPU-Hd-dRl"/>
+                        <constraint firstAttribute="width" constant="220" id="uPU-Hd-dRl"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" placeholderString="#FFFFFF" drawsBackground="YES" usesSingleLineMode="YES" id="RyL-5u-Zsf">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" drawsBackground="YES" usesSingleLineMode="YES" id="RyL-5u-Zsf">
                         <font key="font" metaFont="system" size="20"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -32,15 +34,45 @@
                     <accessibility description="Hexadecimal"/>
                 </textField>
                 <imageView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRX-vA-XzD">
-                    <rect key="frame" x="154" y="36" width="32" height="32"/>
+                    <rect key="frame" x="438" y="36" width="32" height="32"/>
                     <imageCell key="cell" controlSize="mini" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSCaution" id="sh5-7y-G5i"/>
                 </imageView>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDp-sZ-LGh">
+                    <rect key="frame" x="190" y="52" width="0.0" height="0.0"/>
+                </stackView>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-Cf-xt3">
+                    <rect key="frame" x="192" y="52" width="96" height="0.0"/>
+                </stackView>
+                <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-l0-6vr">
+                    <rect key="frame" x="54" y="37" width="68" height="29"/>
+                    <popUpButtonCell key="cell" type="bevel" title="HEX" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" preferredEdge="maxY" selectedItem="yYY-wa-QEH" id="haL-O8-Fgr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="hOg-8v-tbk">
+                            <items>
+                                <menuItem title="HEX" state="on" id="yYY-wa-QEH">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="RGBA" id="1TD-p6-KUo"/>
+                                <menuItem title="HSL" id="gWa-Ab-glM"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="formatPopupChanged:" target="-2" id="5th-i9-7Ow"/>
+                    </connections>
+                </popUpButton>
             </subviews>
             <constraints>
+                <constraint firstItem="NuZ-l0-6vr" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="1fv-I6-hWs"/>
                 <constraint firstItem="8sb-Qs-Mxw" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="741-jK-TwH"/>
-                <constraint firstItem="8sb-Qs-Mxw" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Dsd-h9-aoF"/>
+                <constraint firstAttribute="trailing" secondItem="FRX-vA-XzD" secondAttribute="trailing" constant="10" id="757-Tz-JSC"/>
+                <constraint firstItem="IDp-sZ-LGh" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" constant="-50" id="Dn4-Nc-oJC"/>
                 <constraint firstItem="FRX-vA-XzD" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="LyO-E1-Mob"/>
-                <constraint firstItem="FRX-vA-XzD" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" constant="-70" id="kdL-5k-7Wr"/>
+                <constraint firstItem="IDp-sZ-LGh" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="TBc-Sz-tOP"/>
+                <constraint firstItem="8sb-Qs-Mxw" firstAttribute="leading" secondItem="NuZ-l0-6vr" secondAttribute="trailing" constant="10" id="TO1-qN-b1Y"/>
+                <constraint firstItem="vV8-Cf-xt3" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="WT6-YV-YQq"/>
+                <constraint firstItem="8sb-Qs-Mxw" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="fxS-Wi-nGH"/>
             </constraints>
             <point key="canvasLocation" x="239" y="98"/>
         </customView>

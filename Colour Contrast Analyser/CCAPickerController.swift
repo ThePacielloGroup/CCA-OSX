@@ -121,7 +121,8 @@ class CCAPickerController: NSWindowController {
 //        print(self.currentScreenColorSpace)
         self.adjustedColor = rawColor.usingColorSpace(self.currentScreenColorSpace!)
         hexaText.backgroundColor = adjustedColor
-        hexaText.stringValue = adjustedColor!.getHexString()
+        hexaText.stringValue = adjustedColor!.hexString
+        
     }
     
     func colorAtCenter(screen:NSScreen, imageRef:CGImage) -> NSColor {

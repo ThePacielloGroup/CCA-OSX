@@ -1,6 +1,23 @@
 import Cocoa
 
 extension NSColor {
+    var hexString: String {
+        get {
+            let red = Int(round(self.redComponent * 0xFF))
+            let grn = Int(round(self.greenComponent * 0xFF))
+            let blu = Int(round(self.blueComponent * 0xFF))
+            return NSString(format: "#%02X%02X%02X", red, grn, blu) as String
+        }
+    }
+    
+    var rgbaString: String {
+        get {
+            let red = Int(round(self.redComponent * 0xFF))
+            let grn = Int(round(self.greenComponent * 0xFF))
+            let blu = Int(round(self.blueComponent * 0xFF))
+            return NSString(format: "rgba(%lu, %lu, %lu, %g)", red, grn, blu, self.alphaComponent) as String
+        }
+    }
     
     convenience init?(redInt: Int, greenInt: Int, blueInt:Int) {
         self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
@@ -16,8 +33,16 @@ extension NSColor {
     :param:   hexString
     :returns: color with the given hex string
   */
-  convenience init?(hexString: String) {
-    self.init(hexString: hexString, alpha: 1.0)
+  convenience init?(string: String) {
+    if (NSColor.isHex(string: string)) {
+        self.init(hexString: string, alpha: 1.0)
+    } else if(NSColor.isRGBA(string: string)) {
+        self.init(rgbaString: string)
+    } else {
+        print("Can't initialise color, string format error")
+        self.init()
+        return nil
+    }
   }
 
   /**
@@ -34,41 +59,54 @@ extension NSColor {
     if hex.hasPrefix("#") {
       hex = String(hex.dropFirst())
     }
+    // Deal with 3 character Hex strings
+    if (hex.count == 3) {
+      let redHex   = String(hex.prefix(1))
+      let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 1) ..< hex.index(hex.startIndex, offsetBy: 2)])
+      let blueHex  = String(hex.suffix(1))
+      
+      hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
+    }
+
+    let redHex = String(hex.prefix(2))
+    let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 2) ..< hex.index(hex.startIndex, offsetBy: 4)])
+    let blueHex = String(hex.suffix(2))
     
-    if (hex.range(of: "(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .regularExpression) != nil) {
-        // Deal with 3 character Hex strings
-        if (hex.characters.count == 3) {
-          let redHex   = String(hex.prefix(1))
-          let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 1) ..< hex.index(hex.startIndex, offsetBy: 2)])
-          let blueHex  = String(hex.suffix(1))
-          
-          hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
-        }
+    var redInt:   CUnsignedInt = 0
+    var greenInt: CUnsignedInt = 0
+    var blueInt:  CUnsignedInt = 0
 
-        let redHex = String(hex.prefix(2))
-        let greenHex = String(hex[hex.index(hex.startIndex, offsetBy: 2) ..< hex.index(hex.startIndex, offsetBy: 4)])
-        let blueHex = String(hex.suffix(2))
-        
-        var redInt:   CUnsignedInt = 0
-        var greenInt: CUnsignedInt = 0
-        var blueInt:  CUnsignedInt = 0
+    Scanner(string: redHex).scanHexInt32(&redInt)
+    Scanner(string: greenHex).scanHexInt32(&greenInt)
+    Scanner(string: blueHex).scanHexInt32(&blueInt)
 
-        Scanner(string: redHex).scanHexInt32(&redInt)
-        Scanner(string: greenHex).scanHexInt32(&greenInt)
-        Scanner(string: blueHex).scanHexInt32(&blueInt)
-
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
-    }
-    else {
-        // Note:
-        // The swift 1.1 compiler is currently unable to destroy partially initialized classes in all cases,
-        // so it disallows formation of a situation where it would have to.  We consider this a bug to be fixed
-        // in future releases, not a feature. -- Apple Forum
-        self.init()
-        return nil
-    }
+    self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
   }
 
+    /**
+     Create non-autoreleased color with in the given rgba string
+     
+     :param:   rgbaString
+     :returns: color with the given rgba string and alpha
+     */
+    convenience init?(rgbaString: String) {
+        var redInt:   Int = 0
+        var greenInt: Int = 0
+        var blueInt:  Int = 0
+        var alphaFloat: Float = 0
+        
+        let scanner = Scanner(string: rgbaString)
+        scanner.charactersToBeSkipped = NSCharacterSet.decimalDigits.inverted
+        
+        scanner.scanInt(&redInt)
+        scanner.scanInt(&greenInt)
+        scanner.scanInt(&blueInt)
+        scanner.scanFloat(&alphaFloat)
+
+        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alphaFloat))
+    }
+
+    
   /**
     Create non-autoreleased color with in the given hex value
     Alpha will be set as 1 by default
@@ -92,14 +130,6 @@ extension NSColor {
     self.init(hexString: hexString, alpha: alpha)
   }
 
-    func getHexString() -> String {
-        let red = Int(round(self.redComponent * 0xFF))
-        let grn = Int(round(self.greenComponent * 0xFF))
-        let blu = Int(round(self.blueComponent * 0xFF))
-        let hexString = NSString(format: "#%02X%02X%02X", red, grn, blu) as String
-        return hexString
-    }
-    
     func getRInt() -> Int {
         return Int(round(self.redComponent * 255))
     }
@@ -119,16 +149,6 @@ extension NSColor {
         return Double(round(self.blueComponent * 255))
     }
     
-    
-    func getSRGBColor() -> NSColor {
-        /*
-        let sRGB:NSColorSpace = NSColorSpace.sRGB
-        let components = [self.redComponent, self.greenComponent, self.blueComponent, 1.0]
-        return NSColor(colorSpace:sRGB, components:components, count:4);
- */
-        return self.usingColorSpace(NSColorSpace.sRGB)!
-    }
-    
     func grayScaleComponent() -> CGFloat {
         return (
             0.29900 * self.redComponent +
@@ -139,5 +159,20 @@ extension NSColor {
     
     func isBlack() -> Bool {
         return (self.redComponent == 0 && self.greenComponent == 0 && self.blueComponent == 0)
+    }
+    
+    static func isHex(string: String) -> Bool {
+        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options.caseInsensitive)
+        let valueRange = NSRange(location:0, length: string.count )
+        let result = regexp.rangeOfFirstMatch(in: string, options: .anchored, range: valueRange)
+        return (result.location != NSNotFound)
+    }
+
+    static func isRGBA(string: String) -> Bool {
+        let lcstring = string.lowercased()
+        let regexp = try! NSRegularExpression(pattern: "^(?:rgba?)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?(?:0(?:\\.\\d+)?|1(?:\\.0)?)[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
+        let valueRange = NSRange(location:0, length: lcstring.count )
+        let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
+        return (result.location != NSNotFound)
     }
 }
