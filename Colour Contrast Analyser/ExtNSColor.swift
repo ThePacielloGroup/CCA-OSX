@@ -28,6 +28,20 @@ extension NSColor {
         }
     }
     
+    var nameString: String {
+        get {
+            let rHex = (Int(round(255 * self.redComponent)) & 0xff) << 16
+            let gHex = (Int(round(255 * self.greenComponent)) & 0xff) << 8
+            let bHex = (Int(round(255 * self.blueComponent)) & 0xff)
+            let hex = rHex + gHex + bHex
+            guard let name = (colorKeywordMap.first { $0.value == hex })?.key
+            else {
+                    return ""
+            }
+            return name
+        }
+    }
+    
     convenience init?(redInt: Int, greenInt: Int, blueInt:Int) {
         self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
     }
@@ -47,6 +61,8 @@ extension NSColor {
         self.init(hexString: string)
     } else if(NSColor.isRGB(string: string)) {
         self.init(rgbString: string)
+    } else if(NSColor.isName(string: string)) {
+        self.init(nameString: string)
     } else {
         print("Can't initialise color, string format error")
         self.init()
@@ -88,7 +104,7 @@ extension NSColor {
      */
     convenience init?(rgbString: String) {
         let (redInt, greenInt, blueInt) = NSColor.parseRGB(string: rgbString)
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
+        self.init(red: CGFloat(redInt) / 255, green: CGFloat(greenInt) / 255, blue: CGFloat(blueInt) / 255, alpha: 1.0)
     }
     
     static func parseRGB(string: String) -> (Int, Int, Int) {
@@ -113,7 +129,7 @@ extension NSColor {
      */
     convenience init?(rgbaString: String) {
         let (redInt, greenInt, blueInt, alphaFloat) = NSColor.parseRGBA(string: rgbaString)
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alphaFloat))
+        self.init(red: CGFloat(redInt) / 255, green: CGFloat(greenInt) / 255, blue: CGFloat(blueInt) / 255, alpha: CGFloat(alphaFloat))
     }
 
     static func parseRGBA(string: String) -> (Int, Int, Int, Float) {
@@ -157,6 +173,31 @@ extension NSColor {
         return (hueInt, saturationInt, brightnessInt)
     }
     
+    convenience init?(nameString: String) {
+        let hex = NSColor.parseName(string: nameString)
+        self.init(hex: hex)
+    }
+    
+    static func parseName(string: String) -> Int {
+        let cstring = string.lowercased()
+        return (colorKeywordMap.first(where: { $0.key.lowercased() == cstring })?.value)!
+    }
+
+    /**
+     Creates and returns a `NSColor` object using the given hex color code. Or returns `nil` if color code is invalid.
+     */
+    public convenience init?(hex: Int) {
+        guard (0...0xFFFFFF).contains(hex) else {
+            return nil
+        }
+        
+        let r = (hex & 0xFF0000) >> 16
+        let g = (hex & 0x00FF00) >> 8
+        let b = (hex & 0x0000FF)
+        
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 1.0)
+    }
+
     func getRInt() -> Int {
         return Int(round(self.redComponent * 255))
     }
@@ -189,33 +230,45 @@ extension NSColor {
     }
     
     static func isHex(string: String) -> Bool {
-        let regexp = try! NSRegularExpression(pattern: "^#?[0-9A-Fa-f]{6}$", options: NSRegularExpression.Options.caseInsensitive)
-        let valueRange = NSRange(location:0, length: string.count )
-        let result = regexp.rangeOfFirstMatch(in: string, options: .anchored, range: valueRange)
+        let cstring = string.uppercased()
+        let regexp = try! NSRegularExpression(pattern: "^#?[0-9A-F]{6}$", options: NSRegularExpression.Options.caseInsensitive)
+        let valueRange = NSRange(location:0, length: cstring.count )
+        let result = regexp.rangeOfFirstMatch(in: cstring, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)
     }
 
     static func isRGBA(string: String) -> Bool {
-        let lcstring = string.lowercased()
+        let cstring = string.lowercased()
         let regexp = try! NSRegularExpression(pattern: "^(?:rgba)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?(?:0(?:\\.\\d+)?|1(?:\\.0)?)[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
-        let valueRange = NSRange(location:0, length: lcstring.count )
-        let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
+        let valueRange = NSRange(location:0, length: cstring.count )
+        let result = regexp.rangeOfFirstMatch(in: cstring, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)
     }
     
     static func isRGB(string: String) -> Bool {
-        let lcstring = string.lowercased()
+        let cstring = string.lowercased()
         let regexp = try! NSRegularExpression(pattern: "^(?:rgb)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}[\\s]?[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
-        let valueRange = NSRange(location:0, length: lcstring.count )
-        let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
+        let valueRange = NSRange(location:0, length: cstring.count )
+        let result = regexp.rangeOfFirstMatch(in: cstring, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)
     }
     
     static func isHSL(string: String) -> Bool {
-        let lcstring = string.lowercased()
+        let cstring = string.lowercased()
         let regexp = try! NSRegularExpression(pattern: "^(?:hsl)?[\\s]?[\\(]?[\\s+]?\\d{1,3}[(\\s)|(,)]+[\\s+]?\\d{1,3}%[(\\s)|(,)]+[\\s+]?\\d{1,3}%[\\s]?[\\)]?$", options: NSRegularExpression.Options.caseInsensitive)
-        let valueRange = NSRange(location:0, length: lcstring.count )
-        let result = regexp.rangeOfFirstMatch(in: lcstring, options: .anchored, range: valueRange)
+        let valueRange = NSRange(location:0, length: cstring.count )
+        let result = regexp.rangeOfFirstMatch(in: cstring, options: .anchored, range: valueRange)
         return (result.location != NSNotFound)
     }
+    
+    static func isName(string: String) -> Bool {
+        let cstring = string.lowercased()
+        guard let _ = colorKeywordMap.first(where: { $0.key.lowercased() == cstring })?.value
+        else {
+            return false
+        }
+        return true
+    }
 }
+
+

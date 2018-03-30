@@ -44,7 +44,7 @@
                     <rect key="frame" x="192" y="52" width="0.0" height="0.0"/>
                 </stackView>
                 <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-l0-6vr">
-                    <rect key="frame" x="63" y="37" width="59" height="29"/>
+                    <rect key="frame" x="54" y="37" width="68" height="29"/>
                     <popUpButtonCell key="cell" type="bevel" title="HEX" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" preferredEdge="maxY" selectedItem="yYY-wa-QEH" id="haL-O8-Fgr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
@@ -55,6 +55,9 @@
                                 </menuItem>
                                 <menuItem title="RGB" id="1TD-p6-KUo"/>
                                 <menuItem title="HSL" id="gWa-Ab-glM"/>
+                                <menuItem title="Name" id="iky-aC-wYg">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
                             </items>
                         </menu>
                     </popUpButtonCell>

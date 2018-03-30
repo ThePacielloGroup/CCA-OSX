@@ -13,6 +13,7 @@ class CCAColour {
     private var hexStringVal: String?
     private var rgbStringVal: String?
     private var hslStringVal: String?
+    private var nameStringVal: String?
     private var notification: String
     
     var hexString: String {
@@ -42,6 +43,15 @@ class CCAColour {
         }
     }
     
+    var nameString: String {
+        get {
+            if (self.nameStringVal == nil) {
+                self.nameStringVal = self.value.nameString
+            }
+            return self.nameStringVal!
+        }
+    }
+    
     fileprivate init(value: NSColor, notification: String) {
         self.value = value
         self.notification = notification
@@ -52,6 +62,7 @@ class CCAColour {
         self.hexStringVal = nil
         self.rgbStringVal = nil
         self.hslStringVal = nil
+        self.nameStringVal = nil
         let userInfo = ["color" : self.value]
         NotificationCenter.default.post(name: Notification.Name(rawValue: self.notification), object: nil, userInfo: userInfo)
     }
@@ -77,8 +88,11 @@ class CCAColour {
         let hueB = Int(round(self.value.hueComponent * 360))
         let saturationB = Int(round(self.value.saturationComponent * 100))
         let brightnessB = Int(round(self.value.brightnessComponent * 100))
-        
         return (hueA == hueB && saturationA == saturationB && brightnessA == brightnessB)
+    }
+    
+    func isNameStringEqual(string: String) -> Bool {
+        return (string == self.nameString)
     }
 }
 

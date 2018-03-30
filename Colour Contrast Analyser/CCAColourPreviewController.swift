@@ -54,6 +54,8 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
             self.formatTextField.stringValue = self.color.rgbString
         } else if (format == "HSL") {
             self.formatTextField.stringValue = self.color.hslString
+        } else if (format == "Name") {
+            self.formatTextField.stringValue = self.color.nameString
         } else {
             self.formatTextField.stringValue = self.color.hexString
         }
@@ -90,6 +92,14 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
                     self.formatTextField.stringValue = self.color.hslString
                 }
             }
+        } else if (format == "Name") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.nameString
+            } else {
+                if (!self.color.isNameStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.nameString
+                }
+            }
         }
 
         // Reset Warning status
@@ -116,6 +126,8 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
             return NSColor.isRGB(string: value)
         } else if (format == "HSL") {
             return NSColor.isHSL(string: value)
+        } else if (format == "Name") {
+            return NSColor.isName(string: value)
         } else {
             return NSColor.isHex(string: value)
         }
