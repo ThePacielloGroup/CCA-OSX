@@ -9,12 +9,15 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CCAColourRGBController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
+                <outlet property="aField" destination="VBl-mG-KH6" id="R48-OX-yco"/>
+                <outlet property="aView" destination="HOU-Gz-sy3" id="yEe-Bi-iIw"/>
                 <outlet property="bField" destination="exg-5k-SbW" id="zaQ-Ih-g0W"/>
                 <outlet property="bView" destination="FoJ-Vz-vP5" id="RdY-NO-2b0"/>
                 <outlet property="blueSlider" destination="vtT-1m-grN" id="UWV-qm-qKg"/>
                 <outlet property="gField" destination="2Bn-Sf-Zcl" id="uEw-hQ-oIl"/>
                 <outlet property="gView" destination="uR7-0N-vFC" id="7BQ-P5-Xeb"/>
                 <outlet property="greenSlider" destination="QOK-De-MVW" id="3an-K2-T4i"/>
+                <outlet property="opacitySlider" destination="e02-P9-KMA" id="iNF-kW-mrS"/>
                 <outlet property="rField" destination="fGm-8W-Zic" id="Csa-kP-7tK"/>
                 <outlet property="rView" destination="t4a-Fs-LQg" id="QuE-C4-qd5"/>
                 <outlet property="redSlider" destination="9hA-sD-Bsg" id="HkF-5V-D4I"/>
@@ -25,14 +28,14 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-pg-na1">
-                    <rect key="frame" x="0.0" y="0.0" width="400" height="125"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="158"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cKr-5N-1wG">
-                            <rect key="frame" x="20" y="99" width="360" height="26"/>
+                            <rect key="frame" x="20" y="132" width="360" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="fnt-cH-LHd"/>
                             </constraints>
@@ -46,7 +49,7 @@
                             </connections>
                         </button>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="t4a-Fs-LQg">
-                            <rect key="frame" x="0.0" y="66" width="400" height="33"/>
+                            <rect key="frame" x="0.0" y="99" width="400" height="33"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VZS-wL-xUj" userLabel="Red Title">
                                     <rect key="frame" x="18" y="8" width="28" height="17"/>
@@ -100,7 +103,7 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="uR7-0N-vFC">
-                            <rect key="frame" x="0.0" y="33" width="400" height="33"/>
+                            <rect key="frame" x="0.0" y="66" width="400" height="33"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q3a-oa-BdA" userLabel="Green Title">
                                     <rect key="frame" x="18" y="8" width="41" height="17"/>
@@ -151,7 +154,7 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="FoJ-Vz-vP5">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="33"/>
+                            <rect key="frame" x="0.0" y="33" width="400" height="33"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gha-nJ-f4n" userLabel="Blue Title">
                                     <rect key="frame" x="18" y="8" width="31" height="17"/>
@@ -166,7 +169,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="2Ih-lL-FD0"/>
                                     </constraints>
-                                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="246.94096959969789" tickMarkPosition="above" sliderType="linear" id="PAq-ey-Znw"/>
+                                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="PAq-ey-Znw"/>
                                     <connections>
                                         <accessibilityConnection property="title" destination="gha-nJ-f4n" id="0Of-df-Z5k"/>
                                         <action selector="sliderChanged:" target="-2" id="ddM-rt-Nlj"/>
@@ -200,6 +203,56 @@
                                 <constraint firstItem="vtT-1m-grN" firstAttribute="centerX" secondItem="FoJ-Vz-vP5" secondAttribute="centerX" id="tnN-bx-0Xy"/>
                             </constraints>
                         </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="HOU-Gz-sy3">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="33"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-G7-QmC" userLabel="Blue Title">
+                                    <rect key="frame" x="18" y="8" width="51" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Opacity" id="FQn-im-5n5">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e02-P9-KMA" userLabel="Opacity Slider">
+                                    <rect key="frame" x="73" y="7" width="254" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="BDX-DP-7M0"/>
+                                    </constraints>
+                                    <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="6.0639082618025757" tickMarkPosition="above" sliderType="linear" id="g4b-X0-bEH"/>
+                                    <connections>
+                                        <accessibilityConnection property="title" destination="kTd-G7-QmC" id="aCJ-Bi-i5T"/>
+                                        <action selector="sliderChanged:" target="-2" id="o4K-Dc-Rhd"/>
+                                        <outlet property="nextKeyView" destination="VBl-mG-KH6" id="avm-r0-fu2"/>
+                                    </connections>
+                                </slider>
+                                <textField toolTip="Opacity value" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VBl-mG-KH6" userLabel="Opacity Value">
+                                    <rect key="frame" x="330" y="6" width="50" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="igx-od-Xla"/>
+                                    </constraints>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="1.0" drawsBackground="YES" id="qCg-fq-AYm">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <accessibility description="RGB value"/>
+                                    <connections>
+                                        <accessibilityConnection property="title" destination="kTd-G7-QmC" id="Clg-x4-bpP"/>
+                                        <action selector="rgbChanged:" target="-2" id="Zry-VM-rl8"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="VBl-mG-KH6" firstAttribute="centerY" secondItem="HOU-Gz-sy3" secondAttribute="centerY" id="01u-GV-E5c"/>
+                                <constraint firstItem="e02-P9-KMA" firstAttribute="centerX" secondItem="HOU-Gz-sy3" secondAttribute="centerX" id="48c-0a-yjb"/>
+                                <constraint firstAttribute="height" constant="33" id="6uE-nf-s9e"/>
+                                <constraint firstAttribute="trailing" secondItem="VBl-mG-KH6" secondAttribute="trailing" constant="20" id="OEL-3P-lwa"/>
+                                <constraint firstItem="kTd-G7-QmC" firstAttribute="centerY" secondItem="HOU-Gz-sy3" secondAttribute="centerY" id="n5M-Rz-TNo"/>
+                                <constraint firstItem="kTd-G7-QmC" firstAttribute="leading" secondItem="HOU-Gz-sy3" secondAttribute="leading" constant="20" id="nLN-Zu-eYI"/>
+                                <constraint firstItem="e02-P9-KMA" firstAttribute="centerY" secondItem="HOU-Gz-sy3" secondAttribute="centerY" id="yx1-BC-eMq"/>
+                            </constraints>
+                        </customView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="uR7-0N-vFC" secondAttribute="trailing" id="8CX-ee-bVy"/>
@@ -218,8 +271,10 @@
                         <integer value="1000"/>
                         <integer value="1000"/>
                         <integer value="1000"/>
+                        <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>

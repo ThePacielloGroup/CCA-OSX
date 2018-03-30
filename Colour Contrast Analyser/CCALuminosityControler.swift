@@ -83,13 +83,13 @@ class CCALuminosityControler: NSViewController {
         largeTextAAA.pass = passAAALarge
     }
     @objc func updateForeground(_ notification: Notification) {
-        self.fColor = notification.userInfo!["color"] as! NSColor
+        self.fColor = notification.userInfo!["colorWithOpacity"] as! NSColor
         self.updateResults()
         
         var color:NSColor = self.fColor
         // Fix for #3 : use almost black color
         if (color.isBlack()) {
-            color = NSColor(red: 0.000001, green: 0, blue: 0, alpha: 1.0)
+            color = NSColor(red: 0.001, green: 0, blue: 0, alpha: 1.0)
         }
         textAA.textColor = color
         textAAA.textColor = color

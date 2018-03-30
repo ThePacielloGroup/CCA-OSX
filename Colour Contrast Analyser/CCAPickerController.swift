@@ -111,14 +111,12 @@ class CCAPickerController: NSWindowController {
         let location:NSPoint = convertPointToScreenCoordinates(point: mouseLocation)
 
         let cgi = imageAtLocation(location)
-//        print(cgi.colorSpace)
         let rect:NSRect = pickerView.bounds
         
         pickerView.updateView(cgi, rect: rect)
         
         // getting color
         let rawColor = colorAtCenter(screen: screen, imageRef: cgi)
-//        print(self.currentScreenColorSpace)
         self.adjustedColor = rawColor.usingColorSpace(self.currentScreenColorSpace!)
         hexaText.backgroundColor = adjustedColor
         hexaText.stringValue = adjustedColor!.hexString
@@ -127,8 +125,6 @@ class CCAPickerController: NSWindowController {
     
     func colorAtCenter(screen:NSScreen, imageRef:CGImage) -> NSColor {
         let bitmap: NSBitmapImageRep = NSBitmapImageRep(cgImage: imageRef)//.converting(to: NSColorSpace.sRGB, renderingIntent: NSColorRenderingIntent(rawValue: 0)!)!
-//        print(bitmap.colorSpace)
-//        bitmap.colorSpace = NSDeviceRGBColorSpace
         var color:NSColor
         if (screen.backingScaleFactor == 2.0) { // Retina display
             color = bitmap.colorAt(x: 16, y:16)!

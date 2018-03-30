@@ -16,12 +16,15 @@ class CCAColourRGBController: NSView {
     @IBOutlet weak var redSlider: NSSlider!
     @IBOutlet weak var greenSlider: NSSlider!
     @IBOutlet weak var blueSlider: NSSlider!
+    @IBOutlet weak var opacitySlider: NSSlider!
     @IBOutlet weak var rField: NSTextField!
     @IBOutlet weak var gField: NSTextField!
     @IBOutlet weak var bField: NSTextField!
+    @IBOutlet weak var aField: NSTextField!
     @IBOutlet weak var rView: NSView!
     @IBOutlet weak var gView: NSView!
     @IBOutlet weak var bView: NSView!
+    @IBOutlet weak var aView: NSView!
     @IBOutlet weak var showhide: NSButton!
     var rgbHidden: Bool = true
 
@@ -49,11 +52,19 @@ class CCAColourRGBController: NSView {
     }
     
     @IBAction func sliderChanged(_ sender: NSSlider) {
-        self.color.update(NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue)!)
+        if (self is CCAForegroundColourRGBController) { // Foreground
+            self.color.update(NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue, alpha: opacitySlider.doubleValue)!)
+        } else { // Background
+            self.color.update(NSColor(redInt: redSlider.integerValue, greenInt: greenSlider.integerValue, blueInt: blueSlider.integerValue)!)
+        }
     }
     
     @IBAction func rgbChanged(_ sender: NSTextField) {
-        self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!)
+        if (self is CCAForegroundColourRGBController) { // Foreground
+            self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue, alpha: aField.doubleValue)!)
+        } else { // Background
+            self.color.update(NSColor(redInt: rField.integerValue, greenInt: gField.integerValue, blueInt: bField.integerValue)!)
+        }
     }
     
     @IBAction func disclosureClicked(_ sender: AnyObject) {
@@ -64,6 +75,9 @@ class CCAColourRGBController: NSView {
         self.rView.isHidden = value
         self.gView.isHidden = value
         self.bView.isHidden = value
+        if (self is CCAForegroundColourRGBController) { // Foreground only
+            self.aView.isHidden = value
+        }
         self.rgbHidden = value
     }
     
@@ -76,11 +90,17 @@ class CCAColourRGBController: NSView {
         self.redSlider.integerValue = self.color.value.getRInt()
         self.greenSlider.integerValue = self.color.value.getGInt()
         self.blueSlider.integerValue = self.color.value.getBInt()
+        if (self is CCAForegroundColourRGBController) { // Foreground only
+            self.opacitySlider.doubleValue = self.color.value.getADouble()
+        }
     }
     func updateRGB() {
         self.rField.integerValue = self.color.value.getRInt()
         self.gField.integerValue = self.color.value.getGInt()
         self.bField.integerValue = self.color.value.getBInt()
+        if (self is CCAForegroundColourRGBController) { // Foreground only
+            self.aField.stringValue = String(format: "%.1f", self.color.value.getADouble())
+        }
     }
 }
 
@@ -88,6 +108,11 @@ class CCAForegroundColourRGBController: CCAColourRGBController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.color = CCAColourForeground.sharedInstance
+        self.opacitySlider.minValue = 0.0
+        self.opacitySlider.maxValue = 1.0
+        self.opacitySlider.allowsTickMarkValuesOnly = true
+        self.opacitySlider.numberOfTickMarks = 11
+
         self.updateSliders()
         self.updateRGB()
         NotificationCenter.default.addObserver(self, selector: #selector(CCAColourRGBController.update(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
@@ -98,6 +123,7 @@ class CCABackgroundColourRGBController: CCAColourRGBController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.color = CCAColourBackground.sharedInstance
+        self.aView.isHidden = true
         self.updateSliders()
         self.updateRGB()
         NotificationCenter.default.addObserver(self, selector: #selector(CCAColourRGBController.update(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)

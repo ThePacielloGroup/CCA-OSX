@@ -42,8 +42,8 @@ extension NSColor {
         }
     }
     
-    convenience init?(redInt: Int, greenInt: Int, blueInt:Int) {
-        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: 1.0)
+    convenience init?(redInt: Int, greenInt: Int, blueInt:Int, alpha: Double = 1.0) {
+        self.init(red: CGFloat(redInt) / 255, green: CGFloat(greenInt) / 255, blue: CGFloat(blueInt) / 255, alpha: CGFloat(alpha))
     }
 
     convenience init?(redDouble: Double, greenDouble: Double, blueDouble:Double) {
@@ -215,6 +215,9 @@ extension NSColor {
     }
     func getBDouble() -> Double {
         return Double(round(self.blueComponent * 255))
+    }
+    func getADouble() -> Double {
+        return Double(self.alphaComponent)
     }
     
     func grayScaleComponent() -> CGFloat {

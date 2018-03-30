@@ -52,7 +52,7 @@ class CCAColourDeficiencyController: NSTabViewController, NSTableViewDelegate, N
     }
 
     @objc func updateForeground(_ notification: Notification) {
-        let color = notification.userInfo!["color"] as! NSColor
+        let color = notification.userInfo!["colorWithOpacity"] as! NSColor
         foregroundColor[0] = colourDeficiencyNone.convertColor(color)
         foregroundColor[1] = colourDeficiencyProtanopia.convertColor(color)
         foregroundColor[2] = colourDeficiencyDeuteranopia.convertColor(color)

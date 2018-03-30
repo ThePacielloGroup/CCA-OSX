@@ -63,7 +63,7 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
     
     func updatePreview() {
         self.view.alphaValue = 1
-        self.view.layer?.backgroundColor = self.color.value.cgColor
+        self.view.layer?.backgroundColor = self.color.colorWithOpacity.cgColor
     }
     
     func updateTextField() {

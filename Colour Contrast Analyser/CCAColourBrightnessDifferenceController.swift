@@ -36,7 +36,7 @@ class CCAColourBrightnessDifferenceController: NSViewController {
         colourBrightnessSample.validateColourBrightnessDifference(brightnessDifferenceValue!, colour: colourDifferenceValue!)
     }
     @objc func updateForeground(_ notification: Notification) {
-        self.fColor = notification.userInfo!["color"] as! NSColor
+        self.fColor = notification.userInfo!["colorWithOpacity"] as! NSColor
         self.updateResults()
         
         var color:NSColor = self.fColor
