@@ -75,10 +75,10 @@ class CCAPickerController: NSWindowController {
         super.close()
     }
     
-    func handlerEventLocal(_ aEvent: (NSEvent!)) -> NSEvent {
-        mouseMoved(with: aEvent)
-        pickerView.mouseMoved(with: aEvent)
-        return aEvent
+    func handlerEventLocal(_ aEvent: (NSEvent?)) -> NSEvent {
+        mouseMoved(with: aEvent!)
+        pickerView.mouseMoved(with: aEvent!)
+        return aEvent!
     }
 
     //Because AppKit and CoreGraphics use different coordinat systems
