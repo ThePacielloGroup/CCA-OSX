@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -18,6 +18,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
             <connections>
                 <outlet property="colorBrightnessDifference" destination="SRJ-pJ-EYb" id="o5h-qI-FM9"/>
+                <outlet property="colorProfilesMenu" destination="jZg-Yr-jpb" id="h6O-DQ-kws"/>
                 <outlet property="luminosity" destination="7v4-0F-zyi" id="KEq-Ek-Fv0"/>
                 <outlet property="mainWindow" destination="QvC-M9-y7g" id="VEI-cG-fUh"/>
             </connections>
@@ -123,6 +124,16 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Color Profiles" id="DwJ-S4-2nb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Color Profiles" id="jZg-Yr-jpb">
+                        <items>
+                            <menuItem title="Item" id="1xb-GJ-bqJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Window" id="aUF-d1-5bR">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
@@ -155,18 +166,19 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-74" y="79"/>
         </menu>
         <window title="Colour Contrast Analyser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="400" height="538"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
-            <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="542"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="538"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abj-AF-RZM">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="542"/>
+                        <rect key="frame" x="0.0" y="-8" width="400" height="542"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="sRe-js-gAy" userLabel="Foreground Header" customClass="CCAForegroundColourHeaderController" customModule="Colour_Contrast_Analyser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="516" width="400" height="26"/>
@@ -323,7 +335,7 @@
                                                     </view>
                                                 </box>
                                                 <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-AA-y8U">
-                                                    <rect key="frame" x="10" y="106" width="377" height="15"/>
+                                                    <rect key="frame" x="10" y="106" width="377" height="5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </box>
                                             </subviews>
@@ -447,7 +459,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="MPV-j3-suW">
-                                                        <rect key="frame" x="-14" y="16" width="15" height="0.0"/>
+                                                        <rect key="frame" x="-14" y="15" width="15" height="0.0"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <tableHeaderView key="headerView" id="3zU-UE-PfQ">
@@ -526,7 +538,7 @@
                     <constraint firstAttribute="trailing" secondItem="abj-AF-RZM" secondAttribute="trailing" id="oaS-28-0Uz"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="334" y="277"/>
+            <point key="canvasLocation" x="404" y="219"/>
         </window>
     </objects>
     <resources>

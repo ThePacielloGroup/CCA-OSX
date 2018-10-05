@@ -12,6 +12,7 @@
 		823078B81A96369900C29429 /* CCALuminosityControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823078B71A96369900C29429 /* CCALuminosityControler.swift */; };
 		824A66A41A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */; };
 		824A66A61A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */; };
+		8255DB5D206A831E001F23FE /* ExtNSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255DB5C206A831E001F23FE /* ExtNSScreen.swift */; };
 		825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */; };
 		826E66401A938586007FA9CA /* CCAPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E663F1A938586007FA9CA /* CCAPickerController.swift */; };
 		826E66421A93890E007FA9CA /* ColourPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826E66411A93890E007FA9CA /* ColourPicker.xib */; };
@@ -23,8 +24,9 @@
 		827DD9A41C9812F40063E7E5 /* CCAColourHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD9A31C9812F40063E7E5 /* CCAColourHeaderController.swift */; };
 		827DD9A61C981EC30063E7E5 /* ColourPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827DD9A51C981EC30063E7E5 /* ColourPreviewView.xib */; };
 		827DD9A81C981FA90063E7E5 /* CCAColourPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD9A71C981FA90063E7E5 /* CCAColourPreviewController.swift */; };
-		828B3BB91A77AC2E001A8BAF /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */; };
+		828B3BB91A77AC2E001A8BAF /* ExtNSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B3BB81A77AC2E001A8BAF /* ExtNSColor.swift */; };
 		828B3BBB1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B3BBA1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift */; };
+		829694F9206D871C006672E8 /* ColorKeywordMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829694F8206D871C006672E8 /* ColorKeywordMap.swift */; };
 		829F4F1F1C69D9A100F29C29 /* ColourRGBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829F4F1E1C69D9A100F29C29 /* ColourRGBView.xib */; };
 		82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */; };
 		82C35FFF1A76621600D2B3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */; };
@@ -46,6 +48,7 @@
 		823A7C781A9B2893008870C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainWindow.strings; sourceTree = "<group>"; };
 		824A66A31A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourBrightnessDifferenceAlgorithm.swift; sourceTree = "<group>"; };
 		824A66A51A80BFAF00AB0738 /* CCAColourBrightnessDifferenceField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourBrightnessDifferenceField.swift; sourceTree = "<group>"; };
+		8255DB5C206A831E001F23FE /* ExtNSScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSScreen.swift; sourceTree = "<group>"; };
 		825B1D051A78EDEC002B8272 /* LuminosityAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuminosityAlgorithm.swift; sourceTree = "<group>"; };
 		826E663F1A938586007FA9CA /* CCAPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAPickerController.swift; sourceTree = "<group>"; };
 		826E66411A93890E007FA9CA /* ColourPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourPicker.xib; sourceTree = "<group>"; };
@@ -58,8 +61,9 @@
 		827DD9A31C9812F40063E7E5 /* CCAColourHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourHeaderController.swift; sourceTree = "<group>"; };
 		827DD9A51C981EC30063E7E5 /* ColourPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourPreviewView.xib; sourceTree = "<group>"; };
 		827DD9A71C981FA90063E7E5 /* CCAColourPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourPreviewController.swift; sourceTree = "<group>"; };
-		828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
+		828B3BB81A77AC2E001A8BAF /* ExtNSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtNSColor.swift; sourceTree = "<group>"; };
 		828B3BBA1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAColourBrightnessDifferenceController.swift; sourceTree = "<group>"; };
+		829694F8206D871C006672E8 /* ColorKeywordMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorKeywordMap.swift; sourceTree = "<group>"; };
 		829F4F1E1C69D9A100F29C29 /* ColourRGBView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColourRGBView.xib; sourceTree = "<group>"; };
 		82B819891A976AED006889E7 /* ColourDeficiencyAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourDeficiencyAlgorithm.swift; sourceTree = "<group>"; };
 		82C35FF91A76621600D2B3D0 /* Colour Contrast Analyser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colour Contrast Analyser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +115,6 @@
 				827DD99F1C980F4A0063E7E5 /* ColourHeaderView.xib */,
 				827DD9A51C981EC30063E7E5 /* ColourPreviewView.xib */,
 				8214D3D51A9B3B3A00CF666F /* Preferences.xib */,
-				828B3BB81A77AC2E001A8BAF /* SwiftColors.swift */,
 				82C35FFE1A76621600D2B3D0 /* AppDelegate.swift */,
 				82C360021A76621600D2B3D0 /* MainWindow.xib */,
 				826E66411A93890E007FA9CA /* ColourPicker.xib */,
@@ -127,6 +130,9 @@
 				82CD6E661A8BA4A10016798B /* CCAPickerView.swift */,
 				826E663F1A938586007FA9CA /* CCAPickerController.swift */,
 				8275E1531A961A9100EC53ED /* CCAPreferencesController.swift */,
+				828B3BB81A77AC2E001A8BAF /* ExtNSColor.swift */,
+				8255DB5C206A831E001F23FE /* ExtNSScreen.swift */,
+				829694F8206D871C006672E8 /* ColorKeywordMap.swift */,
 			);
 			path = "Colour Contrast Analyser";
 			sourceTree = "<group>";
@@ -168,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Cédric Trévisan";
 				TargetAttributes = {
 					82C35FF81A76621600D2B3D0 = {
@@ -226,17 +232,19 @@
 				82B8198A1A976AED006889E7 /* ColourDeficiencyAlgorithm.swift in Sources */,
 				823078B81A96369900C29429 /* CCALuminosityControler.swift in Sources */,
 				82FFCA261C688D86004F9E3C /* CCAColourRGBController.swift in Sources */,
+				829694F9206D871C006672E8 /* ColorKeywordMap.swift in Sources */,
 				825B1D061A78EDEC002B8272 /* LuminosityAlgorithm.swift in Sources */,
 				828B3BBB1A77CFA2001A8BAF /* CCAColourBrightnessDifferenceController.swift in Sources */,
 				827DD9A41C9812F40063E7E5 /* CCAColourHeaderController.swift in Sources */,
 				82C745D71A7F939D00FC3648 /* CCALuminosityLevelField.swift in Sources */,
+				8255DB5D206A831E001F23FE /* ExtNSScreen.swift in Sources */,
 				8275E1541A961A9100EC53ED /* CCAPreferencesController.swift in Sources */,
 				8275E1441A95FD9900EC53ED /* CCAColourDeficiencyController.swift in Sources */,
 				82CD6E671A8BA4A10016798B /* CCAPickerView.swift in Sources */,
 				827DD9A21C98128F0063E7E5 /* CCAColour.swift in Sources */,
 				82C35FFF1A76621600D2B3D0 /* AppDelegate.swift in Sources */,
 				824A66A41A80BDC600AB0738 /* ColourBrightnessDifferenceAlgorithm.swift in Sources */,
-				828B3BB91A77AC2E001A8BAF /* SwiftColors.swift in Sources */,
+				828B3BB91A77AC2E001A8BAF /* ExtNSColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +305,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -351,12 +361,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

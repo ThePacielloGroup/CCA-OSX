@@ -13,8 +13,9 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
     var color: CCAColour!
 
     @IBOutlet var view: NSView!
-    @IBOutlet weak var hexField: NSTextField!
+    @IBOutlet weak var formatTextField: NSTextField!
     @IBOutlet weak var warning: NSImageView!
+    @IBOutlet weak var formatPopup: NSPopUpButton!
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -25,7 +26,7 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
         super.init(coder: coder)
         Bundle.main.loadNibNamed(NSNib.Name(rawValue: "ColourPreviewView"), owner: self, topLevelObjects: nil)
         
-        hexField.delegate = self
+        self.formatTextField.delegate = self
         
         // Makes XIB View size same
         self.view.frame = self.bounds
@@ -33,6 +34,7 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
         self.addSubview(self.view)
         self.view.wantsLayer = true
         self.view.translatesAutoresizingMaskIntoConstraints = false
+        self.formatTextField.drawsBackground = true
         
         // these are 10.11-only APIs, but you can use the visual format language or any other autolayout APIs
         self.view.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -42,55 +44,102 @@ class CCAColourPreviewController: NSView, NSTextFieldDelegate {
     }
     
     @objc func update(_ notification: Notification) {
-        self.updateHex()
+        self.updateTextField()
         self.updatePreview()
     }
        
-    func updatePreview() {
-        self.view.alphaValue = 1
-        self.view.layer?.backgroundColor = self.color.value.cgColor
+    @IBAction func formatPopupChanged(_ sender: Any) {
+        let format = self.formatPopup.selectedItem?.title
+        if (format == "RGB") {
+            self.formatTextField.stringValue = self.color.rgbString
+        } else if (format == "HSL") {
+            self.formatTextField.stringValue = self.color.hslString
+        } else if (format == "Name") {
+            self.formatTextField.stringValue = self.color.nameString
+        } else {
+            self.formatTextField.stringValue = self.color.hexString
+        }
     }
     
-    func updateHex() {
-        let hex = NSColor(hexString: self.hexField.stringValue)?.getHexString()
-        if (hex != self.color.hexvalue) {
-            self.hexField.stringValue = self.color.hexvalue
+    func updatePreview() {
+        self.view.alphaValue = 1
+        self.view.layer?.backgroundColor = self.color.colorWithOpacity.cgColor
+    }
+    
+    func updateTextField() {
+        let format = self.formatPopup.selectedItem?.title
+        if (format == "HEX") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.hexString
+            } else {
+                if (!self.color.isHexStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.hexString
+                }
+            }
+        } else if (format == "RGB") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.rgbString
+            } else {
+                if (!self.color.isRGBStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.rgbString
+                }
+            }
+        } else if (format == "HSL") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.hslString
+            } else {
+                if (!self.color.isHSLStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.hslString
+                }
+            }
+        } else if (format == "Name") {
+            if (self.formatTextField.stringValue.isEmpty) {
+                self.formatTextField.stringValue = self.color.nameString
+            } else {
+                if (!self.color.isNameStringEqual(string: self.formatTextField.stringValue)) {
+                    self.formatTextField.stringValue = self.color.nameString
+                }
+            }
         }
+
         // Reset Warning status
-        self.hexField.backgroundColor = NSColor.white
+        self.formatTextField.backgroundColor = NSColor.white
         self.warning.isHidden = true
     }
     
     override func controlTextDidChange(_ obj: Notification) {
-        if (validateHex(self.hexField.stringValue)) {
-            self.hexField.backgroundColor = NSColor.white
+        let string = self.formatTextField.stringValue
+        if (self.validateColor(self.formatTextField.stringValue)) {
+            self.formatTextField.backgroundColor = NSColor.white
             self.warning.isHidden = true
-            self.color.update(NSColor(hexString: self.hexField.stringValue)!)
+            self.color.update(NSColor(string: string)!)
         } else {
             self.warning.isHidden = false
-            self.hexField.backgroundColor = NSColor.red
+            self.formatTextField.backgroundColor = NSColor.red
         }
     }
 
-    func validateHex(_ value: String) -> Bool {
-        let regexp = try! NSRegularExpression(pattern: "^#?([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$", options: NSRegularExpression.Options.caseInsensitive)
-        let valueRange = NSRange(location:0, length: value.characters.count )
-        let result = regexp.rangeOfFirstMatch(in: value, options: .anchored, range: valueRange)
-        if (result.location == NSNotFound) {
-            // regexp validation failed
-            return false
-        }
-        else {
-            return true
+    
+    func validateColor(_ value: String) -> Bool {
+        let format = self.formatPopup.selectedItem?.title
+        if (format == "RGB") {
+            return NSColor.isRGB(string: value)
+        } else if (format == "HSL") {
+            return NSColor.isHSL(string: value)
+        } else if (format == "Name") {
+            return NSColor.isName(string: value)
+        } else {
+            return NSColor.isHex(string: value)
         }
     }
+
 }
 
 class CCAForegroundColourPreviewController: CCAColourPreviewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.color = CCAColourForeground.sharedInstance
-        self.updateHex()
+        self.updateTextField()
         self.updatePreview()
         NotificationCenter.default.addObserver(self, selector: #selector(CCAColourPreviewController.update(_:)), name: NSNotification.Name(rawValue: "ForegroundColorChangedNotification"), object: nil)
     }
@@ -100,7 +149,7 @@ class CCABackgroundColourPreviewController: CCAColourPreviewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.color = CCAColourBackground.sharedInstance
-        self.updateHex()
+        self.updateTextField()
         self.updatePreview()
         NotificationCenter.default.addObserver(self, selector: #selector(CCAColourPreviewController.update(_:)), name: NSNotification.Name(rawValue: "BackgroundColorChangedNotification"), object: nil)
     }
