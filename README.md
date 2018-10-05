@@ -1,3 +1,5 @@
+_NOTE: development on this version of the Colour Contrast Analyser (CCA) has now ceased. See the repository for the new version of the [Colour Contrast Analyser (CCA) for Windows / macOS](https://github.com/ThePacielloGroup/CCAe) (based on [Electron](https://electronjs.org/))._
+
 Color Contrast Analyser for OSX
 ===============================
 
